@@ -22,7 +22,7 @@ from datetime import date
 import requests
 
 CSV = "https://fred.stlouisfed.org/graph/fredgraph.csv"
-AGENTE = "oraculo/0.1 (+https://github.com/Pipemaster29/oraculo)"
+AGENTE = "oraculo/0.1 (+https://github.com/Pipemaster29/Oraculo)"
 
 
 class FalhaDeLeitura(RuntimeError):

@@ -30,7 +30,7 @@ import requests
 GAMMA = "https://gamma-api.polymarket.com"
 CLOB = "https://clob.polymarket.com"
 
-AGENTE = "oraculo/0.1 (+https://github.com/Pipemaster29/oraculo)"
+AGENTE = "oraculo/0.1 (+https://github.com/Pipemaster29/Oraculo)"
 
 # MEDIDO em 11/09/2026: a Gamma devolve 100 itens para `limit=100`, `limit=200` e
 # `limit=500`. Ela não recusa o pedido maior, não avisa, não manda cabeçalho de
