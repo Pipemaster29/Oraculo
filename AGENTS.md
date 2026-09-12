@@ -1,11 +1,13 @@
 # oraculo — o que é, como funciona, como mexer
 
-Compara o que o Polymarket precifica hoje com o que os dados econômicos
-registraram, e mede antes de tudo se o preço do mercado merece confiança.
+Compara o que o mercado projeta para bitcoin, ouro, prata, petróleo e juros com
+o que a história do próprio ativo registrou — e mede antes de tudo se o preço do
+mercado merece confiança.
 
 **Tudo vem de fonte pública e sem nenhuma chave de API.** Gamma e CLOB do
 Polymarket para os mercados e o histórico de preço; `fredgraph.csv` do FRED para
-as séries do Fed, do CPI e do NBER.
+petróleo, bitcoin, gás e as séries do Fed, do CPI e do NBER; a **LBMA** para ouro
+e prata, desde 1968.
 
 A frase "sem nenhuma chave" é restrição de projeto e não descrição. A API oficial
 do FRED (`api.stlouisfed.org`) pede cadastro e serve exatamente as mesmas séries
@@ -91,6 +93,9 @@ aviso.
 |---|---|
 | `oraculo/fontes/polymarket.py` | Gamma e CLOB. **Sabe os tetos reais da fonte** e por que cada um está lá |
 | `oraculo/fontes/fred.py` | `fredgraph.csv`, sem chave. `"."` vira `None`, nunca `0.0` |
+| `oraculo/fontes/lbma.py` | ouro e prata desde 1968, da fonte que publica o benchmark. **Por que não o FRED nem o Stooq está escrito lá** |
+| `oraculo/precos.py` | a taxa-base que vale: em quantas janelas históricas de mesmo comprimento o ativo fez este movimento |
+| `oraculo/numero.py` | número em convenção brasileira. **Existe porque a forma óbvia já quebrou isto duas vezes** |
 | `oraculo/calibragem.py` | o mercado é calibrado? Brier, decomposição de Murphy, curva de confiabilidade |
 | `oraculo/catalogo.py` | de uma pergunta do Polymarket para uma série do FRED. **Uma família por vez, escrita à mão, com justificativa** |
 | `oraculo/painel.py` | junta preço + taxa-base + ajuste numa linha por mercado |
@@ -171,11 +176,34 @@ lista de órfãos veio com "Communist Party of the Russian **Fed**eration" e
 `if x < 0: return` deixa NaN passar, e daí o Brier inteiro vira NaN. Compare com
 `x == x` ou `math.isfinite`.
 
-### 6. A troca de separador decimal come as unidades
+### 6. A troca de separador decimal come o texto em volta
 
-`f"{x:+.1f} p.p.".replace(".", ",")` publicou **"+54,7 p,p,"** na tela. A troca
-tem de acontecer ANTES de a unidade ser grudada. Ver `_decimal` em
-`api/index.py`.
+Aconteceu **duas vezes**, das duas por `.replace` aplicado a uma frase inteira:
+
+- `f"{x:+.1f} p.p.".replace(".", ",")` publicou **"+54,7 p,p,"** — o literal
+  "p.p." tem dois pontos e virou dois erros de digitação;
+- depois, a troca em cadeia `.replace(",", "X").replace(".", ",").replace("X", ".")`
+  numa descrição de taxa-base passou por cima de um rótulo JÁ convertido e
+  devolveu **"US$ 45,000"** para quarenta e cinco mil.
+
+A conversão é propriedade do NÚMERO, não do texto que o cerca. Converta o
+número, depois monte a frase — `oraculo/numero.py`, e nunca um `.replace` rio
+abaixo.
+
+### 6b. Tocar o nível e terminar nele são perguntas diferentes
+
+"O bitcoin **toca** US$ 78 mil até dia 12?" e "o bitcoin **estará acima** de
+US$ 78 mil **no** dia 12?" não são a mesma pergunta, e a primeira é sempre mais
+provável — encostar e voltar resolve uma em SIM e a outra em NÃO.
+
+A família de toque pegava `be above $78,000 on September 12` pelo "above" e
+respondia **34,1%** para um mercado precificado a **5,5%**. Nenhum erro na tela:
+um número plausível, respondendo outra coisa, e a diferença apareceria no painel
+como a maior discrepância do dia.
+
+Hoje são quatro famílias separadas (toque para cima/baixo, fechamento
+acima/abaixo) e `scripts/testar.py` confere o roteamento de cada formato de
+pergunta.
 
 ### 7. A decomposição de Murphy não fecha com preço contínuo
 
@@ -188,6 +216,18 @@ A saída certa foi nomear o número contra o qual ela fecha de verdade
 (`brier_das_faixas`), e a diferença entre os dois virou informação: é quanto o
 mercado ganha por precificar 0,37 em vez de "algo entre 0,3 e 0,4".
 
+### 7b. Nem toda pergunta tem taxa-base, e forçar uma é o pior desfecho
+
+"Os EUA invadem o Irã antes de 2027?" não tem série histórica que responda. Não
+existe um FRED de invasões, e a frequência de guerras no século XX não diz nada
+sobre esta em particular.
+
+Esses mercados ficam na lista "sem taxa-base" da página, **de propósito e para
+sempre**. O que o projeto tem a dizer sobre eles é o que a calibragem mede: o
+preço do Polymarket fica a três milésimos da frequência observada, então ali o
+preço é a melhor estimativa disponível. Isso é uma resposta, e é melhor que uma
+coluna preenchida com um número inventado.
+
 ### 8. A taxa-base não é previsão
 
 A armadilha conceitual, e a mais fácil de cair. O Fed subiu juros em 48,8% dos
@@ -198,6 +238,13 @@ falou. O mercado sabe disso, a taxa-base não sabe nada disso.
 A taxa-base serve para dar ESCALA ao preço, e é assim que a página a apresenta.
 Se alguém um dia escrever "distância grande = oportunidade", o projeto virou
 outra coisa.
+
+**As famílias de PREÇO são a exceção parcial, e é por isso que elas são o melhor
+que este projeto tem.** "O bitcoin toca US$ 150 mil em 110 dias?" tem resposta
+histórica quase literal: ele está em S₀, a pergunta é sobre a razão alvo/S₀, e a
+série diz em quantas janelas de 110 dias essa razão apareceu. Continua sem saber
+nada sobre o ciclo em curso — mas a referência é do próprio ativo, no próprio
+horizonte da pergunta, e não um ano civil que só aparece no texto.
 
 ---
 

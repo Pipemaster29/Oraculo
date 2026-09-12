@@ -93,7 +93,9 @@ def montar(
         if dias is not None and dias <= 0:
             continue
 
-        explicacao = catalogo.explicar(pergunta)
+        explicacao = catalogo.explicar(
+            pergunta, catalogo.Contexto(dias_restantes=dias)
+        )
         if explicacao is None:
             if _parece_economia(pergunta):
                 orfaos.append(
@@ -151,10 +153,18 @@ def montar(
 # encontra economia em qualquer lugar.
 _ECONOMIA = re.compile(
     r"\b("
+    # macro
     r"fed|fomc|powell|interest rates?|federal funds|"
     r"inflation|cpi|ppi|pce|"
     r"recession|unemployment|jobless|payrolls?|jobs report|"
-    r"gdp|treasury|yields?"
+    r"gdp|treasury|yields?|"
+    # preço de ativo
+    r"bitcoin|btc|ethereum|eth|gold|silver|"
+    r"oil|wti|brent|crude|natural gas|"
+    # geopolítica: entra na lista de órfãos de propósito, e o painel explica
+    # por quê. Não há série histórica que responda "os EUA invadem o Irã?", e
+    # fingir que há seria o oposto do que este projeto faz.
+    r"war|invade|invasion|ceasefire|nuclear|military strike"
     r")\b",
     re.I,
 )

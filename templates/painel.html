@@ -22,26 +22,34 @@ td .ressalva { display: block; font-size: 12px; color: var(--tinta-3); margin-to
 </p>
 
 <div class="aviso">
-  <p><strong>Isto não é recomendação de aposta e a diferença entre as duas colunas não é oportunidade.</strong></p>
+  <p><strong>Duas estimativas da mesma probabilidade, feitas de jeitos independentes.</strong></p>
   <p>
-    O <span style="color:var(--mercado)">preço</span> é o que o mercado cobra hoje, com
-    dinheiro atrás. A <span style="color:var(--historia)">história</span> é com que
-    frequência aquilo aconteceu num período comparável — e ela <em>não sabe nada</em>
-    sobre o ano em curso: não conhece a inflação medida, o desemprego medido, nem o que
-    o comitê já falou. O mercado conhece.
+    O <span style="color:var(--mercado)">preço</span> é a probabilidade que o mercado
+    atribui hoje, sabendo tudo o que se sabe agora. A
+    <span style="color:var(--historia)">história</span> é a frequência com que aquilo
+    aconteceu — e para preço de ativo ela responde a pergunta quase literalmente:
+    <em>o bitcoin está em US$&nbsp;77&nbsp;mil, faltam 110 dias; em quantas janelas de
+    110 dias da história dele o bitcoin subiu os 94% que levariam a US$&nbsp;150&nbsp;mil?</em>
+    A série responde isso direto, sem supor distribuição nenhuma — o que importa porque
+    bitcoin e petróleo têm cauda gorda, e toda conta que supõe uma normal subestima
+    justamente o extremo que estes mercados perguntam.
   </p>
   <p>
-    Então uma distância grande quer dizer só isto: <em>o mercado acha este período
-    muito diferente de um período típico</em>. Quase sempre é porque ele sabe de algo.
-    Às vezes é porque está errado. Esta página <strong>não distingue os dois casos</strong>
-    e não tenta.
+    A história <em>não sabe</em> o que é específico de agora: o ciclo em curso, o que o
+    comitê falou, a guerra que começou ontem. O mercado sabe. Então distância grande
+    quer dizer <em>o mercado acha este período muito diferente de um período típico</em> —
+    às vezes porque sabe de algo, às vezes porque errou. Esta página
+    <strong>não distingue os dois casos</strong>; ela põe os dois números lado a lado
+    para você distinguir.
   </p>
 </div>
 
 <div class="cartao">
-  <h2>Mercados econômicos abertos</h2>
+  <h2>Mercados abertos com taxa-base</h2>
   <p class="nota">
-    Ordenados pela distância entre preço e história, do maior desacordo para o menor.
+    Preço de ativo (bitcoin, ether, ouro, prata, petróleo, gás) e macro (juros,
+    inflação, recessão). Ordenados pela distância entre preço e história, do maior
+    desacordo para o menor.
     {% if horizonte %}A coluna <em>ajustado</em> passa o preço pela curva de
     confiabilidade medida no horizonte de {{ horizonte }} dias; fica vazia onde a faixa
     de preço não tem amostra para afirmar.{% else %}A coluna <em>ajustado</em> está
@@ -119,11 +127,27 @@ td .ressalva { display: block; font-size: 12px; color: var(--tinta-3); margin-to
 
 {% if sem_familia %}
 <div class="cartao">
-  <h2>Econômicos que o catálogo ainda não cobre</h2>
+  <h2>Sem taxa-base: o que a história não responde</h2>
   <p class="nota">
-    Mercados com cara de economia que nenhuma família de <code>oraculo/catalogo.py</code>
-    reconheceu. Estão aqui de propósito: sem esta lista, um mercado que o Oráculo
-    deveria cobrir e não cobre some da tela, indistinguível de um que não existe.
+    Mercados dos temas que este painel cobre, mas que nenhuma família de
+    <code>oraculo/catalogo.py</code> reconhece. Estão aqui de propósito: sem esta lista,
+    um mercado que o Oráculo deveria cobrir e não cobre sumiria da tela,
+    indistinguível de um que não existe.
+  </p>
+  <p class="nota">
+    <strong>Os de guerra e geopolítica estão aqui e vão continuar.</strong> "Os EUA
+    invadem o Irã antes de 2027?" não tem série histórica que responda: não existe um
+    FRED de invasões, e a frequência de guerras no século XX não diz nada sobre esta
+    em particular. Inventar uma taxa-base para preencher a coluna seria o oposto do
+    que este projeto faz.
+  </p>
+  <p class="nota">
+    O que se pode dizer sobre eles é o que a
+    <a href="/calibragem">página de calibragem</a> mede, e não é pouco: sobre 2.023
+    mercados resolvidos, o preço do Polymarket fica a três milésimos da frequência
+    observada. <strong>Para estes mercados, o preço é a melhor estimativa
+    disponível</strong> — e não porque eu não tenho nada melhor a oferecer, mas porque
+    está medido que ele é bom.
   </p>
   <div class="rolagem">
   <table>

@@ -35,7 +35,8 @@ from datetime import date
 from functools import lru_cache
 from typing import Callable
 
-from oraculo.fontes import fred
+from oraculo import numero, precos
+from oraculo.fontes import fred, lbma
 
 
 class SemResolucao(RuntimeError):
@@ -60,11 +61,29 @@ class TaxaBase:
 
 
 @dataclass
+class Contexto:
+    """O que a família precisa saber além do texto da pergunta.
+
+    Hoje é só o prazo, e ele é indispensável para as famílias de preço: "o
+    bitcoin toca US$ 150 mil?" tem respostas muito diferentes em nove dias e em
+    nove meses.
+
+    **O prazo vem da `endDate` do mercado, não de uma regex sobre a pergunta.**
+    Ler "by December 31, 2026" do texto exigiria acertar todos os formatos que o
+    Polymarket usa ("in September", "by end of December", "before 2027") e
+    errar em silêncio nos que eu não previsse. O campo estruturado já está na
+    resposta da Gamma.
+    """
+
+    dias_restantes: float | None = None
+
+
+@dataclass
 class Familia:
     nome: str
     padrao: re.Pattern[str]
     justificativa: str
-    calcular: Callable[[re.Match[str]], TaxaBase | None]
+    calcular: Callable[[re.Match[str], Contexto], TaxaBase | None]
 
 
 # --------------------------------------------------------------------------
@@ -362,6 +381,193 @@ def _recessao_no_ano() -> TaxaBase:
 
 
 # --------------------------------------------------------------------------
+# Preço de ativo
+# --------------------------------------------------------------------------
+# Aqui a taxa-base é melhor que nas famílias de calendário, e vale saber por quê.
+#
+# "O Fed sobe juros em 2026?" tem como referência a frequência por ano civil, e
+# ano civil é unidade arbitrária: não tem nada a ver com a pergunta além de
+# aparecer no texto dela. Já "o bitcoin toca US$ 150 mil até 31 de dezembro?" é
+# respondível direto pela história do próprio ativo — ele está em S₀, faltam h
+# dias, a pergunta é se sobe alvo/S₀ dentro desses h dias, e a série diz em
+# quantas janelas de h dias isso aconteceu. Ver `oraculo/precos.py`.
+#
+# O que cada ativo lê, e por quê:
+#
+#   bitcoin, ethereum  FRED CBBTCUSD / CBETHUSD — cotação da Coinbase, diária
+#   WTI, Brent         FRED DCOILWTICO (desde 1986) / DCOILBRENTEU (desde 1987)
+#   gás natural        FRED DHHNGSP — Henry Hub
+#   ouro, prata        LBMA, desde 1968 (o FRED descontinuou; ver fontes/lbma.py)
+
+_SERIES_DE_ATIVO: dict[str, tuple[str, str]] = {
+    "bitcoin": ("fred", "CBBTCUSD"),
+    "btc": ("fred", "CBBTCUSD"),
+    "ethereum": ("fred", "CBETHUSD"),
+    "eth": ("fred", "CBETHUSD"),
+    "wti": ("fred", "DCOILWTICO"),
+    "crude oil": ("fred", "DCOILWTICO"),
+    "oil": ("fred", "DCOILWTICO"),
+    "brent": ("fred", "DCOILBRENTEU"),
+    "natural gas": ("fred", "DHHNGSP"),
+    "gold": ("lbma", "ouro"),
+    "silver": ("lbma", "prata"),
+}
+
+# O artigo vem junto porque "o prata" apareceu na tela. Guardar só o substantivo
+# obriga quem monta a frase a adivinhar o gênero, e quem monta a frase é um
+# f-string que não sabe português.
+_NOME_DO_ATIVO: dict[str, tuple[str, str]] = {
+    "bitcoin": ("o", "bitcoin"), "btc": ("o", "bitcoin"),
+    "ethereum": ("o", "ethereum"), "eth": ("o", "ethereum"),
+    "wti": ("o", "petróleo WTI"), "crude oil": ("o", "petróleo WTI"),
+    "oil": ("o", "petróleo WTI"), "brent": ("o", "petróleo Brent"),
+    "natural gas": ("o", "gás natural"),
+    "gold": ("o", "ouro"), "silver": ("a", "prata"),
+}
+
+
+@lru_cache(maxsize=16)
+def _serie_do_ativo(chave: str) -> list[tuple[date, float]]:
+    origem, identificador = _SERIES_DE_ATIVO[chave]
+    if origem == "lbma":
+        return lbma.serie(identificador)
+    return [(d, v) for d, v in fred.serie(identificador) if v is not None and v > 0]
+
+
+def _para_numero(digitos: str, sufixo: str | None) -> float:
+    """`"45,000"` → 45000; `"150"` + `"k"` → 150000; `"1.5"` + `"M"` → 1500000.
+
+    A vírgula é separador de MILHAR aqui, não decimal: o Polymarket escreve em
+    convenção americana. Trocar os dois papéis transformaria "$45,000" em 45
+    dólares, e a taxa-base de "o bitcoin cai para 45 dólares" é zero — um zero
+    que pareceria medição.
+    """
+    valor = float(digitos.replace(",", ""))
+    if sufixo and sufixo.lower() == "k":
+        valor *= 1_000
+    elif sufixo and sufixo.lower() == "m":
+        valor *= 1_000_000
+    return valor
+
+
+def _toque(achado: re.Match[str], contexto: Contexto, direcao: str) -> TaxaBase:
+    chave = achado.group("ativo").lower()
+    alvo = _para_numero(achado.group("valor"), achado.group("sufixo"))
+    return _taxa_de_toque(chave, alvo, contexto, direcao, numero.dinheiro(alvo))
+
+
+def _taxa_de_toque(
+    chave: str,
+    alvo: float,
+    contexto: Contexto,
+    direcao: str,
+    rotulo_do_alvo: str,
+    fechamento: bool = False,
+) -> TaxaBase:
+    if contexto.dias_restantes is None:
+        raise SemResolucao(
+            "sem prazo: a Gamma não trouxe `endDate` para este mercado, e sem saber "
+            "quantos dias faltam a pergunta não tem resposta — tocar US$ 150 mil em "
+            "nove dias e em nove meses são coisas diferentes"
+        )
+    horizonte = max(1, int(round(contexto.dias_restantes)))
+
+    try:
+        serie = _serie_do_ativo(chave)
+    except (fred.FalhaDeLeitura, lbma.FalhaDeLeitura) as erro:
+        raise SemResolucao(f"a série do ativo não leu: {erro}") from erro
+
+    conta = precos.taxa_de_fechamento if fechamento else precos.taxa_de_toque
+    try:
+        medida = conta(serie, alvo, horizonte, direcao)
+    except precos.SemAmostra as limite:
+        raise SemResolucao(str(limite)) from limite
+
+    origem = _SERIES_DE_ATIVO[chave]
+    artigo, nome = _NOME_DO_ATIVO[chave]
+    if fechamento:
+        verbo = "terminou acima de" if direcao == "acima" else "terminou abaixo de"
+    else:
+        verbo = "subiu até" if direcao == "acima" else "caiu até"
+    variacao = medida.razao_exigida - 1
+
+    # Cada número é convertido sozinho, pelo `numero.br`, e a frase é montada
+    # depois. Ver o cabeçalho de `oraculo/numero.py`: a versão anterior fazia a
+    # troca de separador sobre a frase pronta e devolvia "US$ 45,000" para
+    # quarenta e cinco mil, além de trocar por pontos as vírgulas do texto.
+    dias = f"{horizonte} dia" + ("s" if horizonte != 1 else "")
+    return TaxaBase(
+        valor=medida.valor,
+        n=medida.janelas_efetivas,
+        janela=(
+            f"{medida.primeiro_dia.year}–{medida.ultimo_dia.year}, "
+            f"{numero.br(medida.janelas, 0)} janelas de {dias}"
+        ),
+        descricao=(
+            f"janelas de {dias} em que {artigo} {nome} {verbo} "
+            # "dos" sempre: aqui o artigo concorda com "dólares", não com o
+            # ativo. O `artigo` do ativo vale para o sujeito da frase ("a prata
+            # subiu"), e usá-lo de novo aqui produzia "a partir das US$ 63,84".
+            f"{rotulo_do_alvo} ({numero.porcento(variacao, 0, sinal=True)} a partir "
+            f"dos {numero.dinheiro(medida.preco_de_hoje)} de hoje)"
+        ),
+        ressalva=(
+            (
+                "É a PONTA da janela, não o caminho: encostar no nível e voltar "
+                "resolve este mercado em NÃO. "
+                if fechamento
+                else "É toque e não fechamento: a conta usa o extremo corrente da "
+                "janela, porque é isso que o mercado pergunta. "
+            )
+            + "Duas ressalvas que não somem com "
+            f"mais dado — as janelas se sobrepõem (são {numero.br(medida.janelas, 0)} "
+            f"janelas mas só {medida.janelas_efetivas} independentes), e a história do "
+            "ativo não é estacionária: a volatilidade de hoje não é a da série inteira, "
+            "e recortar só o período recente trocaria esse viés por um n minúsculo."
+        ),
+        series=[origem[1] if origem[0] == "fred" else f"LBMA {origem[1]}"],
+    )
+
+
+def _fechamento(achado: re.Match[str], contexto: Contexto, direcao: str) -> TaxaBase:
+    """Para "estará acima de X NO dia D" — pergunta de ponta, não de toque."""
+    chave = achado.group("ativo").lower()
+    alvo = _para_numero(achado.group("valor"), achado.group("sufixo"))
+    return _taxa_de_toque(
+        chave, alvo, contexto, direcao, numero.dinheiro(alvo), fechamento=True
+    )
+
+
+def _nova_maxima(achado: re.Match[str], contexto: Contexto) -> TaxaBase:
+    chave = achado.group("ativo").lower()
+    try:
+        serie = _serie_do_ativo(chave)
+        alvo = precos.maximo_historico(serie)
+    except (fred.FalhaDeLeitura, lbma.FalhaDeLeitura, precos.SemAmostra) as erro:
+        raise SemResolucao(f"a série do ativo não leu: {erro}") from erro
+    return _taxa_de_toque(
+        chave, alvo, contexto, "acima", f"a máxima histórica ({numero.dinheiro(alvo, 2)})"
+    )
+
+
+# Os padrões abaixo foram escritos contra perguntas ABERTAS no Polymarket em
+# 12/09/2026, copiadas da Gamma:
+#
+#   "Will Bitcoin dip to $45,000 by December 31, 2026?"
+#   "Will Bitcoin reach $250,000 by December 31, 2026?"
+#   "Will Bitcoin hit $150k by December 31, 2026?"
+#   "Will Gold (GC) hit (HIGH) $6,000 by end of December?"
+#   "Will WTI Crude Oil (WTI) hit (HIGH) $110 in September?"
+#   "Will Crude Oil reach a new all-time high by December 31?"
+#
+# O `.{0,40}?` entre o ativo e o verbo existe para os parênteses que o Polymarket
+# intercala ("Gold (GC) hit", "WTI Crude Oil (WTI) hit"). Preguiçoso e com teto,
+# para não atravessar a pergunta inteira e casar um valor que é de outra coisa.
+_ATIVO = r"(?P<ativo>bitcoin|btc|ethereum|eth|natural gas|crude oil|brent|wti|gold|silver|oil)"
+_VALOR = r"\$\s*(?P<valor>\d[\d,]*(?:\.\d+)?)\s*(?P<sufixo>[kKmM])?"
+
+
+# --------------------------------------------------------------------------
 # As famílias
 # --------------------------------------------------------------------------
 # Cada padrão foi escrito contra perguntas que estavam ABERTAS no Polymarket em
@@ -370,6 +576,76 @@ def _recessao_no_ano() -> TaxaBase:
 # que lista os mercados econômicos que nenhuma família pegou.
 
 FAMILIAS: list[Familia] = [
+    # As de preço vêm primeiro porque são as mais específicas. A de "nova máxima"
+    # antes da de toque genérica: as duas falam de "reach", e só a primeira casa
+    # sem um valor em dólar, então a ordem aqui é o que decide qual responde.
+    Familia(
+        nome="Preço: nova máxima histórica",
+        padrao=re.compile(
+            rf"{_ATIVO}.{{0,40}}?\b(?:reach|hit)\w*\s+(?:an?\s+)?new\s+all[- ]time\s+high",
+            re.I,
+        ),
+        justificativa=(
+            "O alvo é o maior preço que a série já registrou, e daí é a mesma conta "
+            "de toque. Vale lembrar que 'recorde histórico' é o recorde DESTA série: "
+            "o WTI do FRED começa em 1986."
+        ),
+        calcular=_nova_maxima,
+    ),
+    Familia(
+        nome="Preço: toque para cima",
+        padrao=re.compile(
+            rf"{_ATIVO}.{{0,40}}?\b(?:hits?|reach(?:es)?|rises?\s+to|go(?:es)?\s+to|"
+            rf"touch(?:es)?)\b.{{0,20}}?{_VALOR}",
+            re.I,
+        ),
+        justificativa=(
+            "Fração das janelas históricas de mesmo comprimento em que o ativo subiu "
+            "a razão exigida em algum momento. Reamostragem empírica, sem supor "
+            "distribuição — o que importa porque bitcoin e petróleo têm cauda gorda e "
+            "qualquer conta que suponha normal subestima justamente o extremo que "
+            "estes mercados perguntam."
+        ),
+        calcular=lambda achado, ctx: _toque(achado, ctx, "acima"),
+    ),
+    # As duas de FECHAMENTO vêm antes das de toque: "be above $78,000 ON
+    # September 12" pergunta onde o preço TERMINA, e a família de toque pegava
+    # essa pergunta pelo "above" e respondia 34,1% para um mercado precificado a
+    # 5,5%. Número plausível, pergunta errada, nenhum erro na tela.
+    Familia(
+        nome="Preço: acima na data",
+        padrao=re.compile(
+            rf"(?:price\s+of\s+)?{_ATIVO}\s+(?:be|is|close|closes|end|ends)\s+"
+            rf"(?:above|over|higher\s+than)\s+{_VALOR}",
+            re.I,
+        ),
+        justificativa=(
+            "Fração das janelas em que o ativo TERMINOU acima da razão exigida. "
+            "Encostar no nível e voltar resolve este mercado em NÃO, então a conta "
+            "usa a ponta da janela e não o caminho."
+        ),
+        calcular=lambda achado, ctx: _fechamento(achado, ctx, "acima"),
+    ),
+    Familia(
+        nome="Preço: abaixo na data",
+        padrao=re.compile(
+            rf"(?:price\s+of\s+)?{_ATIVO}\s+(?:be|is|close|closes|end|ends)\s+"
+            rf"(?:below|under|lower\s+than)\s+{_VALOR}",
+            re.I,
+        ),
+        justificativa="O espelho da anterior.",
+        calcular=lambda achado, ctx: _fechamento(achado, ctx, "abaixo"),
+    ),
+    Familia(
+        nome="Preço: toque para baixo",
+        padrao=re.compile(
+            rf"{_ATIVO}.{{0,40}}?\b(?:dips?|falls?|drops?|declines?|sinks?)\s+(?:to|below)\b"
+            rf".{{0,20}}?{_VALOR}",
+            re.I,
+        ),
+        justificativa="O espelho da anterior, com o mínimo corrente da janela.",
+        calcular=lambda achado, ctx: _toque(achado, ctx, "abaixo"),
+    ),
     Familia(
         nome="Fed: alta na reunião",
         padrao=re.compile(r"fed increase interest rates by .* after the .* meeting", re.I),
@@ -377,13 +653,13 @@ FAMILIAS: list[Familia] = [
             "O alvo do Fed é uma série diária no FRED e só se mexe em decisão do "
             "comitê. Contar os dias em que ela subiu conta exatamente as altas."
         ),
-        calcular=lambda _: _reunioes_com(lambda d: d > 0, "reuniões que terminaram em alta"),
+        calcular=lambda _achado, _ctx: _reunioes_com(lambda d: d > 0, "reuniões que terminaram em alta"),
     ),
     Familia(
         nome="Fed: corte na reunião",
         padrao=re.compile(r"fed decrease interest rates by .* after the .* meeting", re.I),
         justificativa="O espelho da anterior, nos dias em que a série caiu.",
-        calcular=lambda _: _reunioes_com(lambda d: d < 0, "reuniões que terminaram em corte"),
+        calcular=lambda _achado, _ctx: _reunioes_com(lambda d: d < 0, "reuniões que terminaram em corte"),
     ),
     Familia(
         nome="Fed: sem mudança na reunião",
@@ -393,13 +669,13 @@ FAMILIAS: list[Familia] = [
             "Vale conferir que os três somam 1 — se não somarem, uma das contas "
             "está contando duas vezes."
         ),
-        calcular=lambda _: _reunioes_sem_mudanca(),
+        calcular=lambda _achado, _ctx: _reunioes_sem_mudanca(),
     ),
     Familia(
         nome="Fed: alguma alta no ano",
         padrao=re.compile(r"fed rate hike in (20\d\d)", re.I),
         justificativa="Anos civis completos com ao menos um evento de alta.",
-        calcular=lambda _: _por_ano(
+        calcular=lambda _achado, _ctx: _por_ano(
             lambda altas, _cortes: altas > 0, "anos com ao menos uma alta do alvo"
         ),
     ),
@@ -407,7 +683,7 @@ FAMILIAS: list[Familia] = [
         nome="Fed: nenhum corte no ano",
         padrao=re.compile(r"no fed rate cuts? happen in (20\d\d)", re.I),
         justificativa="Anos civis completos em que o alvo não caiu nenhuma vez.",
-        calcular=lambda _: _por_ano(
+        calcular=lambda _achado, _ctx: _por_ano(
             lambda _altas, cortes: cortes == 0, "anos sem nenhum corte do alvo"
         ),
     ),
@@ -419,7 +695,7 @@ FAMILIAS: list[Familia] = [
             "21 anos com zero, e a cauda chegando a 11 em 2008. A frequência de um "
             "N específico é pequena para quase todo N, e é isso que a taxa-base diz."
         ),
-        calcular=lambda achado: _por_ano(
+        calcular=lambda achado, _ctx: _por_ano(
             lambda _altas, cortes, alvo=int(achado.group(1)): cortes == alvo,
             f"anos com exatamente {achado.group(1)} corte(s) do alvo",
         ),
@@ -432,7 +708,7 @@ FAMILIAS: list[Familia] = [
             "cauda inteira, e a cauda é onde está quase toda a massa: 2008 teve 11 "
             "cortes sozinho."
         ),
-        calcular=lambda achado: _por_ano(
+        calcular=lambda achado, _ctx: _por_ano(
             lambda _altas, cortes, alvo=int(achado.group(1)): cortes >= alvo,
             f"anos com {achado.group(1)} corte(s) ou mais do alvo",
         ),
@@ -449,7 +725,7 @@ FAMILIAS: list[Familia] = [
             "Ver o bloco 'O NÍVEL do alvo no fim do ano' — frequência histórica do "
             "nível responderia outra pergunta."
         ),
-        calcular=lambda achado: _nivel_no_fim_do_ano(
+        calcular=lambda achado, _ctx: _nivel_no_fim_do_ano(
             float(achado.group(2)), ao_menos=bool(achado.group(1))
         ),
     ),
@@ -460,7 +736,7 @@ FAMILIAS: list[Familia] = [
             "CPI cheio, variação de 12 meses, pico do ano contra o limiar da "
             "pergunta. É a definição que a manchete usa."
         ),
-        calcular=lambda achado: _inflacao_acima(float(achado.group(1))),
+        calcular=lambda achado, _ctx: _inflacao_acima(float(achado.group(1))),
     ),
     Familia(
         nome="Recessão nos EUA no ano",
@@ -469,12 +745,12 @@ FAMILIAS: list[Familia] = [
             "`USREC` é o indicador oficial do NBER, mensal e binário. Um ano "
             "'tem recessão' se qualquer mês dele estiver marcado."
         ),
-        calcular=lambda _: _recessao_no_ano(),
+        calcular=lambda _achado, _ctx: _recessao_no_ano(),
     ),
 ]
 
 
-def taxa_base_de(pergunta: str) -> tuple[Familia, TaxaBase] | None:
+def taxa_base_de(pergunta: str, contexto: Contexto | None = None) -> tuple[Familia, TaxaBase] | None:
     """A primeira família que casar com a pergunta, e a taxa-base dela.
 
     `None` quando nenhuma casa — que é o caso da grande maioria dos mercados do
@@ -486,13 +762,15 @@ def taxa_base_de(pergunta: str) -> tuple[Familia, TaxaBase] | None:
     duas situações são diferentes e o chamador que quiser distingui-las usa
     `explicar`.
     """
-    resultado = explicar(pergunta)
+    resultado = explicar(pergunta, contexto)
     if resultado is None or resultado[1] is None:
         return None
     return resultado[0], resultado[1]
 
 
-def explicar(pergunta: str) -> tuple[Familia, TaxaBase | None, str] | None:
+def explicar(
+    pergunta: str, contexto: Contexto | None = None
+) -> tuple[Familia, TaxaBase | None, str] | None:
     """Como `taxa_base_de`, mas separa "não casou" de "casou e não li".
 
     - `None` — nenhuma família reconhece a pergunta.
@@ -502,12 +780,13 @@ def explicar(pergunta: str) -> tuple[Familia, TaxaBase | None, str] | None:
     """
     if not pergunta:
         return None
+    contexto = contexto or Contexto()
     for familia in FAMILIAS:
         achado = familia.padrao.search(pergunta)
         if not achado:
             continue
         try:
-            return familia, familia.calcular(achado), ""
+            return familia, familia.calcular(achado, contexto), ""
         except SemResolucao as limite:
             return familia, None, f"sem taxa-base: {limite}"
         except fred.FalhaDeLeitura as erro:

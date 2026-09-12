@@ -16,7 +16,7 @@ from __future__ import annotations
 import math
 import sys
 
-from oraculo import calibragem, painel, visual
+from oraculo import calibragem, catalogo, numero, painel, precos, visual
 from oraculo.fontes import polymarket
 
 _falhas: list[str] = []
@@ -211,6 +211,101 @@ conferir(
 conferir(
     visual.haltere(1.4, -0.2)["mercado"] == visual.REGUA,
     "valor fora de [0,1] é preso à régua em vez de desenhar fora do quadro",
+)
+
+# ---------------------------------------------------------------------------
+print("\nNúmero em convenção brasileira")
+# ---------------------------------------------------------------------------
+
+# Os dois defeitos reais que fizeram este módulo existir. Ver o cabeçalho de
+# `oraculo/numero.py`: os dois vieram de `.replace` sobre a FRASE em vez de
+# sobre o número.
+conferir(numero.br(1234567.5) == "1.234.567,50", "ponto no milhar, vírgula no decimal")
+conferir(numero.dinheiro(45000) == "US$ 45.000", "quarenta e cinco mil não vira 'US$ 45,000'")
+conferir(numero.dinheiro(97.26) == "US$ 97,26", "abaixo de mil, o centavo fica")
+conferir(numero.br(None) == "—" and numero.porcento(float("nan")) == "—",
+         "ausência vira travessão, nunca zero")
+conferir(numero.porcento(0.094, 0, sinal=True) == "+9%", "fração vira porcentagem com sinal")
+
+# ---------------------------------------------------------------------------
+print("\nPreço: toque e fechamento são perguntas diferentes")
+# ---------------------------------------------------------------------------
+
+# Série sintética: sobe até 120 no meio de cada janela e volta para 100.
+# "Tocou 120?" é sim; "terminou acima de 120?" é não. É exatamente o caso que a
+# família de toque respondia errado ao pegar "be above $78,000 on September 12"
+# pelo "above" — 34,1% de resposta para um mercado precificado a 5,5%.
+import datetime  # noqa: E402
+
+base = datetime.date(2000, 1, 1)
+dente = []
+for ciclo in range(400):
+    for passo, valor in enumerate((100.0, 110.0, 120.0, 110.0)):
+        dente.append((base + datetime.timedelta(days=ciclo * 4 + passo), valor))
+
+toque = precos.taxa_de_toque(dente, alvo=120.0 * dente[-1][1] / 100.0, horizonte_dias=4)
+fecha = precos.taxa_de_fechamento(dente, alvo=120.0 * dente[-1][1] / 100.0, horizonte_dias=4)
+conferir(
+    toque.valor > fecha.valor,
+    f"tocar é sempre mais provável que terminar lá ({toque.valor:.2f} > {fecha.valor:.2f})",
+)
+
+# O alvo já do lado certo não é pergunta sobre o futuro. Devolver 100% poria a
+# maior discrepância do painel numa pergunta que já venceu.
+try:
+    precos.taxa_de_toque(dente, alvo=1.0, horizonte_dias=4)
+    conferir(False, "alvo já atingido deveria recusar")
+except precos.SemAmostra:
+    conferir(True, "alvo já do lado certo do preço recusa em vez de devolver 100%")
+
+# Horizonte que não cabe na série: recusa em vez de medir sobre duas janelas.
+try:
+    precos.taxa_de_toque(dente, alvo=dente[-1][1] * 3, horizonte_dias=100_000)
+    conferir(False, "horizonte impossível deveria recusar")
+except precos.SemAmostra:
+    conferir(True, "horizonte maior que a série recusa")
+
+# ---------------------------------------------------------------------------
+print("\nCatálogo: leitura do valor e roteamento da família")
+# ---------------------------------------------------------------------------
+
+# A vírgula do Polymarket é separador de MILHAR. Lida como decimal, "$45,000"
+# vira quarenta e cinco dólares — e a taxa-base de "o bitcoin cai para US$ 45"
+# é zero, um zero que pareceria medição.
+conferir(catalogo._para_numero("45,000", None) == 45000.0, "'45,000' é quarenta e cinco mil")
+conferir(catalogo._para_numero("150", "k") == 150000.0, "'150k' é cento e cinquenta mil")
+conferir(catalogo._para_numero("1.5", "M") == 1_500_000.0, "'1.5M' é um milhão e meio")
+
+
+def familia_de(pergunta: str) -> str | None:
+    for familia in catalogo.FAMILIAS:
+        if familia.padrao.search(pergunta):
+            return familia.nome
+    return None
+
+
+conferir(
+    familia_de("Will the price of Bitcoin be above $78,000 on September 12?")
+    == "Preço: acima na data",
+    "'be above X on DATE' vai para a família de FECHAMENTO",
+)
+conferir(
+    familia_de("Will Bitcoin hit $150k by December 31, 2026?") == "Preço: toque para cima",
+    "'hit X by DATE' vai para a família de TOQUE",
+)
+conferir(
+    familia_de("Will Bitcoin dip to $45,000 by December 31, 2026?")
+    == "Preço: toque para baixo",
+    "'dip to X' vai para o toque para baixo",
+)
+conferir(
+    familia_de("Will Crude Oil reach a new all-time high by December 31?")
+    == "Preço: nova máxima histórica",
+    "'new all-time high' casa antes da família de toque genérica",
+)
+conferir(
+    familia_de("Will the U.S. invade Iran before 2027?") is None,
+    "guerra não casa com nenhuma família — não há série que responda",
 )
 
 # ---------------------------------------------------------------------------

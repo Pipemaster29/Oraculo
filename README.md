@@ -1,13 +1,15 @@
 # Oráculo
 
-Compara o que o [Polymarket](https://polymarket.com) precifica hoje com o que os
-dados econômicos registraram — e, antes disso, mede se o preço do mercado merece
-confiança.
+Projeção de preço de **bitcoin, ouro, prata, petróleo, ether e gás**, e de
+**juros, inflação e recessão** — o que o [Polymarket](https://polymarket.com)
+precifica hoje, ao lado do que a história do próprio ativo registrou. E, antes de
+tudo, a medição de se o preço do mercado merece confiança.
 
-**Sem nenhuma chave de API.** Gamma e CLOB do Polymarket para os mercados e o
-histórico de preço; `fredgraph.csv` do FRED para as séries do Fed, do CPI e do
-NBER. Não há `.env`, não há banco, não há serviço pago. O estado inteiro são dois
-arquivos JSON versionados no repositório.
+**Sem nenhuma chave de API.** Gamma e CLOB do Polymarket; `fredgraph.csv` do FRED
+para petróleo, bitcoin, gás e as séries do Fed, do CPI e do NBER; a
+[LBMA](https://www.lbma.org.uk) para ouro e prata, desde 1968. Não há `.env`,
+banco nem serviço pago: o estado inteiro são dois arquivos JSON versionados no
+repositório.
 
 ```bash
 pip install -r requirements.txt
@@ -18,12 +20,29 @@ uvicorn api.index:app --reload    # http://127.0.0.1:8000
 
 ---
 
-## A pergunta que o projeto começou querendo responder
+## A ideia
 
-*Dá para achar mercado de evento mal precificado comparando o preço com a
-frequência histórica?*
+Para "o bitcoin toca US$ 150 mil até 31 de dezembro?" existe uma referência
+histórica quase literal:
 
-A resposta medida é **quase sempre não**, e o projeto passou a ser sobre isso.
+- o bitcoin está em **S₀** hoje;
+- faltam **h** dias até a data;
+- a pergunta é se ele sobe **alvo/S₀** em algum momento desses h dias.
+
+Então o Oráculo varre a série inteira do ativo, pega toda janela de h dias, e
+conta em quantas delas o preço fez esse mesmo movimento. É reamostragem
+empírica: **não supõe distribuição nenhuma**, o que importa muito porque bitcoin
+e petróleo têm cauda gorda, e toda conta que supõe uma normal subestima
+justamente o extremo que estes mercados perguntam.
+
+Esse número vai para a tela ao lado do preço do mercado. Os dois são estimativas
+da mesma probabilidade, feitas de jeitos independentes: o mercado sabe o que é
+específico de agora, a história sabe o que costuma acontecer. A distância entre
+eles é a informação.
+
+**E a pergunta que o projeto começou querendo responder** — *dá para achar
+mercado mal precificado comparando preço com frequência histórica?* — teve
+resposta medida: **quase sempre não**. Está tudo abaixo.
 
 ---
 
@@ -106,23 +125,24 @@ painel não o transforma em recomendação.
 
 Duas telas.
 
-**O painel** põe três números lado a lado para cada mercado econômico aberto:
+**O painel** põe três números lado a lado para cada mercado coberto:
 
-- **preço** — o que o mercado cobra hoje, com dinheiro atrás;
-- **taxa-base** — com que frequência isto aconteceu num período comparável,
-  calculado de uma série do FRED;
+- **preço** — a probabilidade que o mercado atribui hoje;
+- **taxa-base** — a frequência histórica, pela janela de preço acima ou por uma
+  série do FRED;
 - **ajustado** — o preço passado pela curva de confiabilidade medida acima.
 
-**A taxa-base não é previsão, e essa é a ideia mais fácil de entender errado
-aqui.** O Fed subiu juros em 48,8% dos anos desde 1983; isso não quer dizer que a
-chance de alta em 2026 seja 48,8%, porque 2026 não é um ano sorteado do chapéu —
-tem uma inflação medida, um desemprego medido e um comitê que já falou. O mercado
-sabe tudo isso; a taxa-base não sabe nada disso.
+**Para as famílias de calendário, a taxa-base não é previsão — e essa é a ideia
+mais fácil de entender errado aqui.** O Fed subiu juros em 48,8% dos anos desde
+1983; isso não quer dizer que a chance de alta em 2026 seja 48,8%, porque 2026
+não é um ano sorteado do chapéu. Ali a taxa-base serve para dar **escala**: um
+mercado a 0,88 ao lado de uma referência de 0,49 diz *o mercado acha este ano
+quase duas vezes mais propenso a alta que um ano típico dos últimos quarenta*.
 
-Ela serve para dar **escala** ao preço. Um mercado a 0,89 para "alta de juros em
-2026" não diz nada sozinho; ao lado de uma taxa-base de 0,49 ele passa a dizer
-algo concreto: *o mercado acha este ano quase duas vezes mais propenso a alta que
-um ano típico dos últimos quarenta*.
+**Para as famílias de preço a referência é bem mais forte**, porque ela é do
+próprio ativo e no próprio horizonte da pergunta. Continua sem saber nada sobre o
+ciclo em curso — mas "em 14,5% das janelas de 110 dias o bitcoin subiu os 94% que
+levariam a US$ 150 mil" é uma frase sobre o bitcoin, não sobre o calendário.
 
 **A segunda tela é a calibragem**, com os três horizontes lado a lado. Ela vem
 primeiro na ordem de importância: se o mercado é bem calibrado, o preço dele já é
@@ -132,9 +152,36 @@ a melhor previsão disponível e qualquer número ao lado é enfeite.
 
 ## As famílias do catálogo
 
-Casar uma pergunta do Polymarket com uma série do FRED é feito **à mão, uma
-família por vez**, em `oraculo/catalogo.py`. Não há inferência automática e não
-deve haver.
+Casar uma pergunta do Polymarket com uma série é feito **à mão, uma família por
+vez**, em `oraculo/catalogo.py`. Não há inferência automática e não deve haver.
+
+### Preço de ativo
+
+| família | o que responde |
+|---|---|
+| Preço: toque para cima | "hit / reach $X by DATE" — o ativo ENCOSTA no nível em algum momento |
+| Preço: toque para baixo | "dip / fall to $X by DATE" — o mesmo, para baixo |
+| Preço: acima na data | "be above $X **on** DATE" — onde o preço TERMINA |
+| Preço: abaixo na data | o espelho |
+| Preço: nova máxima histórica | o alvo é o maior preço que a série já registrou |
+
+Ativos: bitcoin e ether (`CBBTCUSD`, `CBETHUSD`), WTI e Brent (`DCOILWTICO`
+desde 1986, `DCOILBRENTEU` desde 1987), gás natural (`DHHNGSP`), ouro e prata
+(LBMA, desde 1968).
+
+Alguns números medidos em 12/09/2026, com o bitcoin a US$ 77.276 e 110 dias até
+o fim do ano:
+
+| mercado | preço | história |
+|---|---|---|
+| Bitcoin toca US$ 100 mil | 21,5% | **49,5%** |
+| Bitcoin toca US$ 150 mil | 2,2% | **14,6%** |
+| Bitcoin cai a US$ 45 mil | 9,5% | **9,4%** |
+| Petróleo WTI toca US$ 110 em setembro | 34,5% | **8,7%** |
+| Petróleo faz nova máxima histórica | 14,0% | **4,0%** |
+| Ouro toca US$ 6.000 | 9,5% | **2,9%** |
+
+### Calendário macro
 
 | família | fonte | taxa-base medida |
 |---|---|---|

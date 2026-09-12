@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-12T00:07:04+00:00",
+ "gerado_em": "2026-09-12T01:55:55+00:00",
  "horizonte_da_calibragem": 7,
  "parada_da_colheita": "teto pedido atingido",
  "mercados_lidos": 2100,
@@ -8,11 +8,11 @@
    "id": "2252245",
    "pergunta": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-september-2026-meeting-649",
-   "volume": 27228137.872695006,
-   "liquidez": 812536.3919,
+   "volume": 27425786.345788043,
+   "liquidez": 553775.1198,
    "fim": "2026-09-16T00:00:00+00:00",
-   "dias_para_o_fim": 3.995105211053241,
-   "preco": 0.805,
+   "dias_para_o_fim": 3.919548259675926,
+   "preco": 0.785,
    "familia": "Fed: alta na reunião",
    "taxa_base": 0.25833333333333336,
    "taxa_base_n": 360,
@@ -24,18 +24,18 @@
     "DFEDTARU"
    ],
    "taxa_base_falha": null,
-   "preco_ajustado": 0.8763888888888889,
-   "distancia": 0.5466666666666666
+   "preco_ajustado": 0.8292083333333333,
+   "distancia": 0.5266666666666666
   },
   {
    "id": "616902",
    "pergunta": "Will no Fed rate cuts happen in 2026?",
    "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026",
-   "volume": 8271000.483782001,
-   "liquidez": 220834.82135,
+   "volume": 8277564.451366004,
+   "liquidez": 248535.79789,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510519457176,
-   "preco": 0.9335,
+   "dias_para_o_fim": 109.91954819775462,
+   "preco": 0.9345,
    "familia": "Fed: nenhum corte no ano",
    "taxa_base": 0.4883720930232558,
    "taxa_base_n": 43,
@@ -47,18 +47,18 @@
     "DFEDTARU"
    ],
    "taxa_base_falha": null,
-   "preco_ajustado": 0.9306098901098904,
-   "distancia": 0.4451279069767442
+   "preco_ajustado": 0.9316098901098904,
+   "distancia": 0.4461279069767442
   },
   {
    "id": "908713",
    "pergunta": "Fed rate hike in 2026?",
    "url": "https://polymarket.com/event/fed-rate-hike-in-2026",
-   "volume": 9051054.110915992,
-   "liquidez": 106161.1575,
+   "volume": 9054869.258979993,
+   "liquidez": 109977.0826,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99510519699074,
-   "preco": 0.89,
+   "dias_para_o_fim": 87.91954820447916,
+   "preco": 0.88,
    "familia": "Fed: alguma alta no ano",
    "taxa_base": 0.4883720930232558,
    "taxa_base_n": 43,
@@ -70,18 +70,18 @@
     "DFEDTARU"
    ],
    "taxa_base_falha": null,
-   "preco_ajustado": 0.9613888888888888,
-   "distancia": 0.4016279069767442
+   "preco_ajustado": 0.9513888888888888,
+   "distancia": 0.3916279069767442
   },
   {
    "id": "3215008",
    "pergunta": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-   "volume": 185467.27621100002,
-   "liquidez": 55121.4741,
+   "volume": 186498.326211,
+   "liquidez": 73740.3002,
    "fim": "2026-12-09T23:59:00+00:00",
-   "dias_para_o_fim": 88.99439752005786,
-   "preco": 0.565,
+   "dias_para_o_fim": 88.91880319070602,
+   "preco": 0.57,
    "familia": "Fed: alta na reunião",
    "taxa_base": 0.25833333333333336,
    "taxa_base_n": 360,
@@ -93,18 +93,62 @@
     "DFEDTARU"
    ],
    "taxa_base_falha": null,
-   "preco_ajustado": 0.510038043478261,
-   "distancia": 0.3066666666666666
+   "preco_ajustado": 0.5150380434782609,
+   "distancia": 0.3116666666666666
+  },
+  {
+   "id": "3954346",
+   "pergunta": "Will WTI Crude Oil (WTI) hit (HIGH) $105 in September?",
+   "url": "https://polymarket.com/event/will-wti-reach-105-in-september-2026",
+   "volume": 334013.09895599994,
+   "liquidez": 13539.15389,
+   "fim": "2026-10-01T03:59:59.999000+00:00",
+   "dias_para_o_fim": 19.086170811006944,
+   "preco": 0.5365,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.24171311234966267,
+   "taxa_base_n": 786,
+   "taxa_base_janela": "1986–2026, 10.227 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o petróleo WTI subiu até US$ 105,00 (+8% a partir dos US$ 97,26 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 10.227 janelas mas só 786 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "DCOILWTICO"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.48153804347826096,
+   "distancia": 0.29478688765033734
+  },
+  {
+   "id": "4250805",
+   "pergunta": "Will the price of Bitcoin be above $78,000 on September 12?",
+   "url": "https://polymarket.com/event/bitcoin-above-78k-on-september-12-2026",
+   "volume": 131740.719439,
+   "liquidez": 37133.6347,
+   "fim": "2026-09-12T16:00:00+00:00",
+   "dias_para_o_fim": 0.5861637906597222,
+   "preco": 0.055,
+   "familia": "Preço: acima na data",
+   "taxa_base": 0.34052027185376144,
+   "taxa_base_n": 4267,
+   "taxa_base_janela": "2014–2026, 4.267 janelas de 1 dia",
+   "taxa_base_descricao": "janelas de 1 dia em que o bitcoin terminou acima de US$ 78.000 (+1% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É a PONTA da janela, não o caminho: encostar no nível e voltar resolve este mercado em NÃO. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.267 janelas mas só 4267 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.06586314760508308,
+   "distancia": -0.28552027185376144
   },
   {
    "id": "2252244",
    "pergunta": "Will there be no change in Fed interest rates after the September 2026 meeting?",
    "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-september-2026-meeting-615",
-   "volume": 34311800.63648006,
-   "liquidez": 686831.208,
+   "volume": 34672964.30096409,
+   "liquidez": 839477.4154,
    "fim": "2026-09-16T00:00:00+00:00",
-   "dias_para_o_fim": 3.995105213923611,
-   "preco": 0.195,
+   "dias_para_o_fim": 3.9195482676157405,
+   "preco": 0.205,
    "familia": "Fed: sem mudança na reunião",
    "taxa_base": 0.4888888888888889,
    "taxa_base_n": 360,
@@ -116,17 +160,61 @@
     "DFEDTARU"
    ],
    "taxa_base_falha": null,
-   "preco_ajustado": 0.28169892473118285,
-   "distancia": -0.29388888888888887
+   "preco_ajustado": 0.2707465753424658,
+   "distancia": -0.28388888888888886
+  },
+  {
+   "id": "701496",
+   "pergunta": "Will Bitcoin reach $100,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-100000-by-december-31-2026-571-361-361",
+   "volume": 3301942.574483001,
+   "liquidez": 74177.182,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12787538902778,
+   "preco": 0.215,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.4947089947089947,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 100.000 (+29% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.28074657534246583,
+   "distancia": -0.2797089947089947
+  },
+  {
+   "id": "3866512",
+   "pergunta": "Will WTI Crude Oil (WTI) hit (HIGH) $110 in September?",
+   "url": "https://polymarket.com/event/will-wti-reach-110-in-september-2026",
+   "volume": 341234.554704,
+   "liquidez": 22502.3571,
+   "fim": "2026-10-01T03:59:59.999000+00:00",
+   "dias_para_o_fim": 19.0861775396875,
+   "preco": 0.345,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.08702454287669893,
+   "taxa_base_n": 786,
+   "taxa_base_janela": "1986–2026, 10.227 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o petróleo WTI subiu até US$ 110,00 (+13% a partir dos US$ 97,26 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 10.227 janelas mas só 786 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "DCOILWTICO"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.4323653846153845,
+   "distancia": 0.25797545712330106
   },
   {
    "id": "2252242",
    "pergunta": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-september-2026-meeting-863",
-   "volume": 15582417.517784998,
-   "liquidez": 4131528.10627,
+   "volume": 15635317.517785002,
+   "liquidez": 4146131.31086,
    "fim": "2026-09-16T00:00:00+00:00",
-   "dias_para_o_fim": 3.9951052055671297,
+   "dias_para_o_fim": 3.9195482392592593,
    "preco": 0.0005,
    "familia": "Fed: corte na reunião",
    "taxa_base": 0.25277777777777777,
@@ -146,11 +234,11 @@
    "id": "2252246",
    "pergunta": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-september-2026-meeting-664",
-   "volume": 18484275.87169401,
-   "liquidez": 1152324.68736,
+   "volume": 18721320.478511013,
+   "liquidez": 1391059.64702,
    "fim": "2026-09-16T00:00:00+00:00",
-   "dias_para_o_fim": 3.99510520755787,
-   "preco": 0.0065,
+   "dias_para_o_fim": 3.9195482460995374,
+   "preco": 0.0075,
    "familia": "Fed: alta na reunião",
    "taxa_base": 0.25833333333333336,
    "taxa_base_n": 360,
@@ -162,17 +250,17 @@
     "DFEDTARU"
    ],
    "taxa_base_falha": null,
-   "preco_ajustado": 0.017363147605083073,
-   "distancia": -0.25183333333333335
+   "preco_ajustado": 0.018363147605083074,
+   "distancia": -0.25083333333333335
   },
   {
    "id": "2589814",
    "pergunta": "Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-october-2026-meeting-20260617190324033",
-   "volume": 192459.18399600007,
-   "liquidez": 114299.07481,
+   "volume": 192570.29399600005,
+   "liquidez": 139291.84385,
    "fim": "2026-10-28T23:59:00+00:00",
-   "dias_para_o_fim": 46.994397523449074,
+   "dias_para_o_fim": 46.918803228738426,
    "preco": 0.0085,
    "familia": "Fed: alta na reunião",
    "taxa_base": 0.25833333333333336,
@@ -189,13 +277,35 @@
    "distancia": -0.24983333333333335
   },
   {
+   "id": "701495",
+   "pergunta": "Will Bitcoin reach $110,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-110000-by-december-31-2026-658-339-969",
+   "volume": 1695188.7161920003,
+   "liquidez": 99667.2058,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12786465925926,
+   "preco": 0.135,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.38431938431938434,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 110.000 (+42% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.22169892473118286,
+   "distancia": -0.24931938431938433
+  },
+  {
    "id": "2252243",
    "pergunta": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-25-bps-after-the-september-2026-meeting-586",
-   "volume": 37867753.46321404,
-   "liquidez": 2642494.27988,
+   "volume": 37888588.500542045,
+   "liquidez": 2723513.01905,
    "fim": "2026-09-16T00:00:00+00:00",
-   "dias_para_o_fim": 3.995113633587963,
+   "dias_para_o_fim": 3.9195625753819447,
    "preco": 0.0035,
    "familia": "Fed: corte na reunião",
    "taxa_base": 0.25277777777777777,
@@ -215,10 +325,10 @@
    "id": "2589810",
    "pergunta": "Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-october-2026-meeting-20260617190324029",
-   "volume": 289739.7628509999,
-   "liquidez": 125693.89718,
+   "volume": 289739.76285099995,
+   "liquidez": 141379.04698,
    "fim": "2026-10-28T23:59:00+00:00",
-   "dias_para_o_fim": 46.994397556631945,
+   "dias_para_o_fim": 46.918804347881945,
    "preco": 0.005,
    "familia": "Fed: corte na reunião",
    "taxa_base": 0.25277777777777777,
@@ -238,10 +348,10 @@
    "id": "3215005",
    "pergunta": "Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-december-2026-meeting-20260729232808633",
-   "volume": 101013.63755599997,
-   "liquidez": 97144.11702,
+   "volume": 101408.68755599998,
+   "liquidez": 112463.90193,
    "fim": "2026-12-09T23:59:00+00:00",
-   "dias_para_o_fim": 88.9943974627662,
+   "dias_para_o_fim": 88.91880197671296,
    "preco": 0.01,
    "familia": "Fed: corte na reunião",
    "taxa_base": 0.25277777777777777,
@@ -261,10 +371,10 @@
    "id": "2589811",
    "pergunta": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324030",
-   "volume": 591057.2868409998,
-   "liquidez": 121950.68912,
+   "volume": 591182.620175,
+   "liquidez": 166801.23152,
    "fim": "2026-10-28T23:59:00+00:00",
-   "dias_para_o_fim": 46.99440068508102,
+   "dias_para_o_fim": 46.91881719780093,
    "preco": 0.0145,
    "familia": "Fed: corte na reunião",
    "taxa_base": 0.25277777777777777,
@@ -281,14 +391,36 @@
    "distancia": -0.23827777777777776
   },
   {
+   "id": "701494",
+   "pergunta": "Will Bitcoin reach $120,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-120000-by-december-31-2026-625-425-562",
+   "volume": 1759756.7795160003,
+   "liquidez": 96883.6912,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12786987378473,
+   "preco": 0.085,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.32202982202982205,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 120.000 (+55% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.09586314760508308,
+   "distancia": -0.23702982202982203
+  },
+  {
    "id": "3215009",
    "pergunta": "Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-december-2026-meeting-20260729232808637",
-   "volume": 102750.457263,
-   "liquidez": 76945.63219,
+   "volume": 103145.50726299999,
+   "liquidez": 59056.42021,
    "fim": "2026-12-09T23:59:00+00:00",
-   "dias_para_o_fim": 88.99439746523147,
-   "preco": 0.0225,
+   "dias_para_o_fim": 88.9188020854861,
+   "preco": 0.022,
    "familia": "Fed: alta na reunião",
    "taxa_base": 0.25833333333333336,
    "taxa_base_n": 360,
@@ -300,17 +432,61 @@
     "DFEDTARU"
    ],
    "taxa_base_falha": null,
-   "preco_ajustado": 0.03336314760508308,
-   "distancia": -0.23583333333333337
+   "preco_ajustado": 0.032863147605083076,
+   "distancia": -0.23633333333333337
+  },
+  {
+   "id": "2467206",
+   "pergunta": "Will Bitcoin reach $95,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-95000-by-december-31-2026-from-june-8",
+   "volume": 611844.6444459998,
+   "liquidez": 55994.701,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784515377315,
+   "preco": 0.325,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.557960557960558,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 95.000 (+23% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.4123653846153845,
+   "distancia": -0.23296055796055798
+  },
+  {
+   "id": "3387867",
+   "pergunta": "Will Ethereum dip to $1,750 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-dip-to-1750-by-december-31-2026-20260806184731889",
+   "volume": 495867.9804159998,
+   "liquidez": 45314.1781,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.1278447953125,
+   "preco": 0.155,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.38467852257181945,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum caiu até US$ 1.750 (-30% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.24169892473118285,
+   "distancia": -0.22967852257181945
   },
   {
    "id": "3215006",
    "pergunta": "Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808634",
-   "volume": 153292.495702,
-   "liquidez": 84691.73159,
+   "volume": 153746.29570200003,
+   "liquidez": 110739.04032,
    "fim": "2026-12-09T23:59:00+00:00",
-   "dias_para_o_fim": 88.99439750494213,
+   "dias_para_o_fim": 88.91880273141204,
    "preco": 0.0295,
    "familia": "Fed: corte na reunião",
    "taxa_base": 0.25277777777777777,
@@ -327,13 +503,35 @@
    "distancia": -0.22327777777777777
   },
   {
+   "id": "701548",
+   "pergunta": "Will Ethereum reach $4,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-4000-by-december-31-2026",
+   "volume": 407214.5356150002,
+   "liquidez": 45462.2443,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.1278444087963,
+   "preco": 0.165,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.38303693570451436,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 4.000 (+59% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.2516989247311828,
+   "distancia": -0.21803693570451435
+  },
+  {
    "id": "2241741",
    "pergunta": "Will inflation reach more than 4.5% in 2026?",
    "url": "https://polymarket.com/event/will-inflation-reach-more-than-4pt5-in-2026",
-   "volume": 197964.69001900006,
-   "liquidez": 6308.7746,
+   "volume": 197964.690019,
+   "liquidez": 9648.0961,
    "fim": "2027-01-01T04:59:00+00:00",
-   "dias_para_o_fim": 111.20273086068288,
+   "dias_para_o_fim": 111.1271366082986,
    "preco": 0.13,
    "familia": "Inflação acima de um limiar no ano",
    "taxa_base": 0.34615384615384615,
@@ -349,13 +547,35 @@
    "distancia": -0.21615384615384614
   },
   {
+   "id": "3865999",
+   "pergunta": "Will Ethereum dip to $2,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-dip-to-2000-by-december-31-2026-from-august-24",
+   "volume": 282007.1905549999,
+   "liquidez": 26723.133,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12783211884259,
+   "preco": 0.295,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.5088919288645691,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum caiu até US$ 2.000 (-21% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.3607465753424658,
+   "distancia": -0.21389192886456915
+  },
+  {
    "id": "680951",
    "pergunta": "Will inflation reach more than 5% in 2026?",
    "url": "https://polymarket.com/event/will-inflation-reach-more-than-5-in-2026-282-763",
    "volume": 323630.82634899986,
-   "liquidez": 10344.006,
+   "liquidez": 11615.4772,
    "fim": "2027-01-01T04:59:00+00:00",
-   "dias_para_o_fim": 111.20273397905092,
+   "dias_para_o_fim": 111.12714291337964,
    "preco": 0.085,
    "familia": "Inflação acima de um limiar no ano",
    "taxa_base": 0.2948717948717949,
@@ -371,13 +591,79 @@
    "distancia": -0.20987179487179486
   },
   {
+   "id": "701493",
+   "pergunta": "Will Bitcoin reach $130,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-130000-by-december-31-2026-756-151-855",
+   "volume": 1338155.201824,
+   "liquidez": 113313.9235,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12785877773148,
+   "preco": 0.0535,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.25901875901875904,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 130.000 (+68% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.06436314760508308,
+   "distancia": -0.20551875901875905
+  },
+  {
+   "id": "701547",
+   "pergunta": "Will Ethereum reach $4,500 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-4500-by-december-31-2026",
+   "volume": 350587.4716969999,
+   "liquidez": 65632.1231,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784428472223,
+   "preco": 0.095,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.30013679890560874,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 4.500 (+79% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.10586314760508307,
+   "distancia": -0.20513679890560874
+  },
+  {
+   "id": "701549",
+   "pergunta": "Will Ethereum reach $3,500 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-3500-by-december-31-2026",
+   "volume": 650771.3228250004,
+   "liquidez": 64999.8339,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.1278453355787,
+   "preco": 0.285,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.4883720930232558,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 3.500 (+39% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.3507465753424658,
+   "distancia": -0.20337209302325582
+  },
+  {
    "id": "609655",
    "pergunta": "US recession by end of 2026?",
    "url": "https://polymarket.com/event/us-recession-by-end-of-2026",
-   "volume": 1743043.1103440004,
-   "liquidez": 15370.5833,
+   "volume": 1743043.110344,
+   "liquidez": 15473.6944,
    "fim": "2027-01-31T00:00:00+00:00",
-   "dias_para_o_fim": 140.99510514778933,
+   "dias_para_o_fim": 140.91953646471063,
    "preco": 0.07,
    "familia": "Recessão nos EUA no ano",
    "taxa_base": 0.2692307692307692,
@@ -393,14 +679,36 @@
    "distancia": -0.1992307692307692
   },
   {
+   "id": "1345531",
+   "pergunta": "Will Bitcoin reach $90,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-90000-by-december-31-2026-113-862-581-343",
+   "volume": 1865313.1779130003,
+   "liquidez": 75717.6116,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.1278699512037,
+   "preco": 0.445,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.6378066378066378,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 90.000 (+16% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.42655319148936155,
+   "distancia": -0.19280663780663782
+  },
+  {
    "id": "1168142",
    "pergunta": "Will the upper bound of the target federal funds rate be ≥ 4.5% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-4pt5-at-the-end-of-2026-139",
-   "volume": 2410410.248418,
-   "liquidez": 9985.91471,
+   "volume": 2410410.2484179996,
+   "liquidez": 9971.90386,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99510517045138,
-   "preco": 0.113,
+   "dias_para_o_fim": 87.9195368610764,
+   "preco": 0.1125,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": 0.3023255813953488,
    "taxa_base_n": 43,
@@ -412,18 +720,194 @@
     "DFEDTARU"
    ],
    "taxa_base_falha": null,
-   "preco_ajustado": 0.19969892473118284,
-   "distancia": -0.18932558139534883
+   "preco_ajustado": 0.19919892473118284,
+   "distancia": -0.18982558139534883
+  },
+  {
+   "id": "4250803",
+   "pergunta": "Will the price of Bitcoin be above $76,000 on September 12?",
+   "url": "https://polymarket.com/event/bitcoin-above-76k-on-september-12-2026",
+   "volume": 120115.29537099999,
+   "liquidez": 37276.56638,
+   "fim": "2026-09-12T16:00:00+00:00",
+   "dias_para_o_fim": 0.5861636012962963,
+   "preco": 0.9735,
+   "familia": "Preço: acima na data",
+   "taxa_base": 0.7947035387860324,
+   "taxa_base_n": 4267,
+   "taxa_base_janela": "2014–2026, 4.267 janelas de 1 dia",
+   "taxa_base_descricao": "janelas de 1 dia em que o bitcoin terminou acima de US$ 76.000 (-2% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É a PONTA da janela, não o caminho: encostar no nível e voltar resolve este mercado em NÃO. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.267 janelas mas só 4267 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.9706098901098904,
+   "distancia": 0.17879646121396764
+  },
+  {
+   "id": "4052418",
+   "pergunta": "Will Bitcoin reach $87,500 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-87pt5k-in-september-2026",
+   "volume": 166352.55138199998,
+   "liquidez": 71752.681,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086164155694444,
+   "preco": 0.135,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.30218875029418685,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin subiu até US$ 87.500 (+13% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.22169892473118286,
+   "distancia": -0.16718875029418684
+  },
+  {
+   "id": "4035901",
+   "pergunta": "Will WTI Crude Oil (WTI) hit (HIGH) $115 in September?",
+   "url": "https://polymarket.com/event/will-wti-reach-115-in-september-2026",
+   "volume": 245095.51224199997,
+   "liquidez": 25101.17783,
+   "fim": "2026-10-01T03:59:59.999000+00:00",
+   "dias_para_o_fim": 19.086165000069446,
+   "preco": 0.2,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.034223134839151265,
+   "taxa_base_n": 786,
+   "taxa_base_janela": "1986–2026, 10.227 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o petróleo WTI subiu até US$ 115,00 (+18% a partir dos US$ 97,26 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 10.227 janelas mas só 786 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "DCOILWTICO"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.2657465753424658,
+   "distancia": 0.16577686516084875
+  },
+  {
+   "id": "701546",
+   "pergunta": "Will Ethereum reach $5,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-5000-by-december-31-2026",
+   "volume": 473883.2710760001,
+   "liquidez": 62280.42841,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784471787037,
+   "preco": 0.0635,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.22681258549931602,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 5.000 (+99% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.07436314760508307,
+   "distancia": -0.16331258549931602
+  },
+  {
+   "id": "3866000",
+   "pergunta": "Will Ethereum dip to $2,250 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-dip-to-2250-by-december-31-2026",
+   "volume": 467544.60054499994,
+   "liquidez": 25928.5688,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.1278446462963,
+   "preco": 0.525,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.6829001367989056,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum caiu até US$ 2.250 (-11% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.470038043478261,
+   "distancia": -0.15790013679890558
+  },
+  {
+   "id": "4052417",
+   "pergunta": "Will Bitcoin reach $90,000 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-90k-in-september-2026",
+   "volume": 190367.17979499997,
+   "liquidez": 74077.3954,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.08616433634259,
+   "preco": 0.085,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.2428806778065427,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin subiu até US$ 90.000 (+16% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.09586314760508308,
+   "distancia": -0.1578806778065427
+  },
+  {
+   "id": "4052419",
+   "pergunta": "Will Bitcoin reach $85,000 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-85k-in-september-2026",
+   "volume": 373537.3622869998,
+   "liquidez": 60233.8936,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086177664027776,
+   "preco": 0.235,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.38950341256766297,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin subiu até US$ 85.000 (+10% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.3007465753424658,
+   "distancia": -0.15450341256766298
+  },
+  {
+   "id": "4052448",
+   "pergunta": "Will Ethereum reach $3,000 in September?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-3000-in-september-2026",
+   "volume": 64861.08040199999,
+   "liquidez": 38688.2379,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.08616219744213,
+   "preco": 0.14,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.29276754737123034,
+   "taxa_base_n": 197,
+   "taxa_base_janela": "2016–2026, 3.747 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o ethereum subiu até US$ 3.000 (+19% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.747 janelas mas só 197 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.22669892473118286,
+   "distancia": -0.15276754737123033
   },
   {
    "id": "680952",
    "pergunta": "Will inflation reach more than 6% in 2026?",
    "url": "https://polymarket.com/event/will-inflation-reach-more-than-6-in-2026-978-634",
-   "volume": 68010.63263600004,
-   "liquidez": 3475.92279,
+   "volume": 68010.63263600002,
+   "liquidez": 7475.77448,
    "fim": "2027-01-01T04:59:00+00:00",
-   "dias_para_o_fim": 111.20273074887731,
-   "preco": 0.069,
+   "dias_para_o_fim": 111.12713446642361,
+   "preco": 0.0655,
    "familia": "Inflação acima de um limiar no ano",
    "taxa_base": 0.21794871794871795,
    "taxa_base_n": 78,
@@ -434,17 +918,105 @@
     "CPIAUCSL"
    ],
    "taxa_base_falha": null,
-   "preco_ajustado": 0.07986314760508308,
-   "distancia": -0.14894871794871795
+   "preco_ajustado": 0.07636314760508307,
+   "distancia": -0.15244871794871795
+  },
+  {
+   "id": "4052416",
+   "pergunta": "Will Bitcoin reach $92,500 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-92pt5k-in-september-2026",
+   "volume": 115563.09368299994,
+   "liquidez": 91119.7041,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086163538761575,
+   "preco": 0.045,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.19698752647681808,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin subiu até US$ 92.500 (+20% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.05586314760508307,
+   "distancia": -0.15198752647681807
+  },
+  {
+   "id": "4052449",
+   "pergunta": "Will Ethereum reach $2,900 in September?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-2900-in-september-2026",
+   "volume": 75978.65802,
+   "liquidez": 44149.5287,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086162631967593,
+   "preco": 0.215,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.35895382973045104,
+   "taxa_base_n": 197,
+   "taxa_base_janela": "2016–2026, 3.747 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o ethereum subiu até US$ 2.900 (+15% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.747 janelas mas só 197 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.28074657534246583,
+   "distancia": -0.14395382973045104
+  },
+  {
+   "id": "701492",
+   "pergunta": "Will Bitcoin reach $140,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-140000-by-december-31-2026-131-829-299",
+   "volume": 1148758.771222,
+   "liquidez": 78546.90309,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.1278584092477,
+   "preco": 0.0435,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.18614718614718614,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 140.000 (+81% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.05436314760508307,
+   "distancia": -0.14264718614718613
+  },
+  {
+   "id": "4052446",
+   "pergunta": "Will Ethereum reach $3,200 in September?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-3200-in-september-2026",
+   "volume": 128905.00344599997,
+   "liquidez": 58089.57502,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086163710462962,
+   "preco": 0.0595,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.19962636776087536,
+   "taxa_base_n": 197,
+   "taxa_base_janela": "2016–2026, 3.747 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o ethereum subiu até US$ 3.200 (+27% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.747 janelas mas só 197 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.07036314760508307,
+   "distancia": -0.14012636776087536
   },
   {
    "id": "616905",
    "pergunta": "Will 3 Fed rate cuts happen in 2026?",
    "url": "https://polymarket.com/event/will-3-fed-rate-cuts-happen-in-2026",
-   "volume": 2827991.3548099995,
-   "liquidez": 248165.05392,
+   "volume": 2827991.35481,
+   "liquidez": 264369.16832,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510517484954,
+   "dias_para_o_fim": 109.9195418956713,
    "preco": 0.0045,
    "familia": "Fed: exatamente N cortes no ano",
    "taxa_base": 0.13953488372093023,
@@ -461,13 +1033,101 @@
    "distancia": -0.13503488372093023
   },
   {
+   "id": "2467207",
+   "pergunta": "Will Bitcoin reach $85,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-85000-by-december-31-2026-from-june-8",
+   "volume": 725194.5700879998,
+   "liquidez": 63628.7902,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784544210648,
+   "preco": 0.625,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.7580567580567581,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 85.000 (+10% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.6558289473684211,
+   "distancia": -0.1330567580567581
+  },
+  {
+   "id": "4052420",
+   "pergunta": "Will Bitcoin reach $82,500 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-82pt5k-in-september-2026",
+   "volume": 451316.270991,
+   "liquidez": 72738.927,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086177823865743,
+   "preco": 0.385,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.5177688867968934,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin subiu até US$ 82.500 (+7% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.4723653846153845,
+   "distancia": -0.13276888679689336
+  },
+  {
+   "id": "701545",
+   "pergunta": "Will Ethereum reach $5,500 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-5500-by-december-31-2026",
+   "volume": 281688.99390199996,
+   "liquidez": 66185.0389,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12783205796296,
+   "preco": 0.0445,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.17455540355677154,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 5.500 (+119% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.05536314760508307,
+   "distancia": -0.13005540355677153
+  },
+  {
+   "id": "4052450",
+   "pergunta": "Will Ethereum reach $2,800 in September?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-2800-in-september-2026",
+   "volume": 73946.73812099999,
+   "liquidez": 40257.1277,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086162569398148,
+   "preco": 0.315,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.4411529223378703,
+   "taxa_base_n": 197,
+   "taxa_base_janela": "2016–2026, 3.747 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o ethereum subiu até US$ 2.800 (+11% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.747 janelas mas só 197 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.4023653846153845,
+   "distancia": -0.1261529223378703
+  },
+  {
    "id": "2589812",
    "pergunta": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031",
-   "volume": 295817.22381999996,
-   "liquidez": 214543.579,
+   "volume": 295869.5438199999,
+   "liquidez": 271639.8329,
    "fim": "2026-10-28T23:59:00+00:00",
-   "dias_para_o_fim": 46.99439755803241,
+   "dias_para_o_fim": 46.918804400011574,
    "preco": 0.615,
    "familia": "Fed: sem mudança na reunião",
    "taxa_base": 0.4888888888888889,
@@ -484,13 +1144,101 @@
    "distancia": 0.12611111111111112
   },
   {
+   "id": "573656",
+   "pergunta": "Will Bitcoin hit $150k by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-hit-150k-by-december-31-2026",
+   "volume": 2826668.252782001,
+   "liquidez": 75044.05904,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12787522809028,
+   "preco": 0.0225,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.14622414622414623,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 150.000 (+94% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.03336314760508308,
+   "distancia": -0.12372414622414624
+  },
+  {
+   "id": "3866511",
+   "pergunta": "Will WTI Crude Oil (WTI) hit (HIGH) $120 in September?",
+   "url": "https://polymarket.com/event/will-wti-reach-120-in-september-2026",
+   "volume": 241777.098189,
+   "liquidez": 57726.86941,
+   "fim": "2026-10-01T03:59:59.999000+00:00",
+   "dias_para_o_fim": 19.086164928981482,
+   "preco": 0.135,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.017307128190085067,
+   "taxa_base_n": 786,
+   "taxa_base_janela": "1986–2026, 10.227 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o petróleo WTI subiu até US$ 120,00 (+23% a partir dos US$ 97,26 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 10.227 janelas mas só 786 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "DCOILWTICO"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.22169892473118286,
+   "distancia": 0.11769287180991495
+  },
+  {
+   "id": "4052445",
+   "pergunta": "Will Ethereum reach $3,300 in September?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-3300-in-september-2026",
+   "volume": 165538.35016299997,
+   "liquidez": 61542.85114,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086164122696758,
+   "preco": 0.049,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.1659994662396584,
+   "taxa_base_n": 197,
+   "taxa_base_janela": "2016–2026, 3.747 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o ethereum subiu até US$ 3.300 (+31% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.747 janelas mas só 197 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.05986314760508307,
+   "distancia": -0.11699946623965839
+  },
+  {
+   "id": "701491",
+   "pergunta": "Will Bitcoin reach $150,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-150000-by-december-31-2026-557-246-971",
+   "volume": 1171184.6831450004,
+   "liquidez": 86245.97949,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12785848092592,
+   "preco": 0.0295,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.14622414622414623,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 150.000 (+94% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.04036314760508307,
+   "distancia": -0.11672414622414623
+  },
+  {
    "id": "2589813",
    "pergunta": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
-   "volume": 367780.51099500014,
-   "liquidez": 145618.9639,
+   "volume": 367780.510995,
+   "liquidez": 197517.3829,
    "fim": "2026-10-28T23:59:00+00:00",
-   "dias_para_o_fim": 46.99440065371528,
+   "dias_para_o_fim": 46.9188165175463,
    "preco": 0.375,
    "familia": "Fed: alta na reunião",
    "taxa_base": 0.25833333333333336,
@@ -507,14 +1255,58 @@
    "distancia": 0.11666666666666664
   },
   {
+   "id": "4052415",
+   "pergunta": "Will Bitcoin reach $95,000 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-95k-in-september-2026",
+   "volume": 260714.57624899998,
+   "liquidez": 125648.99693,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.08616520909722,
+   "preco": 0.0405,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.15509531654506942,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin subiu até US$ 95.000 (+23% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.05136314760508308,
+   "distancia": -0.11459531654506941
+  },
+  {
+   "id": "4250807",
+   "pergunta": "Will the price of Bitcoin be above $80,000 on September 12?",
+   "url": "https://polymarket.com/event/bitcoin-above-80k-on-september-12-2026",
+   "volume": 117246.66303299998,
+   "liquidez": 38713.83265,
+   "fim": "2026-09-12T16:00:00+00:00",
+   "dias_para_o_fim": 0.5861635567939815,
+   "preco": 0.006,
+   "familia": "Preço: acima na data",
+   "taxa_base": 0.11600656198734474,
+   "taxa_base_n": 4267,
+   "taxa_base_janela": "2014–2026, 4.267 janelas de 1 dia",
+   "taxa_base_descricao": "janelas de 1 dia em que o bitcoin terminou acima de US$ 80.000 (+4% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É a PONTA da janela, não o caminho: encostar no nível e voltar resolve este mercado em NÃO. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.267 janelas mas só 4267 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.016863147605083076,
+   "distancia": -0.11000656198734474
+  },
+  {
    "id": "616904",
    "pergunta": "Will 2 Fed rate cuts happen in 2026?",
    "url": "https://polymarket.com/event/will-2-fed-rate-cuts-happen-in-2026",
-   "volume": 3057840.742975999,
-   "liquidez": 103918.92329,
+   "volume": 3058099.8338859994,
+   "liquidez": 122270.96507,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510517799767,
-   "preco": 0.0095,
+   "dias_para_o_fim": 109.91954190260417,
+   "preco": 0.01,
    "familia": "Fed: exatamente N cortes no ano",
    "taxa_base": 0.11627906976744186,
    "taxa_base_n": 43,
@@ -526,17 +1318,193 @@
     "DFEDTARU"
    ],
    "taxa_base_falha": null,
-   "preco_ajustado": 0.020363147605083072,
-   "distancia": -0.10677906976744186
+   "preco_ajustado": 0.020863147605083072,
+   "distancia": -0.10627906976744186
+  },
+  {
+   "id": "701489",
+   "pergunta": "Will Bitcoin reach $170,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-170000-by-december-31-2026-335-688-943",
+   "volume": 455636.2633810001,
+   "liquidez": 94285.43467,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784456487269,
+   "preco": 0.0155,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.11832611832611832,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 170.000 (+120% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.026363147605083074,
+   "distancia": -0.10282611832611832
+  },
+  {
+   "id": "701544",
+   "pergunta": "Will Ethereum reach $6,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-6000-by-december-31-2026",
+   "volume": 329503.308504,
+   "liquidez": 72957.84888,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12783742182872,
+   "preco": 0.043,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.14309165526675788,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 6.000 (+138% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.05386314760508307,
+   "distancia": -0.10009165526675788
+  },
+  {
+   "id": "4052414",
+   "pergunta": "Will Bitcoin reach $97,500 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-97pt5k-in-september-2026",
+   "volume": 128917.78505599998,
+   "liquidez": 104900.94834,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.08616374003472,
+   "preco": 0.0255,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.12544128030124735,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin subiu até US$ 97.500 (+26% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.03636314760508307,
+   "distancia": -0.09994128030124735
+  },
+  {
+   "id": "4319476",
+   "pergunta": "Will Bitcoin dip to $74,000 September 7-13?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-74k-september-7-13-2026",
+   "volume": 115512.68124600002,
+   "liquidez": 35137.79618,
+   "fim": "2026-09-14T04:00:00+00:00",
+   "dias_para_o_fim": 2.0861635094560183,
+   "preco": 0.0365,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.13619315518049696,
+   "taxa_base_n": 2133,
+   "taxa_base_janela": "2014–2026, 4.266 janelas de 2 dias",
+   "taxa_base_descricao": "janelas de 2 dias em que o bitcoin caiu até US$ 74.000 (-4% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.266 janelas mas só 2133 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.047363147605083075,
+   "distancia": -0.09969315518049696
+  },
+  {
+   "id": "2126461",
+   "pergunta": "Will Crude Oil reach a new all-time high by December 31?",
+   "url": "https://polymarket.com/event/will-crude-oil-reach-a-new-all-time-high-by-december-31",
+   "volume": 1182887.923272,
+   "liquidez": 88427.9485,
+   "fim": "2027-01-01T04:59:00+00:00",
+   "dias_para_o_fim": 111.1271641771875,
+   "preco": 0.14,
+   "familia": "Preço: nova máxima histórica",
+   "taxa_base": 0.04043683589138135,
+   "taxa_base_n": 133,
+   "taxa_base_janela": "1986–2026, 10.164 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o petróleo WTI subiu até a máxima histórica (US$ 145,31) (+49% a partir dos US$ 97,26 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 10.164 janelas mas só 133 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "DCOILWTICO"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.22669892473118286,
+   "distancia": 0.09956316410861867
+  },
+  {
+   "id": "701490",
+   "pergunta": "Will Bitcoin reach $160,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-160000-by-december-31-2026-934-934-164",
+   "volume": 642134.1453629995,
+   "liquidez": 97946.2171,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784526929397,
+   "preco": 0.0255,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.12457912457912458,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 160.000 (+107% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.03636314760508307,
+   "distancia": -0.09907912457912459
+  },
+  {
+   "id": "4052423",
+   "pergunta": "Will Bitcoin dip to $75,000 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-75k-in-september-2026",
+   "volume": 315947.924726,
+   "liquidez": 67057.6518,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.08616562489583,
+   "preco": 0.685,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.5893151329724641,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin caiu até US$ 75.000 (-3% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.7158289473684212,
+   "distancia": 0.09568486702753598
+  },
+  {
+   "id": "701488",
+   "pergunta": "Will Bitcoin reach $180,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-180000-by-december-31-2026-629-622-598",
+   "volume": 536804.28129,
+   "liquidez": 63558.29972,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784488505787,
+   "preco": 0.0145,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.11014911014911015,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 180.000 (+133% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.025363147605083076,
+   "distancia": -0.09564911014911015
   },
   {
    "id": "3215007",
    "pergunta": "Will there be no change in Fed interest rates after the December 2026 meeting?",
    "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635",
-   "volume": 134257.78231799998,
-   "liquidez": 72581.1558,
+   "volume": 134652.837703,
+   "liquidez": 108715.2245,
    "fim": "2026-12-09T23:59:00+00:00",
-   "dias_para_o_fim": 88.99439749221065,
+   "dias_para_o_fim": 88.91880268846064,
    "preco": 0.395,
    "familia": "Fed: sem mudança na reunião",
    "taxa_base": 0.4888888888888889,
@@ -553,13 +1521,629 @@
    "distancia": -0.09388888888888886
   },
   {
+   "id": "4319463",
+   "pergunta": "Will Bitcoin reach $82,000 September 7-13?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-82k-september-7-13-2026",
+   "volume": 95618.95359400002,
+   "liquidez": 43067.81427,
+   "fim": "2026-09-14T04:00:00+00:00",
+   "dias_para_o_fim": 2.086163056458333,
+   "preco": 0.0145,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.10407876230661041,
+   "taxa_base_n": 2133,
+   "taxa_base_janela": "2014–2026, 4.266 janelas de 2 dias",
+   "taxa_base_descricao": "janelas de 2 dias em que o bitcoin subiu até US$ 82.000 (+6% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.266 janelas mas só 2133 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.025363147605083076,
+   "distancia": -0.08957876230661041
+  },
+  {
+   "id": "701552",
+   "pergunta": "Will Ethereum dip to $1,500 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-dip-to-1500-by-december-31-2026-865-787",
+   "volume": 2590268.7737229997,
+   "liquidez": 94007.42779,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12787507711806,
+   "preco": 0.1435,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.23255813953488372,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum caiu até US$ 1.500 (-40% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.23019892473118284,
+   "distancia": -0.08905813953488373
+  },
+  {
+   "id": "3865961",
+   "pergunta": "Will Bitcoin dip to $75,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-75000-by-december-31-2026-from-august-24",
+   "volume": 227692.51411899997,
+   "liquidez": 61368.1533,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12783135399306,
+   "preco": 0.85,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.7616642616642617,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 75.000 (-3% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.9213888888888888,
+   "distancia": 0.08833573833573827
+  },
+  {
+   "id": "4052429",
+   "pergunta": "Will Bitcoin dip to $67,500 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-67pt5k-in-september-2026",
+   "volume": 197489.65958099993,
+   "liquidez": 50418.4126,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.0861643847338,
+   "preco": 0.125,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.21087314662273476,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin caiu até US$ 67.500 (-13% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.21169892473118285,
+   "distancia": -0.08587314662273476
+  },
+  {
+   "id": "4052451",
+   "pergunta": "Will Ethereum reach $2,700 in September?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-2700-in-september-2026",
+   "volume": 117720.10767600003,
+   "liquidez": 35287.5891,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086163583935186,
+   "preco": 0.485,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.5700560448358687,
+   "taxa_base_n": 197,
+   "taxa_base_janela": "2016–2026, 3.747 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o ethereum subiu até US$ 2.700 (+7% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.747 janelas mas só 197 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.46655319148936153,
+   "distancia": -0.0850560448358687
+  },
+  {
+   "id": "701541",
+   "pergunta": "Will Ethereum reach $7,500 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-7500-by-december-31-2026",
+   "volume": 246517.42155499998,
+   "liquidez": 76221.17782,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12783174141205,
+   "preco": 0.0235,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.10560875512995896,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 7.500 (+198% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.03436314760508308,
+   "distancia": -0.08210875512995897
+  },
+  {
+   "id": "4319473",
+   "pergunta": "Will Bitcoin dip to $76,000 September 7-13?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-76k-september-7-13-2026",
+   "volume": 79474.470456,
+   "liquidez": 32039.3265,
+   "fim": "2026-09-14T04:00:00+00:00",
+   "dias_para_o_fim": 2.08616267306713,
+   "preco": 0.245,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.3263009845288326,
+   "taxa_base_n": 2133,
+   "taxa_base_janela": "2014–2026, 4.266 janelas de 2 dias",
+   "taxa_base_descricao": "janelas de 2 dias em que o bitcoin caiu até US$ 76.000 (-2% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.266 janelas mas só 2133 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.3107465753424658,
+   "distancia": -0.08130098452883261
+  },
+  {
+   "id": "701487",
+   "pergunta": "Will Bitcoin reach $190,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-190000-by-december-31-2026-936-485-627",
+   "volume": 734016.6199219999,
+   "liquidez": 108077.67961,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784551984954,
+   "preco": 0.011,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.09211159211159212,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 190.000 (+146% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.021863147605083073,
+   "distancia": -0.08111159211159212
+  },
+  {
+   "id": "4052413",
+   "pergunta": "Will Bitcoin reach $100,000 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-100k-in-september-2026",
+   "volume": 437939.31897599983,
+   "liquidez": 147654.11936,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086177787233794,
+   "preco": 0.0165,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.0974346905154154,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin subiu até US$ 100.000 (+29% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.027363147605083075,
+   "distancia": -0.0809346905154154
+  },
+  {
+   "id": "2467356",
+   "pergunta": "Will Ethereum reach $3,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-3000-by-december-31-2026-from-june-8",
+   "volume": 121928.263909,
+   "liquidez": 26029.0882,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12783033248843,
+   "preco": 0.555,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.6355677154582763,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 3.000 (+19% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.500038043478261,
+   "distancia": -0.08056771545827623
+  },
+  {
+   "id": "701543",
+   "pergunta": "Will Ethereum reach $6,500 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-6500-by-december-31-2026",
+   "volume": 235871.091623,
+   "liquidez": 38094.00214,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12783153111111,
+   "preco": 0.042,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.12147742818057455,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 6.500 (+158% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.05286314760508308,
+   "distancia": -0.07947742818057454
+  },
+  {
+   "id": "701540",
+   "pergunta": "Will Ethereum reach $8,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-8000-by-december-31-2026",
+   "volume": 309104.61618399987,
+   "liquidez": 90240.20932,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.1278322562037,
+   "preco": 0.0215,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.10013679890560875,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 8.000 (+218% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.032363147605083076,
+   "distancia": -0.07863679890560876
+  },
+  {
+   "id": "701542",
+   "pergunta": "Will Ethereum reach $7,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-7000-by-december-31-2026",
+   "volume": 204876.3993389999,
+   "liquidez": 52038.82893,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12783115587962,
+   "preco": 0.0385,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.11108071135430916,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 7.000 (+178% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.04936314760508308,
+   "distancia": -0.07258071135430916
+  },
+  {
+   "id": "701486",
+   "pergunta": "Will Bitcoin reach $200,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-200000-by-december-31-2026-752-232-389",
+   "volume": 2038784.7685829992,
+   "liquidez": 104538.26847,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12787009034722,
+   "preco": 0.011,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.07744107744107744,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 200.000 (+159% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.021863147605083073,
+   "distancia": -0.06644107744107744
+  },
+  {
+   "id": "1294368",
+   "pergunta": "Will Gold (GC) hit (HIGH) $6,000 by end of December?",
+   "url": "https://polymarket.com/event/will-gold-gc-hit-high-6000-by-end-of-december",
+   "volume": 1085188.594331,
+   "liquidez": 23493.0213,
+   "fim": "2026-12-31T00:00:00+00:00",
+   "dias_para_o_fim": 109.91952499431713,
+   "preco": 0.095,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.029441971927422116,
+   "taxa_base_n": 192,
+   "taxa_base_janela": "1968–2026, 14.605 janelas de 110 dias",
+   "taxa_base_descricao": "janelas de 110 dias em que o ouro subiu até US$ 6.000 (+37% a partir dos US$ 4.386 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 14.605 janelas mas só 192 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "LBMA ouro"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.10586314760508307,
+   "distancia": 0.06555802807257788
+  },
+  {
+   "id": "4250801",
+   "pergunta": "Will the price of Bitcoin be above $74,000 on September 12?",
+   "url": "https://polymarket.com/event/bitcoin-above-74k-on-september-12-2026",
+   "volume": 96040.99140000001,
+   "liquidez": 40644.35612,
+   "fim": "2026-09-12T16:00:00+00:00",
+   "dias_para_o_fim": 0.5861630689814814,
+   "preco": 0.9965,
+   "familia": "Preço: acima na data",
+   "taxa_base": 0.9320365596437779,
+   "taxa_base_n": 4267,
+   "taxa_base_janela": "2014–2026, 4.267 janelas de 1 dia",
+   "taxa_base_descricao": "janelas de 1 dia em que o bitcoin terminou acima de US$ 74.000 (-4% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É a PONTA da janela, não o caminho: encostar no nível e voltar resolve este mercado em NÃO. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.267 janelas mas só 4267 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.9936098901098904,
+   "distancia": 0.0644634403562222
+  },
+  {
+   "id": "4052431",
+   "pergunta": "Will Bitcoin dip to $65,000 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-65k-in-september-2026",
+   "volume": 263762.387072,
+   "liquidez": 62628.2106,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.08616524025463,
+   "preco": 0.085,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.1494469286891033,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin caiu até US$ 65.000 (-16% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.09586314760508308,
+   "distancia": -0.0644469286891033
+  },
+  {
+   "id": "4338638",
+   "pergunta": "Will Bitcoin reach $80,000 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-80k-in-september-2026-from-september-7",
+   "volume": 168317.19238900003,
+   "liquidez": 49134.1291,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086164191689814,
+   "preco": 0.63,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.6931042598258413,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin subiu até US$ 80.000 (+4% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.6608289473684211,
+   "distancia": -0.06310425982584134
+  },
+  {
+   "id": "4052427",
+   "pergunta": "Will Bitcoin dip to $70,000 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-70k-in-september-2026",
+   "volume": 233818.0267929999,
+   "liquidez": 57446.0829,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086164733449074,
+   "preco": 0.225,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.2880677806542716,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin caiu até US$ 70.000 (-9% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.29074657534246584,
+   "distancia": -0.06306778065427157
+  },
+  {
+   "id": "701539",
+   "pergunta": "Will Ethereum reach $10,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-10000-by-december-31-2026",
+   "volume": 796968.918998,
+   "liquidez": 114955.23714,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784570725695,
+   "preco": 0.015,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.07688098495212038,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 10.000 (+297% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.025863147605083073,
+   "distancia": -0.06188098495212038
+  },
+  {
+   "id": "2467362",
+   "pergunta": "Will Ethereum dip to $1,250 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-dip-to-1250-by-december-31-2026-from-june-8",
+   "volume": 553612.2443100001,
+   "liquidez": 58035.1353,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784496107639,
+   "preco": 0.075,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.1357045143638851,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum caiu até US$ 1.250 (-50% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.08586314760508307,
+   "distancia": -0.06070451436388509
+  },
+  {
+   "id": "3865960",
+   "pergunta": "Will Bitcoin dip to $70,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-70000-by-december-31-2026-from-august-24",
+   "volume": 273124.54256299994,
+   "liquidez": 59710.3531,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12783198850695,
+   "preco": 0.645,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.5870610870610871,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 70.000 (-9% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.6758289473684211,
+   "distancia": 0.057938912938912956
+  },
+  {
+   "id": "3865962",
+   "pergunta": "Will Bitcoin dip to $65,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-65000-by-december-31-2026-from-august-24",
+   "volume": 176670.82764100004,
+   "liquidez": 38253.888,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12783094831018,
+   "preco": 0.395,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.45286195286195285,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 65.000 (-16% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.48236538461538453,
+   "distancia": -0.05786195286195284
+  },
+  {
+   "id": "4052460",
+   "pergunta": "Will Ethereum dip to $1,800 in September?",
+   "url": "https://polymarket.com/event/will-ethereum-dip-to-1800-in-september-2026",
+   "volume": 111781.99893599999,
+   "liquidez": 58771.02681,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086163480277776,
+   "preco": 0.0325,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.088871096877502,
+   "taxa_base_n": 197,
+   "taxa_base_janela": "2016–2026, 3.747 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o ethereum caiu até US$ 1.800 (-28% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.747 janelas mas só 197 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.04336314760508307,
+   "distancia": -0.056371096877502
+  },
+  {
+   "id": "4052432",
+   "pergunta": "Will Bitcoin dip to $62,500 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-62pt5k-in-september-2026",
+   "volume": 162892.193154,
+   "liquidez": 93761.70725,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086163900868055,
+   "preco": 0.0465,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.0993174864674041,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin caiu até US$ 62.500 (-19% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.05736314760508307,
+   "distancia": -0.0528174864674041
+  },
+  {
+   "id": "4319480",
+   "pergunta": "Will Bitcoin dip to $72,000 September 7-13?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-72k-september-7-13-2026",
+   "volume": 103450.13205,
+   "liquidez": 42875.55318,
+   "fim": "2026-09-14T04:00:00+00:00",
+   "dias_para_o_fim": 2.086163217222222,
+   "preco": 0.015,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.06540084388185655,
+   "taxa_base_n": 2133,
+   "taxa_base_janela": "2014–2026, 4.266 janelas de 2 dias",
+   "taxa_base_descricao": "janelas de 2 dias em que o bitcoin caiu até US$ 72.000 (-7% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.266 janelas mas só 2133 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.025863147605083073,
+   "distancia": -0.05040084388185655
+  },
+  {
+   "id": "4319457",
+   "pergunta": "Will Bitcoin reach $84,000 September 7-13?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-84k-september-7-13-2026",
+   "volume": 102123.804244,
+   "liquidez": 42597.13141,
+   "fim": "2026-09-14T04:00:00+00:00",
+   "dias_para_o_fim": 2.0861631097453706,
+   "preco": 0.005,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.053445850914205346,
+   "taxa_base_n": 2133,
+   "taxa_base_janela": "2014–2026, 4.266 janelas de 2 dias",
+   "taxa_base_descricao": "janelas de 2 dias em que o bitcoin subiu até US$ 84.000 (+9% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.266 janelas mas só 2133 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.015863147605083075,
+   "distancia": -0.04844585091420535
+  },
+  {
+   "id": "1294367",
+   "pergunta": "Will Gold (GC) hit (HIGH) $7,000 by end of December?",
+   "url": "https://polymarket.com/event/will-gold-gc-hit-high-7000-by-end-of-december",
+   "volume": 164878.26057899997,
+   "liquidez": 21590.4135,
+   "fim": "2026-12-31T00:00:00+00:00",
+   "dias_para_o_fim": 109.9194974289236,
+   "preco": 0.055,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.009311879493324205,
+   "taxa_base_n": 192,
+   "taxa_base_janela": "1968–2026, 14.605 janelas de 110 dias",
+   "taxa_base_descricao": "janelas de 110 dias em que o ouro subiu até US$ 7.000 (+60% a partir dos US$ 4.386 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 14.605 janelas mas só 192 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "LBMA ouro"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.06586314760508308,
+   "distancia": 0.0456881205066758
+  },
+  {
    "id": "616906",
    "pergunta": "Will 4 Fed rate cuts happen in 2026?",
    "url": "https://polymarket.com/event/will-4-fed-rate-cuts-happen-in-2026",
-   "volume": 2704981.9841439985,
-   "liquidez": 213475.43657,
+   "volume": 2705115.0364099997,
+   "liquidez": 226839.87332,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510517325231,
+   "dias_para_o_fim": 109.91954174822916,
    "preco": 0.0025,
    "familia": "Fed: exatamente N cortes no ano",
    "taxa_base": 0.046511627906976744,
@@ -576,14 +2160,234 @@
    "distancia": -0.04401162790697674
   },
   {
+   "id": "4250809",
+   "pergunta": "Will the price of Bitcoin be above $82,000 on September 12?",
+   "url": "https://polymarket.com/event/bitcoin-above-82k-on-september-12-2026",
+   "volume": 89132.268935,
+   "liquidez": 38057.28605,
+   "fim": "2026-09-12T16:00:00+00:00",
+   "dias_para_o_fim": 0.5861628107986111,
+   "preco": 0.0015,
+   "familia": "Preço: acima na data",
+   "taxa_base": 0.04476212795875322,
+   "taxa_base_n": 4267,
+   "taxa_base_janela": "2014–2026, 4.267 janelas de 1 dia",
+   "taxa_base_descricao": "janelas de 1 dia em que o bitcoin terminou acima de US$ 82.000 (+6% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É a PONTA da janela, não o caminho: encostar no nível e voltar resolve este mercado em NÃO. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.267 janelas mas só 4267 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.012363147605083074,
+   "distancia": -0.04326212795875322
+  },
+  {
+   "id": "4319524",
+   "pergunta": "Will Ethereum reach $2,800 September 7-13?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-2800-september-7-13-2026",
+   "volume": 65675.87064600001,
+   "liquidez": 24315.12293,
+   "fim": "2026-09-14T04:00:00+00:00",
+   "dias_para_o_fim": 2.086162221284722,
+   "preco": 0.019,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.06110520722635494,
+   "taxa_base_n": 1882,
+   "taxa_base_janela": "2016–2026, 3.764 janelas de 2 dias",
+   "taxa_base_descricao": "janelas de 2 dias em que o ethereum subiu até US$ 2.800 (+11% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.764 janelas mas só 1882 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.029863147605083074,
+   "distancia": -0.04210520722635494
+  },
+  {
+   "id": "3866510",
+   "pergunta": "Will WTI Crude Oil (WTI) hit (HIGH) $130 in September?",
+   "url": "https://polymarket.com/event/will-wti-reach-130-in-september-2026",
+   "volume": 213779.324057,
+   "liquidez": 81049.94744,
+   "fim": "2026-10-01T03:59:59.999000+00:00",
+   "dias_para_o_fim": 19.086164593912038,
+   "preco": 0.0475,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.006942407353084971,
+   "taxa_base_n": 786,
+   "taxa_base_janela": "1986–2026, 10.227 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o petróleo WTI subiu até US$ 130,00 (+34% a partir dos US$ 97,26 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 10.227 janelas mas só 786 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "DCOILWTICO"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.05836314760508307,
+   "distancia": 0.04055759264691503
+  },
+  {
+   "id": "3013350",
+   "pergunta": "Will Bitcoin dip to $60,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-60k-by-december-31-2026-from-july-21",
+   "volume": 736973.6877929999,
+   "liquidez": 83484.3128,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784562407407,
+   "preco": 0.27,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.31024531024531027,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 60.000 (-22% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.3357465753424658,
+   "distancia": -0.04024531024531025
+  },
+  {
+   "id": "4052444",
+   "pergunta": "Will Ethereum reach $4,000 in September?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-4000-in-september-2026",
+   "volume": 247127.25476400004,
+   "liquidez": 88906.41589,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086165099895833,
+   "preco": 0.011,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.05097411262343208,
+   "taxa_base_n": 197,
+   "taxa_base_janela": "2016–2026, 3.747 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o ethereum subiu até US$ 4.000 (+59% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.747 janelas mas só 197 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.021863147605083073,
+   "distancia": -0.039974112623432076
+  },
+  {
+   "id": "701503",
+   "pergunta": "Will Bitcoin dip to $35,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-35000-by-december-31-2026-744-877-748-219-467-465-646-211-122-947-537-552-555-361-972-954-635-887-657-996-643",
+   "volume": 3225999.319422001,
+   "liquidez": 182928.551,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12787531245371,
+   "preco": 0.055,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.016354016354016353,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 35.000 (-55% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.06586314760508308,
+   "distancia": 0.03864598364598365
+  },
+  {
+   "id": "4052434",
+   "pergunta": "Will Bitcoin dip to $60,000 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-60k-in-september-2026",
+   "volume": 209426.097359,
+   "liquidez": 88562.47866,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086164532094905,
+   "preco": 0.0275,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.06354436337961873,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin caiu até US$ 60.000 (-22% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.038363147605083074,
+   "distancia": -0.036044363379618735
+  },
+  {
+   "id": "1339769",
+   "pergunta": "Will Bitcoin dip to $30,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-30000-by-december-31-2026-971-191-116-343-999-758-299-813-237",
+   "volume": 854214.7627299998,
+   "liquidez": 102190.85819,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784587206019,
+   "preco": 0.038,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.003848003848003848,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 30.000 (-61% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.048863147605083077,
+   "distancia": 0.03415199615199615
+  },
+  {
+   "id": "4052461",
+   "pergunta": "Will Ethereum dip to $1,700 in September?",
+   "url": "https://polymarket.com/event/will-ethereum-dip-to-1700-in-september-2026",
+   "volume": 75086.58575800002,
+   "liquidez": 62165.01792,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.08616260283565,
+   "preco": 0.023,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.057112356551908196,
+   "taxa_base_n": 197,
+   "taxa_base_janela": "2016–2026, 3.747 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o ethereum caiu até US$ 1.700 (-32% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.747 janelas mas só 197 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.03386314760508308,
+   "distancia": -0.034112356551908196
+  },
+  {
+   "id": "1057883",
+   "pergunta": "Will Bitcoin reach $250,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-250000-by-december-31-2026-579-442",
+   "volume": 5469083.590604002,
+   "liquidez": 115758.88253,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.1278756287963,
+   "preco": 0.009,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.04040404040404041,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 250.000 (+224% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.01986314760508307,
+   "distancia": -0.031404040404040406
+  },
+  {
    "id": "616903",
    "pergunta": "Will 1 Fed rate cut happen in 2026?",
    "url": "https://polymarket.com/event/will-1-fed-rate-cut-happen-in-2026",
-   "volume": 2992299.0181040014,
-   "liquidez": 298805.44071,
+   "volume": 2996532.563451999,
+   "liquidez": 330882.19936,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510517689815,
-   "preco": 0.0445,
+   "dias_para_o_fim": 109.91954189997686,
+   "preco": 0.0385,
    "familia": "Fed: exatamente N cortes no ano",
    "taxa_base": 0.06976744186046512,
    "taxa_base_n": 43,
@@ -595,17 +2399,127 @@
     "DFEDTARU"
    ],
    "taxa_base_falha": null,
-   "preco_ajustado": 0.05536314760508307,
-   "distancia": -0.025267441860465117
+   "preco_ajustado": 0.04936314760508308,
+   "distancia": -0.031267441860465116
+  },
+  {
+   "id": "4052436",
+   "pergunta": "Will Bitcoin dip to $57,500 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-57pt5k-in-september-2026",
+   "volume": 289794.672733,
+   "liquidez": 111269.19783,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086165504895835,
+   "preco": 0.0125,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.039538714991762765,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin caiu até US$ 57.500 (-26% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.023363147605083075,
+   "distancia": -0.027038714991762764
+  },
+  {
+   "id": "1294365",
+   "pergunta": "Will Gold (GC) hit (HIGH) $10,000 by end of December?",
+   "url": "https://polymarket.com/event/will-gold-gc-hit-high-10000-by-end-of-december",
+   "volume": 89183.83267599999,
+   "liquidez": 51933.90709,
+   "fim": "2026-12-31T00:00:00+00:00",
+   "dias_para_o_fim": 109.91949633333334,
+   "preco": 0.027,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.00013693940431359124,
+   "taxa_base_n": 192,
+   "taxa_base_janela": "1968–2026, 14.605 janelas de 110 dias",
+   "taxa_base_descricao": "janelas de 110 dias em que o ouro subiu até US$ 10.000 (+128% a partir dos US$ 4.386 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 14.605 janelas mas só 192 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "LBMA ouro"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.037863147605083074,
+   "distancia": 0.026863060595686408
+  },
+  {
+   "id": "4319482",
+   "pergunta": "Will Bitcoin dip to $70,000 September 7-13?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-70k-september-7-13-2026",
+   "volume": 102995.674121,
+   "liquidez": 31384.89473,
+   "fim": "2026-09-14T04:00:00+00:00",
+   "dias_para_o_fim": 2.0861631359953705,
+   "preco": 0.0055,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.032114392873886545,
+   "taxa_base_n": 2133,
+   "taxa_base_janela": "2014–2026, 4.266 janelas de 2 dias",
+   "taxa_base_descricao": "janelas de 2 dias em que o bitcoin caiu até US$ 70.000 (-9% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.266 janelas mas só 2133 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.016363147605083075,
+   "distancia": -0.026614392873886547
+  },
+  {
+   "id": "4250799",
+   "pergunta": "Will the price of Bitcoin be above $72,000 on September 12?",
+   "url": "https://polymarket.com/event/bitcoin-above-72k-on-september-12-2026",
+   "volume": 130973.056605,
+   "liquidez": 42548.67821,
+   "fim": "2026-09-12T16:00:00+00:00",
+   "dias_para_o_fim": 0.5861637790740741,
+   "preco": 0.998,
+   "familia": "Preço: acima na data",
+   "taxa_base": 0.9730489805483946,
+   "taxa_base_n": 4267,
+   "taxa_base_janela": "2014–2026, 4.267 janelas de 1 dia",
+   "taxa_base_descricao": "janelas de 1 dia em que o bitcoin terminou acima de US$ 72.000 (-7% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É a PONTA da janela, não o caminho: encostar no nível e voltar resolve este mercado em NÃO. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.267 janelas mas só 4267 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.9951098901098904,
+   "distancia": 0.024951019451605383
+  },
+  {
+   "id": "4052462",
+   "pergunta": "Will Ethereum dip to $1,600 in September?",
+   "url": "https://polymarket.com/event/will-ethereum-dip-to-1600-in-september-2026",
+   "volume": 71632.17687100002,
+   "liquidez": 68582.19133,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086162500127315,
+   "preco": 0.0105,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.03522818254603683,
+   "taxa_base_n": 197,
+   "taxa_base_janela": "2016–2026, 3.747 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o ethereum caiu até US$ 1.600 (-36% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.747 janelas mas só 197 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.021363147605083073,
+   "distancia": -0.024728182546036828
   },
   {
    "id": "616913",
    "pergunta": "Will 11 Fed rate cuts happen in 2026?",
    "url": "https://polymarket.com/event/will-11-fed-rate-cuts-happen-in-2026",
    "volume": 5263061.268101,
-   "liquidez": 533555.92411,
+   "liquidez": 536961.26879,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510518918983,
+   "dias_para_o_fim": 109.91954222196759,
    "preco": 0.0005,
    "familia": "Fed: exatamente N cortes no ano",
    "taxa_base": 0.023255813953488372,
@@ -625,10 +2539,10 @@
    "id": "616912",
    "pergunta": "Will 10 Fed rate cuts happen in 2026?",
    "url": "https://polymarket.com/event/will-10-fed-rate-cuts-happen-in-2026",
-   "volume": 4945007.649516001,
-   "liquidez": 518713.06867,
+   "volume": 4945007.649516002,
+   "liquidez": 518816.13693,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510518709491,
+   "dias_para_o_fim": 109.91954214755786,
    "preco": 0.0005,
    "familia": "Fed: exatamente N cortes no ano",
    "taxa_base": 0.023255813953488372,
@@ -648,10 +2562,10 @@
    "id": "616911",
    "pergunta": "Will 9 Fed rate cuts happen in 2026?",
    "url": "https://polymarket.com/event/will-9-fed-rate-cuts-happen-in-2026",
-   "volume": 4284243.5675180005,
-   "liquidez": 488010.29626,
+   "volume": 4284243.567518002,
+   "liquidez": 489595.90072,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510518524306,
+   "dias_para_o_fim": 109.91954214040508,
    "preco": 0.0005,
    "familia": "Fed: exatamente N cortes no ano",
    "taxa_base": 0.023255813953488372,
@@ -672,9 +2586,9 @@
    "pergunta": "Will 6 Fed rate cuts happen in 2026?",
    "url": "https://polymarket.com/event/will-6-fed-rate-cuts-happen-in-2026",
    "volume": 4218749.725320001,
-   "liquidez": 142712.89004,
+   "liquidez": 143207.35142,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510518438657,
+   "dias_para_o_fim": 109.91954213855324,
    "preco": 0.0005,
    "familia": "Fed: exatamente N cortes no ano",
    "taxa_base": 0.023255813953488372,
@@ -694,10 +2608,10 @@
    "id": "616909",
    "pergunta": "Will 7 Fed rate cuts happen in 2026?",
    "url": "https://polymarket.com/event/will-7-fed-rate-cuts-happen-in-2026",
-   "volume": 3519561.7951669996,
-   "liquidez": 163969.27569,
+   "volume": 3519568.355166997,
+   "liquidez": 164907.9286,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510518097222,
+   "dias_para_o_fim": 109.91954205827545,
    "preco": 0.0005,
    "familia": "Fed: exatamente N cortes no ano",
    "taxa_base": 0.023255813953488372,
@@ -717,10 +2631,10 @@
    "id": "616907",
    "pergunta": "Will 5 Fed rate cuts happen in 2026?",
    "url": "https://polymarket.com/event/will-5-fed-rate-cuts-happen-in-2026",
-   "volume": 2967084.0091269985,
-   "liquidez": 236354.75749,
+   "volume": 2967185.8531269985,
+   "liquidez": 244556.00354,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510517604166,
+   "dias_para_o_fim": 109.91954189864582,
    "preco": 0.0015,
    "familia": "Fed: exatamente N cortes no ano",
    "taxa_base": 0.023255813953488372,
@@ -737,13 +2651,607 @@
    "distancia": -0.02175581395348837
   },
   {
+   "id": "701504",
+   "pergunta": "Will Bitcoin dip to $25,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-25000-by-december-31-2026-948-243-253-666-115-787-981-282-573-719-186-417-762-754-486-851-278-145-417-178-244",
+   "volume": 1297682.5940940003,
+   "liquidez": 125883.20704,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12785870305555,
+   "preco": 0.0225,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.0012025012025012026,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 25.000 (-68% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.03336314760508308,
+   "distancia": 0.021297498797498798
+  },
+  {
+   "id": "3866509",
+   "pergunta": "Will WTI Crude Oil (WTI) hit (HIGH) $140 in September?",
+   "url": "https://polymarket.com/event/will-wti-reach-140-in-september-2026",
+   "volume": 260443.56632900005,
+   "liquidez": 140227.1064,
+   "fim": "2026-10-01T03:59:59.999000+00:00",
+   "dias_para_o_fim": 19.08616516872685,
+   "preco": 0.0245,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.00371565463967928,
+   "taxa_base_n": 786,
+   "taxa_base_janela": "1986–2026, 10.227 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o petróleo WTI subiu até US$ 140,00 (+44% a partir dos US$ 97,26 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 10.227 janelas mas só 786 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "DCOILWTICO"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.03536314760508308,
+   "distancia": 0.02078434536032072
+  },
+  {
+   "id": "2126460",
+   "pergunta": "Will Crude Oil reach a new all-time high by September 30?",
+   "url": "https://polymarket.com/event/will-crude-oil-reach-a-new-all-time-high-by-september-30",
+   "volume": 1670165.4677850003,
+   "liquidez": 163366.69371,
+   "fim": "2026-10-01T03:59:00+00:00",
+   "dias_para_o_fim": 19.08550347273148,
+   "preco": 0.022,
+   "familia": "Preço: nova máxima histórica",
+   "taxa_base": 0.002151168475603794,
+   "taxa_base_n": 786,
+   "taxa_base_janela": "1986–2026, 10.227 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o petróleo WTI subiu até a máxima histórica (US$ 145,31) (+49% a partir dos US$ 97,26 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 10.227 janelas mas só 786 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "DCOILWTICO"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.032863147605083076,
+   "distancia": 0.019848831524396204
+  },
+  {
+   "id": "2468461",
+   "pergunta": "Will Ethereum dip to $500 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-dip-to-500-by-december-31-2026-from-june-8",
+   "volume": 103101.38518000001,
+   "liquidez": 29188.21258,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12782986195603,
+   "preco": 0.0185,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.0,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum caiu até US$ 500,00 (-80% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.029363147605083073,
+   "distancia": 0.0185
+  },
+  {
+   "id": "4052438",
+   "pergunta": "Will Bitcoin dip to $55,000 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-55k-in-september-2026",
+   "volume": 611641.7352569998,
+   "liquidez": 93682.20372,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.08617841642361,
+   "preco": 0.0105,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.028241939279830548,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin caiu até US$ 55.000 (-29% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.021363147605083073,
+   "distancia": -0.017741939279830546
+  },
+  {
+   "id": "4250811",
+   "pergunta": "Will the price of Bitcoin be above $84,000 on September 12?",
+   "url": "https://polymarket.com/event/bitcoin-above-84k-on-september-12-2026",
+   "volume": 67760.469729,
+   "liquidez": 52181.44636,
+   "fim": "2026-09-12T16:00:00+00:00",
+   "dias_para_o_fim": 0.5861622424768519,
+   "preco": 0.0015,
+   "familia": "Preço: acima na data",
+   "taxa_base": 0.018982891961565503,
+   "taxa_base_n": 4267,
+   "taxa_base_janela": "2014–2026, 4.267 janelas de 1 dia",
+   "taxa_base_descricao": "janelas de 1 dia em que o bitcoin terminou acima de US$ 84.000 (+9% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É a PONTA da janela, não o caminho: encostar no nível e voltar resolve este mercado em NÃO. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.267 janelas mas só 4267 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.012363147605083074,
+   "distancia": -0.0174828919615655
+  },
+  {
+   "id": "1343219",
+   "pergunta": "Will Bitcoin dip to $20,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-20000-by-december-31-2026-121-885-178-397-354-236-731-159-857",
+   "volume": 608663.2543550001,
+   "liquidez": 83980.50693,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784505150462,
+   "preco": 0.0165,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.0,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 20.000 (-74% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.027363147605083075,
+   "distancia": 0.0165
+  },
+  {
+   "id": "1057916",
+   "pergunta": "Will Bitcoin dip to $15,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-15000-by-december-31-2026-416-954-417-853-885-363-335-458-585-275-615-269-479-379-516-218-918-374-598-429-212",
+   "volume": 4974847.455359004,
+   "liquidez": 66409.76836,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12787555122685,
+   "preco": 0.0155,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.0,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 15.000 (-81% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.026363147605083074,
+   "distancia": 0.0155
+  },
+  {
+   "id": "1294364",
+   "pergunta": "Will Gold (GC) hit (HIGH) $12,000 by end of December?",
+   "url": "https://polymarket.com/event/will-gold-gc-hit-high-12000-by-end-of-december",
+   "volume": 69783.704927,
+   "liquidez": 38907.07942,
+   "fim": "2026-12-31T00:00:00+00:00",
+   "dias_para_o_fim": 109.91949578583333,
+   "preco": 0.0155,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.0,
+   "taxa_base_n": 192,
+   "taxa_base_janela": "1968–2026, 14.605 janelas de 110 dias",
+   "taxa_base_descricao": "janelas de 110 dias em que o ouro subiu até US$ 12.000 (+174% a partir dos US$ 4.386 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 14.605 janelas mas só 192 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "LBMA ouro"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.026363147605083074,
+   "distancia": 0.0155
+  },
+  {
+   "id": "1343228",
+   "pergunta": "Will Bitcoin dip to $5,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-5000-by-december-31-2026-jy3n-991-141-345-117-196-482-674-487-176-555",
+   "volume": 804433.9833509999,
+   "liquidez": 100959.86056,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784578626159,
+   "preco": 0.014,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.0,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 5.000 (-94% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.024863147605083076,
+   "distancia": 0.014
+  },
+  {
+   "id": "4052463",
+   "pergunta": "Will Ethereum dip to $1,500 in September?",
+   "url": "https://polymarket.com/event/will-ethereum-dip-to-1500-in-september-2026",
+   "volume": 130456.031838,
+   "liquidez": 81357.88527,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.086163768761573,
+   "preco": 0.0075,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.021350413664264746,
+   "taxa_base_n": 197,
+   "taxa_base_janela": "2016–2026, 3.747 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o ethereum caiu até US$ 1.500 (-40% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.747 janelas mas só 197 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.018363147605083074,
+   "distancia": -0.013850413664264746
+  },
+  {
+   "id": "4319484",
+   "pergunta": "Will Bitcoin dip to $68,000 September 7-13?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-68k-september-7-13-2026",
+   "volume": 73662.85131000001,
+   "liquidez": 38427.69547,
+   "fim": "2026-09-14T04:00:00+00:00",
+   "dias_para_o_fim": 2.08616254099537,
+   "preco": 0.0025,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.015939990623534926,
+   "taxa_base_n": 2133,
+   "taxa_base_janela": "2014–2026, 4.266 janelas de 2 dias",
+   "taxa_base_descricao": "janelas de 2 dias em que o bitcoin caiu até US$ 68.000 (-12% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.266 janelas mas só 2133 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.013363147605083074,
+   "distancia": -0.013439990623534926
+  },
+  {
+   "id": "1343220",
+   "pergunta": "Will Bitcoin dip to $10,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-10000-by-december-31-2026-888-644-567-258-946-853-325-494-356-991",
+   "volume": 862045.7297079999,
+   "liquidez": 81001.0168,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12784594969908,
+   "preco": 0.013,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.0,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 10.000 (-87% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.023863147605083075,
+   "distancia": 0.013
+  },
+  {
+   "id": "701501",
+   "pergunta": "Will Bitcoin dip to $55,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-55000-by-december-31-2026-527-627-868-745-188-361-314-673-612-946-821-624-855-557-684-381-884-939-182-939-516",
+   "volume": 5996991.507699999,
+   "liquidez": 186608.3163,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12787570638888,
+   "preco": 0.195,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.2077922077922078,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 55.000 (-29% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.28169892473118285,
+   "distancia": -0.0127922077922078
+  },
+  {
+   "id": "4250798",
+   "pergunta": "Will the price of Bitcoin be above $70,000 on September 12?",
+   "url": "https://polymarket.com/event/bitcoin-above-70k-on-september-12-2026",
+   "volume": 87920.36444,
+   "liquidez": 32556.75711,
+   "fim": "2026-09-12T16:00:00+00:00",
+   "dias_para_o_fim": 0.5861627955787037,
+   "preco": 0.9995,
+   "familia": "Preço: acima na data",
+   "taxa_base": 0.9868760253105227,
+   "taxa_base_n": 4267,
+   "taxa_base_janela": "2014–2026, 4.267 janelas de 1 dia",
+   "taxa_base_descricao": "janelas de 1 dia em que o bitcoin terminou acima de US$ 70.000 (-9% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É a PONTA da janela, não o caminho: encostar no nível e voltar resolve este mercado em NÃO. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.267 janelas mas só 4267 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.9966098901098904,
+   "distancia": 0.012623974689477402
+  },
+  {
+   "id": "3866508",
+   "pergunta": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in September?",
+   "url": "https://polymarket.com/event/will-wti-reach-150-in-september-2026",
+   "volume": 235318.37152899997,
+   "liquidez": 98672.97896,
+   "fim": "2026-10-01T03:59:59.999000+00:00",
+   "dias_para_o_fim": 19.08616478707176,
+   "preco": 0.0125,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.0016622665493302043,
+   "taxa_base_n": 786,
+   "taxa_base_janela": "1986–2026, 10.227 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o petróleo WTI subiu até US$ 150,00 (+54% a partir dos US$ 97,26 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 10.227 janelas mas só 786 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "DCOILWTICO"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.023363147605083075,
+   "distancia": 0.010837733450669797
+  },
+  {
+   "id": "1339768",
+   "pergunta": "Will Bitcoin dip to $40,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-40000-by-december-31-2026-593-522-842-874-931-776-991-167-531-959",
+   "volume": 2089124.259346,
+   "liquidez": 176446.0023,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12787016252314,
+   "preco": 0.065,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.05723905723905724,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 40.000 (-48% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.07586314760508307,
+   "distancia": 0.00776094276094276
+  },
+  {
+   "id": "1294363",
+   "pergunta": "Will Gold (GC) hit (HIGH) $15,000 by end of December?",
+   "url": "https://polymarket.com/event/will-gold-gc-hit-high-15000-by-end-of-december",
+   "volume": 107118.60183400004,
+   "liquidez": 35181.20049,
+   "fim": "2026-12-31T00:00:00+00:00",
+   "dias_para_o_fim": 109.91949677409723,
+   "preco": 0.007,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.0,
+   "taxa_base_n": 192,
+   "taxa_base_janela": "1968–2026, 14.605 janelas de 110 dias",
+   "taxa_base_descricao": "janelas de 110 dias em que o ouro subiu até US$ 15.000 (+242% a partir dos US$ 4.386 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 14.605 janelas mas só 192 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "LBMA ouro"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.017863147605083073,
+   "distancia": 0.007
+  },
+  {
+   "id": "1393068",
+   "pergunta": "Will Bitcoin reach $500,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-500000-by-december-31-2026-864",
+   "volume": 1566383.4413220002,
+   "liquidez": 163259.01576,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12785887153936,
+   "preco": 0.006,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.0,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 500.000 (+547% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.016863147605083076,
+   "distancia": 0.006
+  },
+  {
+   "id": "701554",
+   "pergunta": "Will Ethereum dip to $800 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-dip-to-800-by-december-31-2026-568",
+   "volume": 1643302.7629189997,
+   "liquidez": 121458.69988,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12785894114582,
+   "preco": 0.0225,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.018057455540355677,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum caiu até US$ 800,00 (-68% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.03336314760508308,
+   "distancia": 0.004442544459644322
+  },
+  {
+   "id": "701553",
+   "pergunta": "Will Ethereum dip to $1,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-dip-to-1000-by-december-31-2026-273-175",
+   "volume": 2020344.8538569992,
+   "liquidez": 123002.0884,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12787001885418,
+   "preco": 0.065,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.0692202462380301,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum caiu até US$ 1.000 (-60% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.07586314760508307,
+   "distancia": -0.004220246238030093
+  },
+  {
+   "id": "4319448",
+   "pergunta": "Will Bitcoin reach $90,000 September 7-13?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-90k-september-7-13-2026",
+   "volume": 106481.021589,
+   "liquidez": 40899.36575,
+   "fim": "2026-09-14T04:00:00+00:00",
+   "dias_para_o_fim": 2.086163246701389,
+   "preco": 0.002,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.005860290670417253,
+   "taxa_base_n": 2133,
+   "taxa_base_janela": "2014–2026, 4.266 janelas de 2 dias",
+   "taxa_base_descricao": "janelas de 2 dias em que o bitcoin subiu até US$ 90.000 (+16% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.266 janelas mas só 2133 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.012863147605083074,
+   "distancia": -0.0038602906704172527
+  },
+  {
+   "id": "4052425",
+   "pergunta": "Will Bitcoin dip to $72,500 in September?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-72pt5k-in-september-2026",
+   "volume": 203008.67197200004,
+   "liquidez": 61101.822,
+   "fim": "2026-10-01T04:00:00+00:00",
+   "dias_para_o_fim": 19.08616442037037,
+   "preco": 0.405,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.4078606730995528,
+   "taxa_base_n": 223,
+   "taxa_base_janela": "2014–2026, 4.249 janelas de 19 dias",
+   "taxa_base_descricao": "janelas de 19 dias em que o bitcoin caiu até US$ 72.500 (-6% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.249 janelas mas só 223 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.38655319148936157,
+   "distancia": -0.0028606730995527907
+  },
+  {
+   "id": "2467357",
+   "pergunta": "Will Ethereum reach $2,750 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-ethereum-reach-2750-by-december-31-2026-from-june-8",
+   "volume": 87091.95536699999,
+   "liquidez": 26768.983,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12782944759259,
+   "preco": 0.765,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.7622435020519835,
+   "taxa_base_n": 32,
+   "taxa_base_janela": "2016–2026, 3.655 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o ethereum subiu até US$ 2.750 (+9% a partir dos US$ 2.516 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 3.655 janelas mas só 32 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBETHUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.8092083333333333,
+   "distancia": 0.0027564979480164675
+  },
+  {
+   "id": "1393070",
+   "pergunta": "Will Bitcoin reach $1,000,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-reach-1000000-by-december-31-2026-946",
+   "volume": 2748233.3828649996,
+   "liquidez": 245082.66931,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12787515399305,
+   "preco": 0.0025,
+   "familia": "Preço: toque para cima",
+   "taxa_base": 0.0,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin subiu até US$ 1.000.000 (+1.194% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.013363147605083074,
+   "distancia": 0.0025
+  },
+  {
+   "id": "701502",
+   "pergunta": "Will Bitcoin dip to $45,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-45000-by-december-31-2026-674-923-755-971-998-525-926-245-316-517-544-589-965-923-986-841-815-224-586-231-289-533-573",
+   "volume": 6819130.712992001,
+   "liquidez": 384954.8526,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12788152525462,
+   "preco": 0.095,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.09355459355459356,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 45.000 (-42% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.10586314760508307,
+   "distancia": 0.0014454064454064441
+  },
+  {
+   "id": "1339767",
+   "pergunta": "Will Bitcoin dip to $50,000 by December 31, 2026?",
+   "url": "https://polymarket.com/event/will-bitcoin-dip-to-50000-by-december-31-2026-454-325-222-878-949-487-451-853-523-111",
+   "volume": 3631671.7086619996,
+   "liquidez": 159450.9873,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.127875461331,
+   "preco": 0.14,
+   "familia": "Preço: toque para baixo",
+   "taxa_base": 0.13924963924963926,
+   "taxa_base_n": 37,
+   "taxa_base_janela": "2014–2026, 4.158 janelas de 111 dias",
+   "taxa_base_descricao": "janelas de 111 dias em que o bitcoin caiu até US$ 50.000 (-35% a partir dos US$ 77.276 de hoje)",
+   "taxa_base_ressalva": "É toque e não fechamento: a conta usa o extremo corrente da janela, porque é isso que o mercado pergunta. Duas ressalvas que não somem com mais dado — as janelas se sobrepõem (são 4.158 janelas mas só 37 independentes), e a história do ativo não é estacionária: a volatilidade de hoje não é a da série inteira, e recortar só o período recente trocaria esse viés por um n minúsculo.",
+   "taxa_base_series": [
+    "CBBTCUSD"
+   ],
+   "taxa_base_falha": null,
+   "preco_ajustado": 0.22669892473118286,
+   "distancia": 0.0007503607503607512
+  },
+  {
    "id": "616914",
    "pergunta": "Will 12 or more Fed rate cuts happen in 2026?",
    "url": "https://polymarket.com/event/will-12-or-more-fed-rate-cuts-happen-in-2026",
-   "volume": 3952613.433919999,
-   "liquidez": 259243.22898,
+   "volume": 3952613.4339200007,
+   "liquidez": 262622.93946,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510518274305,
+   "dias_para_o_fim": 109.91954213280093,
    "preco": 0.0005,
    "familia": "Fed: N cortes ou mais no ano",
    "taxa_base": 0.0,
@@ -763,10 +3271,10 @@
    "id": "616910",
    "pergunta": "Will 8 Fed rate cuts happen in 2026?",
    "url": "https://polymarket.com/event/will-8-fed-rate-cuts-happen-in-2026",
-   "volume": 3288345.37589,
-   "liquidez": 286836.29346,
+   "volume": 3288345.375889999,
+   "liquidez": 289603.44624,
    "fim": "2026-12-31T00:00:00+00:00",
-   "dias_para_o_fim": 109.99510517975695,
+   "dias_para_o_fim": 109.9195419809838,
    "preco": 0.0005,
    "familia": "Fed: exatamente N cortes no ano",
    "taxa_base": 0.0,
@@ -786,10 +3294,10 @@
    "id": "1168140",
    "pergunta": "Will the upper bound of the target federal funds rate be 4.0% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-4pt0-at-the-end-of-2026-386",
-   "volume": 1372196.2545589993,
-   "liquidez": 2707.7421,
+   "volume": 1372196.2545589998,
+   "liquidez": 2922.3302,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99509517511574,
+   "dias_para_o_fim": 87.91952544766204,
    "preco": 0.424,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
@@ -807,9 +3315,9 @@
    "pergunta": "Will the upper bound of the target federal funds rate be 3.75% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-3pt75-at-the-end-of-2026-166",
    "volume": 534974.1740199998,
-   "liquidez": 5489.2885,
+   "liquidez": 6092.32177,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99509512303241,
+   "dias_para_o_fim": 87.91951148104167,
    "preco": 0.0875,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
@@ -826,10 +3334,10 @@
    "id": "1168136",
    "pergunta": "Will the upper bound of the target federal funds rate be 3.0% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-3pt0-at-the-end-of-2026-593",
-   "volume": 498441.1462329999,
-   "liquidez": 25297.36939,
+   "volume": 498441.14623300004,
+   "liquidez": 28129.3756,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.9950951183449,
+   "dias_para_o_fim": 87.91951146413194,
    "preco": 0.0035,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
@@ -846,11 +3354,11 @@
    "id": "1168141",
    "pergunta": "Will the upper bound of the target federal funds rate be 4.25% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-4pt25-at-the-end-of-2026-984",
-   "volume": 431180.4981939999,
-   "liquidez": 9168.49551,
+   "volume": 431180.4981939998,
+   "liquidez": 10632.15038,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99509510827546,
-   "preco": 0.3025,
+   "dias_para_o_fim": 87.91951108998842,
+   "preco": 0.2985,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
    "taxa_base_n": null,
@@ -859,17 +3367,17 @@
    "taxa_base_ressalva": null,
    "taxa_base_series": null,
    "taxa_base_falha": "sem taxa-base: nível exato (4.25%) não é respondível com 43 variações anuais numa grade de 25 pontos-base: a amostra tem buracos, e um buraco viraria '0%' na tela. A variante 'X% ou mais' é medida",
-   "preco_ajustado": 0.3898653846153845,
+   "preco_ajustado": 0.3642465753424658,
    "distancia": null
   },
   {
    "id": "1168844",
    "pergunta": "Will the upper bound of the target federal funds rate be 2.0% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-2pt0-at-the-end-of-2026-736",
-   "volume": 265621.69560100004,
-   "liquidez": 21527.43055,
+   "volume": 265621.695601,
+   "liquidez": 23930.1937,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99509199366898,
+   "dias_para_o_fim": 87.91949857633102,
    "preco": 0.0035,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
@@ -886,10 +3394,10 @@
    "id": "1168138",
    "pergunta": "Will the upper bound of the target federal funds rate be 3.5% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-3pt5-at-the-end-of-2026-352",
-   "volume": 203647.366063,
-   "liquidez": 4661.93912,
+   "volume": 203647.36606300002,
+   "liquidez": 5260.06388,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99509197379629,
+   "dias_para_o_fim": 87.91949775665509,
    "preco": 0.0585,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
@@ -906,10 +3414,10 @@
    "id": "1168134",
    "pergunta": "Will the upper bound of the target federal funds rate be 2.5% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-2pt5-at-the-end-of-2026-876",
-   "volume": 175936.66637400002,
-   "liquidez": 19356.65317,
+   "volume": 175936.66637399996,
+   "liquidez": 21837.33635,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99509196065972,
+   "dias_para_o_fim": 87.91949753644676,
    "preco": 0.0045,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
@@ -923,13 +3431,33 @@
    "distancia": null
   },
   {
+   "id": "3866515",
+   "pergunta": "Will WTI Crude Oil (WTI) hit (LOW) $80 in September?",
+   "url": "https://polymarket.com/event/will-wti-dip-to-80-in-september-2026",
+   "volume": 162845.09810499998,
+   "liquidez": 32040.1737,
+   "fim": "2026-10-01T03:59:59.999000+00:00",
+   "dias_para_o_fim": 19.08616386103009,
+   "preco": 0.145,
+   "familia": "Preço: toque para cima",
+   "taxa_base": null,
+   "taxa_base_n": null,
+   "taxa_base_janela": null,
+   "taxa_base_descricao": null,
+   "taxa_base_ressalva": null,
+   "taxa_base_series": null,
+   "taxa_base_falha": "sem taxa-base: o alvo (80) já está do lado certo do preço de hoje (97.26) — a pergunta não é sobre um movimento futuro",
+   "preco_ajustado": 0.23169892473118284,
+   "distancia": null
+  },
+  {
    "id": "1168843",
    "pergunta": "Will the upper bound of the target federal funds rate be 1.75% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-1pt75-at-the-end-of-2026-739",
-   "volume": 150358.65533700006,
-   "liquidez": 20510.8618,
+   "volume": 150365.65133700008,
+   "liquidez": 22885.39343,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99509194662036,
+   "dias_para_o_fim": 87.91949716651621,
    "preco": 0.003,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
@@ -947,9 +3475,9 @@
    "pergunta": "Will the upper bound of the target federal funds rate be 1.25% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-1pt25-at-the-end-of-2026-681",
    "volume": 150314.24185899997,
-   "liquidez": 21890.59694,
+   "liquidez": 24767.72608,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99509194623843,
+   "dias_para_o_fim": 87.91949716560185,
    "preco": 0.0065,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
@@ -966,10 +3494,10 @@
    "id": "1168834",
    "pergunta": "Will the upper bound of the target federal funds rate be 1.5% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-1pt5-at-the-end-of-2026-a8ms-587",
-   "volume": 147548.125612,
-   "liquidez": 11134.09219,
+   "volume": 147548.1256120001,
+   "liquidez": 12458.38229,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99509194520833,
+   "dias_para_o_fim": 87.91949716194445,
    "preco": 0.0035,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
@@ -983,13 +3511,53 @@
    "distancia": null
   },
   {
+   "id": "1560230",
+   "pergunta": "Will Ethereum hit $1,000 or $3,000 first?",
+   "url": "https://polymarket.com/event/will-ethereum-hit-1k-or-3k-first",
+   "volume": 102971.25172399996,
+   "liquidez": 8067.0566,
+   "fim": "2027-01-01T05:00:00+00:00",
+   "dias_para_o_fim": 111.12782978315971,
+   "preco": 0.275,
+   "familia": "Preço: toque para cima",
+   "taxa_base": null,
+   "taxa_base_n": null,
+   "taxa_base_janela": null,
+   "taxa_base_descricao": null,
+   "taxa_base_ressalva": null,
+   "taxa_base_series": null,
+   "taxa_base_falha": "sem taxa-base: o alvo (1000) já está do lado certo do preço de hoje (2516.12) — a pergunta não é sobre um movimento futuro",
+   "preco_ajustado": 0.34074657534246583,
+   "distancia": null
+  },
+  {
+   "id": "4063373",
+   "pergunta": "Will WTI Crude Oil (WTI) hit (LOW) $85 in September?",
+   "url": "https://polymarket.com/event/will-wti-dip-to-85-in-september-2026",
+   "volume": 92280.572968,
+   "liquidez": 15749.3194,
+   "fim": "2026-10-01T03:59:59.999000+00:00",
+   "dias_para_o_fim": 19.086163008993054,
+   "preco": 0.325,
+   "familia": "Preço: toque para cima",
+   "taxa_base": null,
+   "taxa_base_n": null,
+   "taxa_base_janela": null,
+   "taxa_base_descricao": null,
+   "taxa_base_ressalva": null,
+   "taxa_base_series": null,
+   "taxa_base_falha": "sem taxa-base: o alvo (85) já está do lado certo do preço de hoje (97.26) — a pergunta não é sobre um movimento futuro",
+   "preco_ajustado": 0.4123653846153845,
+   "distancia": null
+  },
+  {
    "id": "1168133",
    "pergunta": "Will the upper bound of the target federal funds rate be 2.25% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-2pt25-at-the-end-of-2026-971",
-   "volume": 89039.82652599998,
-   "liquidez": 17353.10899,
+   "volume": 89039.82652599999,
+   "liquidez": 14020.61184,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99509189380787,
+   "dias_para_o_fim": 87.91949613359954,
    "preco": 0.0035,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
@@ -1003,13 +3571,73 @@
    "distancia": null
   },
   {
+   "id": "4218286",
+   "pergunta": "Will WTI Crude Oil (WTI) hit (LOW) $90 in September?",
+   "url": "https://polymarket.com/event/will-wti-dip-to-90-in-september-2026-from-september-4",
+   "volume": 81911.244877,
+   "liquidez": 23207.0049,
+   "fim": "2026-10-01T03:59:59.999000+00:00",
+   "dias_para_o_fim": 19.08616268685185,
+   "preco": 0.573,
+   "familia": "Preço: toque para cima",
+   "taxa_base": null,
+   "taxa_base_n": null,
+   "taxa_base_janela": null,
+   "taxa_base_descricao": null,
+   "taxa_base_ressalva": null,
+   "taxa_base_series": null,
+   "taxa_base_falha": "sem taxa-base: o alvo (90) já está do lado certo do preço de hoje (97.26) — a pergunta não é sobre um movimento futuro",
+   "preco_ajustado": 0.518038043478261,
+   "distancia": null
+  },
+  {
+   "id": "3866516",
+   "pergunta": "Will WTI Crude Oil (WTI) hit (LOW) $70 in September?",
+   "url": "https://polymarket.com/event/will-wti-dip-to-70-in-september-2026",
+   "volume": 73080.04566000002,
+   "liquidez": 51961.65954,
+   "fim": "2026-10-01T03:59:59.999000+00:00",
+   "dias_para_o_fim": 19.08616250834491,
+   "preco": 0.0215,
+   "familia": "Preço: toque para cima",
+   "taxa_base": null,
+   "taxa_base_n": null,
+   "taxa_base_janela": null,
+   "taxa_base_descricao": null,
+   "taxa_base_ressalva": null,
+   "taxa_base_series": null,
+   "taxa_base_falha": "sem taxa-base: o alvo (70) já está do lado certo do preço de hoje (97.26) — a pergunta não é sobre um movimento futuro",
+   "preco_ajustado": 0.032363147605083076,
+   "distancia": null
+  },
+  {
+   "id": "4413392",
+   "pergunta": "Will WTI Crude Oil (WTI) hit (LOW) $95 in September?",
+   "url": "https://polymarket.com/event/will-wti-dip-to-95-in-september-2026",
+   "volume": 71149.238395,
+   "liquidez": 27086.291,
+   "fim": "2026-10-01T03:59:59.999000+00:00",
+   "dias_para_o_fim": 19.08616246054398,
+   "preco": 0.825,
+   "familia": "Preço: toque para cima",
+   "taxa_base": null,
+   "taxa_base_n": null,
+   "taxa_base_janela": null,
+   "taxa_base_descricao": null,
+   "taxa_base_ressalva": null,
+   "taxa_base_series": null,
+   "taxa_base_falha": "sem taxa-base: o alvo (95) já está do lado certo do preço de hoje (97.26) — a pergunta não é sobre um movimento futuro",
+   "preco_ajustado": 0.8963888888888888,
+   "distancia": null
+  },
+  {
    "id": "1168137",
    "pergunta": "Will the upper bound of the target federal funds rate be 3.25% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-3pt25-at-the-end-of-2026-282",
    "volume": 68313.06401400002,
-   "liquidez": 16455.52721,
+   "liquidez": 17784.27491,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.99509186182871,
+   "dias_para_o_fim": 87.91949558357639,
    "preco": 0.0045,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
@@ -1026,10 +3654,10 @@
    "id": "1168135",
    "pergunta": "Will the upper bound of the target federal funds rate be 2.75% at the end of 2026?",
    "url": "https://polymarket.com/event/will-the-upper-bound-of-the-target-federal-funds-rate-be-2pt75-at-the-end-of-2026-218",
-   "volume": 68083.79779899999,
-   "liquidez": 18595.17142,
+   "volume": 68083.79779899998,
+   "liquidez": 20348.2428,
    "fim": "2026-12-09T00:00:00+00:00",
-   "dias_para_o_fim": 87.9950918606713,
+   "dias_para_o_fim": 87.91949557968749,
    "preco": 0.0045,
    "familia": "Fed: nível do alvo no fim do ano",
    "taxa_base": null,
@@ -1045,29 +3673,164 @@
  ],
  "sem_familia": [
   {
+   "id": "665374",
+   "pergunta": "Will the U.S. invade Iran before 2027?",
+   "volume": 65636673.15224098
+  },
+  {
+   "id": "567621",
+   "pergunta": "Will China invade Taiwan by end of 2026?",
+   "volume": 41167209.00730883
+  },
+  {
+   "id": "1144471",
+   "pergunta": "Will Satoshi move any Bitcoin in 2026?",
+   "volume": 4970388.622920003
+  },
+  {
+   "id": "1107878",
+   "pergunta": "Will the U.S. invade Cuba in 2026?",
+   "volume": 3292884.12744
+  },
+  {
+   "id": "1633611",
+   "pergunta": "Will China invade Taiwan by December 31, 2027?",
+   "volume": 3207792.0612769993
+  },
+  {
+   "id": "2696747",
+   "pergunta": "US-Iran Final Nuclear Deal by December 31, 2026?",
+   "volume": 2691285.1709589995
+  },
+  {
+   "id": "2243897",
+   "pergunta": "Russia x Ukraine ceasefire agreement by December 31, 2026?",
+   "volume": 2597673.6040710006
+  },
+  {
+   "id": "1633606",
+   "pergunta": "Will China invade Taiwan by September 30, 2026?",
+   "volume": 2117228.226653999
+  },
+  {
+   "id": "3399458",
+   "pergunta": "Israel x Iran ceasefire continues through September 30?",
+   "volume": 1853002.0454450008
+  },
+  {
+   "id": "948958",
+   "pergunta": "Bitcoin all time high by December 31, 2026?",
+   "volume": 1808034.089613999
+  },
+  {
+   "id": "2243896",
+   "pergunta": "Russia x Ukraine ceasefire agreement by October 31, 2026?",
+   "volume": 1615787.4349859993
+  },
+  {
+   "id": "2696746",
+   "pergunta": "US-Iran Final Nuclear Deal by September 30, 2026?",
+   "volume": 1595669.9688930004
+  },
+  {
    "id": "1808547",
    "pergunta": "Fed Rate Hike by September 2026 Meeting?",
-   "volume": 1538590.333226
+   "volume": 1548560.2996409999
+  },
+  {
+   "id": "1115301",
+   "pergunta": "Will the U.S. invade Greenland in 2026?",
+   "volume": 1435539.2063749991
+  },
+  {
+   "id": "948957",
+   "pergunta": "Bitcoin all time high by September 30, 2026?",
+   "volume": 1410460.438542
+  },
+  {
+   "id": "665258",
+   "pergunta": "Will China unban Bitcoin by 2027?",
+   "volume": 1082964.0862029998
+  },
+  {
+   "id": "2264328",
+   "pergunta": "Russia x Ukraine ceasefire by December 31, 2026?",
+   "volume": 851721.7570300001
+  },
+  {
+   "id": "1170144",
+   "pergunta": "Will the US officially declare war on Iran by December 31, 2026?",
+   "volume": 843032.0615110005
   },
   {
    "id": "1808548",
    "pergunta": "Fed Rate Hike by October 2026 Meeting?",
-   "volume": 710105.6226509999
+   "volume": 710621.8926510001
+  },
+  {
+   "id": "2264327",
+   "pergunta": "Russia x Ukraine ceasefire by October 31, 2026?",
+   "volume": 680154.3515989997
+  },
+  {
+   "id": "951181",
+   "pergunta": "Ethereum all time high by December 31, 2026?",
+   "volume": 570467.4883079998
+  },
+  {
+   "id": "3399459",
+   "pergunta": "Israel x Iran ceasefire continues through October 31?",
+   "volume": 529866.167624
   },
   {
    "id": "1439549",
    "pergunta": "Fed rate cut by September 2026 meeting?",
-   "volume": 516730.29029600014
+   "volume": 516730.2902960001
+  },
+  {
+   "id": "3399468",
+   "pergunta": "Israel x Iran ceasefire continues through December 31?",
+   "volume": 515870.2879440001
+  },
+  {
+   "id": "1194695",
+   "pergunta": "Will Russia invade another country in 2026?",
+   "volume": 460612.92667600006
+  },
+  {
+   "id": "1068346",
+   "pergunta": "Will Bitcoin outperform Gold in 2026?",
+   "volume": 454929.6503370001
+  },
+  {
+   "id": "665459",
+   "pergunta": "Will North Korea invade South Korea before 2027?",
+   "volume": 444742.47767399997
+  },
+  {
+   "id": "1811266",
+   "pergunta": "Will China invade Taiwan by June 30, 2027?",
+   "volume": 443227.7162910002
+  },
+  {
+   "id": "950852",
+   "pergunta": "Will Bitcoin have the best performance in 2026?",
+   "volume": 440905.68875900004
+  },
+  {
+   "id": "951180",
+   "pergunta": "Ethereum all time high by September 30, 2026?",
+   "volume": 382659.6107319999
   },
   {
    "id": "2118805",
    "pergunta": "Will the Fed decide differently in the next three decisions (Jun–Jul–Sep)?",
-   "volume": 372102.813524
+   "volume": 372107.0818120001
   },
   {
    "id": "690215",
    "pergunta": "Will the Fed’s lower bound reach 2.75% or lower before 2027?",
-   "volume": 363565.3225609999
+   "volume": 363565.32256100007
   },
   {
    "id": "2118801",
@@ -1077,17 +3840,37 @@
   {
    "id": "2589837",
    "pergunta": "Will the Fed decide differently in the next three decisions (Jul–Sep–Oct)?",
-   "volume": 322943.37187500007
+   "volume": 322943.371875
   },
   {
    "id": "1439555",
    "pergunta": "Fed rate cut by December 2026 meeting?",
-   "volume": 319861.321871
+   "volume": 319923.3818710001
   },
   {
    "id": "690220",
    "pergunta": "Will the Fed’s lower bound reach 3.0% or lower before 2027?",
    "volume": 314166.496735
+  },
+  {
+   "id": "1553608",
+   "pergunta": "Will MicroStrategy announce holding 1M+ BTC by December 31, 2026?-bV81",
+   "volume": 296438.2370669999
+  },
+  {
+   "id": "950853",
+   "pergunta": "Will Gold have the best performance in 2026?",
+   "volume": 279489.3250420002
+  },
+  {
+   "id": "1108137",
+   "pergunta": "Will the U.S. invade a Latin American country in 2026?",
+   "volume": 276732.68074099993
+  },
+  {
+   "id": "665521",
+   "pergunta": "Iran nuclear test before 2027?",
+   "volume": 257872.04015400002
   },
   {
    "id": "2589833",
@@ -1097,7 +3880,17 @@
   {
    "id": "1168832",
    "pergunta": "Will the upper bound of the target federal funds rate be ≤1.0% at the end of 2026?",
-   "volume": 254099.85498699997
+   "volume": 254109.50398699995
+  },
+  {
+   "id": "1116981",
+   "pergunta": "Will the U.S. invade Mexico in 2026?",
+   "volume": 253887.77504200002
+  },
+  {
+   "id": "3491459",
+   "pergunta": "US-Iran Final Nuclear Deal by October 31, 2026?",
+   "volume": 225472.105386
   },
   {
    "id": "1192820",
@@ -1110,24 +3903,54 @@
    "volume": 217811.6003359999
   },
   {
+   "id": "3902370",
+   "pergunta": "Israel x Iran ceasefire continues through November 30?",
+   "volume": 214606.530567
+  },
+  {
    "id": "677147",
    "pergunta": "Fed emergency rate cut before 2027?",
-   "volume": 209904.35072800005
+   "volume": 209904.35072800002
   },
   {
    "id": "1087310",
    "pergunta": "Will US unemployment reach at least 5.5% in 2026?",
-   "volume": 204736.914621
+   "volume": 204736.91462099997
+  },
+  {
+   "id": "704784",
+   "pergunta": "Will Bitcoin replace SHA-256 before 2027?",
+   "volume": 196257.77822500002
+  },
+  {
+   "id": "4095055",
+   "pergunta": "US x Iran Effective Ceasefire by September 30?",
+   "volume": 195876.924053
+  },
+  {
+   "id": "2109881",
+   "pergunta": "Will Anthropic flip BTC by December 31?",
+   "volume": 194442.92504200008
   },
   {
    "id": "1115677",
    "pergunta": "Jerome Powell out from Fed Board by December 31?",
-   "volume": 159614.56559599997
+   "volume": 159614.565596
+  },
+  {
+   "id": "1796338",
+   "pergunta": "Will Russia test a nuclear weapon by September 30 2026?",
+   "volume": 158344.37632399998
+  },
+  {
+   "id": "1116581",
+   "pergunta": "Will the U.S. invade Colombia in 2026?",
+   "volume": 149529.98410099995
   },
   {
    "id": "1439550",
    "pergunta": "Fed rate cut by October 2026 meeting?",
-   "volume": 145860.12264399996
+   "volume": 145860.12264400002
   },
   {
    "id": "690199",
@@ -1137,7 +3960,12 @@
   {
    "id": "2661519",
    "pergunta": "No change in Bank of England’s interest rates after September 2026 meeting?",
-   "volume": 141556.64455800003
+   "volume": 141579.910661
+  },
+  {
+   "id": "776464",
+   "pergunta": "Another S&P 500 Company buys Bitcoin by December 31, 2026?",
+   "volume": 134502.99071399999
   },
   {
    "id": "1087309",
@@ -1157,17 +3985,27 @@
   {
    "id": "2657588",
    "pergunta": "Will no Fed rate hikes happen in 2026?",
-   "volume": 122329.78709099999
+   "volume": 122677.611531
+  },
+  {
+   "id": "1796381",
+   "pergunta": "Will Russia test a nuclear weapon by December 31 2026?",
+   "volume": 120048.18495900002
   },
   {
    "id": "1192826",
    "pergunta": "Will China’s 2026 annual GDP growth (Y/Y) be 9% or higher?",
-   "volume": 117483.72344400002
+   "volume": 117483.72344399999
+  },
+  {
+   "id": "665322",
+   "pergunta": "Will Trump sell 10k-25k Gold Cards in 2026?",
+   "volume": 116846.894906
   },
   {
    "id": "677024",
    "pergunta": "Will the 10-year Treasury yield hit 5.0% before 2027?",
-   "volume": 108166.32065100003
+   "volume": 108171.32065099997
   },
   {
    "id": "690209",
@@ -1180,14 +4018,24 @@
    "volume": 102024.16247100002
   },
   {
+   "id": "2657590",
+   "pergunta": "Will 2 Fed rate hikes happen in 2026?",
+   "volume": 88467.18077199999
+  },
+  {
    "id": "1192822",
    "pergunta": "Will China’s 2026 annual GDP growth (Y/Y) be between 6.0% and 7.0%?",
    "volume": 87943.119277
   },
   {
-   "id": "2657590",
-   "pergunta": "Will 2 Fed rate hikes happen in 2026?",
-   "volume": 86722.130772
+   "id": "2853114",
+   "pergunta": "IAEA visits Isfahan, Fordow, or Natanz nuclear site by October 31?",
+   "volume": 84108.16089700001
+  },
+  {
+   "id": "3701688",
+   "pergunta": "Russia x Ukraine ceasefire agreement by June 30, 2027?",
+   "volume": 83309.65606999998
   },
   {
    "id": "1192819",
@@ -1197,7 +4045,7 @@
   {
    "id": "690221",
    "pergunta": "Will the Fed’s lower bound reach 3.25% or lower before 2027?",
-   "volume": 81282.991367
+   "volume": 81282.99136699997
   },
   {
    "id": "1192821",
@@ -1212,7 +4060,12 @@
   {
    "id": "1087311",
    "pergunta": "Will US unemployment reach at least 6.0% in 2026?",
-   "volume": 79378.79690999999
+   "volume": 79378.79690999998
+  },
+  {
+   "id": "1795597",
+   "pergunta": "Will the U.S. test a nuclear weapon by December 31 2026?",
+   "volume": 76920.28781200002
   },
   {
    "id": "1192817",
@@ -1220,14 +4073,29 @@
    "volume": 75379.48151000003
   },
   {
+   "id": "4095054",
+   "pergunta": "US x Iran Effective Ceasefire by September 18?",
+   "volume": 74719.42527199998
+  },
+  {
+   "id": "4443001",
+   "pergunta": "Israel x Iran ceasefire continues through September 15?",
+   "volume": 74192.33584700001
+  },
+  {
    "id": "2661520",
    "pergunta": "Bank of England increases interest rates by 25 bps after September 2026 meeting?",
    "volume": 69733.945758
   },
   {
+   "id": "3701687",
+   "pergunta": "Russia x Ukraine ceasefire agreement by March 31, 2027?",
+   "volume": 69096.218613
+  },
+  {
    "id": "1192816",
    "pergunta": "Will China’s 2026 annual GDP growth (Y/Y) be below 1.0%?",
-   "volume": 68057.85166200002
+   "volume": 68057.85166199999
   },
   {
    "id": "1192823",
