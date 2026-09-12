@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% block titulo %}Oráculo — o mercado é calibrado?{% endblock %}
+
+{% block estilo %}
+.diagrama { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+.diagrama .moldura { fill: none; stroke: var(--borda); stroke-width: 1; }
+.diagrama .grade { stroke: var(--grade); stroke-width: 1; }
+/* A diagonal é REFERÊNCIA, não série: fica cinza e tracejada para não disputar
+   atenção com o dado. Dar a ela uma cor de série sugeriria duas medições. */
+.diagrama .diagonal { stroke: var(--tinta-3); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.diagrama .curva { fill: none; stroke: var(--mercado); stroke-width: 2;
+  stroke-linejoin: round; stroke-linecap: round; }
+.diagrama circle { fill: var(--mercado); stroke: var(--superficie); stroke-width: 2; }
+.diagrama circle.rala { fill: var(--superficie); stroke: var(--mercado); }
+.diagrama text { fill: var(--tinta-3); font-size: 11px; font-family: inherit; }
+.diagrama .eixo { fill: var(--tinta-2); font-size: 12px; }
+.diagrama .alvo { pointer-events: all; fill: transparent; }
+.diagrama .alvo:hover + circle { stroke: var(--tinta); }
+
+.par { display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+  gap: 20px; align-items: start; }
+@media (max-width: 760px) { .par { grid-template-columns: 1fr; } }
+.horizonte-nota { font-size: 13.5px; color: var(--tinta-2); }
+.horizonte-nota strong { color: var(--tinta); }
+{% endblock %}
+
+{% block conteudo %}
+
+<p class="carimbo">
+  Medido em {{ gerado_em | quando }} ({{ idade }}).
+  {%- if bloco %}
+  {{ bloco.mercados_medidos }} mercados resolvidos entraram na conta, de
+  {{ bloco.mercados_candidatos }} candidatos; {{ bloco.mercados_sem_historico }} não
+  tinham série de preço. Volume mínimo de US$ {{ "{:,.0f}".format(bloco.volume_minimo).replace(",", ".") }}.
+  A colheita parou porque: {{ bloco.parada_da_colheita }}.
+  {%- endif %}
+</p>
+
+<div class="aviso">
+  <p><strong>Esta é a página que sustenta ou derruba o resto do projeto.</strong></p>
+  <p>
+    Um preço de contrato binário <em>é</em> uma probabilidade: pagar US$&nbsp;0,70 por um
+    papel que vale US$&nbsp;1 se o evento acontecer é dizer 70%. Calibração é conferir
+    isso contra o mundo — das vezes em que o mercado pediu 0,70, o evento aconteceu em
+    70% delas? A conta não usa modelo nenhum nosso: é aritmética sobre mercados já
+    resolvidos, com desfecho público.
+  </p>
+  <p>
+    <strong>O horizonte faz parte da medida.</strong> O preço na véspera acerta quase
+    sempre, e isso não é previsão — é o mercado lendo o jornal. Por isso os três
+    horizontes aparecem lado a lado, em vez de um só escolhido depois de ver qual
+    ficava melhor.
+  </p>
+</div>
+
+{% if not horizontes %}
+<div class="cartao">
+  <p class="vazio">
+    <code>data/calibragem.json</code> ainda não foi gerado. Rode
+    <code>python -m scripts.calibrar</code>.
+  </p>
+</div>
+{% endif %}
+
+{% for chave, h in horizontes.items() %}
+<div class="cartao">
+  <h2>{{ chave }} dia{{ "s" if chave != "1" }} antes da resolução</h2>
+  <p class="nota">
+    n = {{ h.n }} mercados · taxa-base da amostra {{ h.taxa_base | porcento }}
+    (a fração de mercados cujo "sim" aconteceu)
+  </p>
+
+  <div class="indicadores" style="margin-bottom:18px">
+    <div class="indicador">
+      <div class="rotulo">Brier</div>
+      <div class="valor">{{ h.brier | numero }}</div>
+      <div class="pe">menor é melhor; 0 é perfeito</div>
+    </div>
+    <div class="indicador">
+      <div class="rotulo">Ganho sobre a climatologia</div>
+      <div class="valor">{{ h.ganho_sobre_climatologia | porcento }}</div>
+      <div class="pe">contra chutar sempre {{ h.taxa_base | porcento }} ({{ h.brier_da_climatologia | numero }})</div>
+    </div>
+    <div class="indicador">
+      <div class="rotulo">Confiabilidade</div>
+      <div class="valor">{{ h.confiabilidade | numero }}</div>
+      <div class="pe">quão longe o preço fica da frequência; 0 é honestidade perfeita</div>
+    </div>
+    <div class="indicador">
+      <div class="rotulo">Resolução</div>
+      <div class="valor">{{ h.resolucao | numero }}</div>
+      <div class="pe">quanto o preço se compromete; 0 seria responder a média a tudo</div>
+    </div>
+  </div>
+
+  <div class="par">
+    <svg class="diagrama" viewBox="0 0 {{ h.diagrama.largura }} {{ h.diagrama.altura }}"
+         width="{{ h.diagrama.largura }}" height="{{ h.diagrama.altura }}" role="img"
+         aria-label="Diagrama de confiabilidade: preço pedido no eixo horizontal, frequência observada no vertical. A tabela ao lado traz os mesmos números.">
+      {% for marca in h.diagrama.marcas_y %}
+      <line class="grade" x1="{{ marca.x }}" y1="{{ marca.y }}"
+            x2="{{ marca.x + h.diagrama.moldura.lado }}" y2="{{ marca.y }}"/>
+      <text x="{{ marca.x - 7 }}" y="{{ marca.y + 4 }}" text-anchor="end">{{ marca.valor | numero(2) }}</text>
+      {% endfor %}
+      {% for marca in h.diagrama.marcas_x %}
+      <text x="{{ marca.x }}" y="{{ marca.y + 16 }}" text-anchor="middle">{{ marca.valor | numero(2) }}</text>
+      {% endfor %}
+      <rect class="moldura" x="{{ h.diagrama.moldura.x }}" y="{{ h.diagrama.moldura.y }}"
+            width="{{ h.diagrama.moldura.lado }}" height="{{ h.diagrama.moldura.lado }}"/>
+      <line class="diagonal" x1="{{ h.diagrama.diagonal.x1 }}" y1="{{ h.diagrama.diagonal.y1 }}"
+            x2="{{ h.diagrama.diagonal.x2 }}" y2="{{ h.diagrama.diagonal.y2 }}"/>
+      <polyline class="curva" points="{{ h.diagrama.linha }}"/>
+      {% for ponto in h.diagrama.pontos %}
+      <circle class="{{ 'rala' if not ponto.confiavel }}" cx="{{ "%.1f"|format(ponto.x) }}"
+              cy="{{ "%.1f"|format(ponto.y) }}" r="{{ "%.1f"|format(ponto.raio) }}">
+        <title>faixa {{ ponto.rotulo | replace(".", ",") }} · n={{ ponto.n }} · pediu {{ ponto.preco | numero(3) }} · aconteceu {{ ponto.frequencia | numero(3) }}</title>
+      </circle>
+      {% endfor %}
+      <text class="eixo" x="{{ h.diagrama.moldura.x + h.diagrama.moldura.lado / 2 }}"
+            y="{{ h.diagrama.altura - 4 }}" text-anchor="middle">preço que o mercado pediu</text>
+      <text class="eixo" x="12" y="{{ h.diagrama.moldura.y + h.diagrama.moldura.lado / 2 }}"
+            text-anchor="middle"
+            transform="rotate(-90 12 {{ h.diagrama.moldura.y + h.diagrama.moldura.lado / 2 }})">frequência observada</text>
+    </svg>
+
+    <div>
+      <div class="rolagem">
+      <table>
+        <thead>
+          <tr><th>Faixa</th><th class="num">n</th><th class="num">Pediu</th>
+              <th class="num">Aconteceu</th><th class="num">Erro</th></tr>
+        </thead>
+        <tbody>
+          {% for faixa in h.faixas if faixa.n > 0 %}
+          <tr>
+            <td>{{ faixa.piso | numero(1) }}–{{ faixa.teto | numero(1) }}</td>
+            <td class="num">{{ faixa.n }}</td>
+            <td class="num">{{ faixa.preco_medio | numero(3) }}</td>
+            <td class="num">{{ faixa.frequencia_real | numero(3) }}</td>
+            <td class="num">{{ faixa.erro | com_sinal }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      </div>
+      <p class="horizonte-nota" style="margin-top:12px">
+        Disco vazado = faixa com menos de 30 observações, que não entra em nenhum
+        ajuste. Área do disco proporcional a n.
+      </p>
+    </div>
+  </div>
+
+  <p class="horizonte-nota" style="margin-top:16px">
+    <strong>Viés favorito–azarão:</strong>
+    na ponta de baixo (preço &lt; 0,20) o erro é
+    {{ h.vies_favorito_azarao.erro_azarao | com_sinal }} sobre n={{ h.vies_favorito_azarao.n_azarao }};
+    na de cima (&gt; 0,80), {{ h.vies_favorito_azarao.erro_favorito | com_sinal }} sobre
+    n={{ h.vies_favorito_azarao.n_favorito }}. A literatura de pista de corrida acha
+    azarão caro desde os anos 1940; aqui as duas pontas erram para o mesmo lado e por
+    pouco, então <strong>esse viés não aparece</strong>.
+  </p>
+
+  {% if h.banda_suspeita and h.banda_suspeita.z is not none %}
+  <p class="horizonte-nota" style="margin-top:10px">
+    <strong>A banda {{ h.banda_suspeita.piso | numero(2) }}–{{ h.banda_suspeita.teto | numero(2) }}:</strong>
+    o mercado pediu {{ h.banda_suspeita.preco_medio | numero(3) }} e aconteceu
+    {{ h.banda_suspeita.frequencia_real | numero(3) }} —
+    {{ h.banda_suspeita.diferenca | com_sinal }} sobre n={{ h.banda_suspeita.n }},
+    z = {{ h.banda_suspeita.z | sinalizado }}.
+    <em>Este z é otimista e a faixa foi escolhida depois de ver os dados</em>: mercados
+    do mesmo evento resolvem juntos, então o n efetivo é o número de eventos e não o de
+    mercados. Hipótese para a próxima medição, não achado.
+  </p>
+  {% endif %}
+</div>
+{% endfor %}
+
+{% endblock %}

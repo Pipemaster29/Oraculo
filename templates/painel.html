@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% block titulo %}Oráculo — painel{% endblock %}
+
+{% block estilo %}
+.haltere { display: block; }
+.haltere .trilho { stroke: var(--grade); stroke-width: 3; stroke-linecap: round; }
+.haltere .ligacao { stroke: var(--tinta-3); stroke-width: 2; stroke-linecap: round; }
+/* O anel da cor da superfície é o que mantém as duas marcas legíveis quando
+   preço e taxa-base quase coincidem e os discos se sobrepõem. */
+.haltere circle { stroke: var(--superficie); stroke-width: 2; }
+.haltere .mercado { fill: var(--mercado); }
+.haltere .historia { fill: var(--historia); }
+td .ressalva { display: block; font-size: 12px; color: var(--tinta-3); margin-top: 2px; }
+{% endblock %}
+
+{% block conteudo %}
+
+<p class="carimbo">
+  Retrato de {{ gerado_em | quando }} ({{ idade }}).
+  {%- if bloco %} {{ bloco.mercados_lidos }} mercados lidos; a colheita parou porque:
+  {{ bloco.parada_da_colheita }}.{% endif %}
+</p>
+
+<div class="aviso">
+  <p><strong>Isto não é recomendação de aposta e a diferença entre as duas colunas não é oportunidade.</strong></p>
+  <p>
+    O <span style="color:var(--mercado)">preço</span> é o que o mercado cobra hoje, com
+    dinheiro atrás. A <span style="color:var(--historia)">história</span> é com que
+    frequência aquilo aconteceu num período comparável — e ela <em>não sabe nada</em>
+    sobre o ano em curso: não conhece a inflação medida, o desemprego medido, nem o que
+    o comitê já falou. O mercado conhece.
+  </p>
+  <p>
+    Então uma distância grande quer dizer só isto: <em>o mercado acha este período
+    muito diferente de um período típico</em>. Quase sempre é porque ele sabe de algo.
+    Às vezes é porque está errado. Esta página <strong>não distingue os dois casos</strong>
+    e não tenta.
+  </p>
+</div>
+
+<div class="cartao">
+  <h2>Mercados econômicos abertos</h2>
+  <p class="nota">
+    Ordenados pela distância entre preço e história, do maior desacordo para o menor.
+    {% if horizonte %}A coluna <em>ajustado</em> passa o preço pela curva de
+    confiabilidade medida no horizonte de {{ horizonte }} dias; fica vazia onde a faixa
+    de preço não tem amostra para afirmar.{% else %}A coluna <em>ajustado</em> está
+    vazia porque a calibragem ainda não foi medida.{% endif %}
+  </p>
+
+  <div class="legenda">
+    <span><i class="pastilha mercado"></i> preço do mercado</span>
+    <span><i class="pastilha historia"></i> taxa-base histórica</span>
+  </div>
+
+  {% if linhas %}
+  <div class="rolagem">
+  <table>
+    <thead>
+      <tr>
+        <th>Mercado</th>
+        <th>0 &rarr; 100%</th>
+        <th class="num">Preço</th>
+        <th class="num">História</th>
+        <th class="num">Distância</th>
+        <th class="num">Ajustado</th>
+        <th class="num">Fecha em</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for linha in linhas %}
+      <tr>
+        <td>
+          <a class="pergunta" href="{{ linha.url }}" target="_blank" rel="noopener">{{ linha.pergunta }}</a>
+          <span class="ressalva">
+            {{ linha.familia }}
+            {%- if linha.taxa_base_descricao %} · {{ linha.taxa_base_descricao }}
+            ({{ linha.taxa_base_janela }}, n={{ linha.taxa_base_n }}){% endif %}
+            {%- if linha.taxa_base_falha %} · <strong>{{ linha.taxa_base_falha }}</strong>{% endif %}
+          </span>
+        </td>
+        <td>
+          <svg class="haltere" width="{{ linha.haltere.largura }}" height="18"
+               viewBox="0 0 {{ linha.haltere.largura }} 18" role="img"
+               aria-label="preço {{ linha.preco | porcento }}{% if linha.taxa_base is not none %}, história {{ linha.taxa_base | porcento }}{% endif %}">
+            <line class="trilho" x1="2" y1="9" x2="{{ linha.haltere.largura - 2 }}" y2="9"/>
+            {% if linha.haltere.ligacao %}
+            <line class="ligacao" x1="{{ linha.haltere.ligacao.x1 }}" y1="9"
+                  x2="{{ linha.haltere.ligacao.x2 }}" y2="9"/>
+            {% endif %}
+            {% if linha.haltere.historia is not none %}
+            <circle class="historia" cx="{{ linha.haltere.historia }}" cy="9" r="5"/>
+            {% endif %}
+            <circle class="mercado" cx="{{ linha.haltere.mercado }}" cy="9" r="5"/>
+          </svg>
+        </td>
+        <td class="num">{{ linha.preco | porcento }}</td>
+        <td class="num">{{ linha.taxa_base | porcento }}</td>
+        <td class="num">{{ linha.distancia | com_sinal }}</td>
+        <td class="num">{{ linha.preco_ajustado | porcento }}</td>
+        <td class="num">
+          {%- if linha.dias_para_o_fim is not none -%}
+            {{ "%.0f"|format(linha.dias_para_o_fim) }} d
+          {%- else -%}—{%- endif -%}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% else %}
+  <p class="vazio">
+    Nenhuma linha. Ou <code>data/painel.json</code> não foi gerado
+    (<code>python -m scripts.montar</code>), ou nenhum mercado aberto casou com uma
+    família do catálogo.
+  </p>
+  {% endif %}
+</div>
+
+{% if sem_familia %}
+<div class="cartao">
+  <h2>Econômicos que o catálogo ainda não cobre</h2>
+  <p class="nota">
+    Mercados com cara de economia que nenhuma família de <code>oraculo/catalogo.py</code>
+    reconheceu. Estão aqui de propósito: sem esta lista, um mercado que o Oráculo
+    deveria cobrir e não cobre some da tela, indistinguível de um que não existe.
+  </p>
+  <div class="rolagem">
+  <table>
+    <thead><tr><th>Mercado</th><th class="num">Volume</th></tr></thead>
+    <tbody>
+      {% for orfao in sem_familia[:20] %}
+      <tr>
+        <td>{{ orfao.pergunta }}</td>
+        <td class="num">US$ {{ "{:,.0f}".format(orfao.volume).replace(",", ".") }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block titulo %}Oráculo{% endblock %}</title>
+<style>
+/* ------------------------------------------------------------------
+   Paleta. Os dois tons de série saíram do validador da skill `dataviz`
+   e passaram nos seis testes nos dois modos: par azul↔laranja com
+   ΔE de CVD 24,7 no claro e 26,8 no escuro (alvo ≥ 8), ΔE de visão
+   normal 33,6 e 31,8 (piso 15), contraste ≥ 3:1 contra as duas
+   superfícies.
+
+   Todo tom tem definição no `:root` puro. Cor definida SÓ dentro de
+   um `@media` some para quem não casa com a consulta — e o modo
+   "sistema" não casa com nenhum dos dois `data-theme`.
+   ------------------------------------------------------------------ */
+:root {
+  color-scheme: light;
+  --fundo:        #fcfcfb;
+  --superficie:   #ffffff;
+  --borda:        #e4e3de;
+  --grade:        #eeede8;
+  --tinta:        #0b0b0b;
+  --tinta-2:      #52514e;
+  --tinta-3:      #7a7873;
+  --mercado:      #2a78d6;
+  --historia:     #eb6834;
+  --aviso-fundo:  #fdf6e8;
+  --aviso-borda:  #eda100;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --fundo:      #141413;
+    --superficie: #1a1a19;
+    --borda:      #34332f;
+    --grade:      #2a2926;
+    --tinta:      #ffffff;
+    --tinta-2:    #c3c2b7;
+    --tinta-3:    #8d8b81;
+    --mercado:    #3987e5;
+    --historia:   #d95926;
+    --aviso-fundo:#2a2415;
+    --aviso-borda:#c98500;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --fundo:      #141413;
+  --superficie: #1a1a19;
+  --borda:      #34332f;
+  --grade:      #2a2926;
+  --tinta:      #ffffff;
+  --tinta-2:    #c3c2b7;
+  --tinta-3:    #8d8b81;
+  --mercado:    #3987e5;
+  --historia:   #d95926;
+  --aviso-fundo:#2a2415;
+  --aviso-borda:#c98500;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--tinta);
+  font: 15px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.folha { max-width: 1000px; margin: 0 auto; padding-block: 28px; padding-inline: 18px; }
+
+header h1 { font-size: 22px; margin: 0 0 2px; letter-spacing: -0.01em; }
+header p.sub { margin: 0; color: var(--tinta-2); font-size: 14px; }
+
+nav { display: flex; gap: 4px; margin: 20px 0 8px; flex-wrap: wrap; }
+nav a {
+  padding: 6px 12px; border-radius: 999px; text-decoration: none;
+  color: var(--tinta-2); font-size: 14px; border: 1px solid transparent;
+}
+nav a.ativa { color: var(--tinta); border-color: var(--borda); background: var(--superficie); }
+nav a:hover { color: var(--tinta); }
+
+.carimbo {
+  font-size: 12.5px; color: var(--tinta-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.aviso {
+  background: var(--aviso-fundo);
+  border: 1px solid var(--borda);
+  border-left: 3px solid var(--aviso-borda);
+  border-radius: 8px; padding: 13px 15px; margin: 16px 0 24px;
+  font-size: 14px; color: var(--tinta-2);
+}
+.aviso strong { color: var(--tinta); }
+.aviso p { margin: 0 0 8px; }
+.aviso p:last-child { margin-bottom: 0; }
+
+.cartao {
+  background: var(--superficie); border: 1px solid var(--borda);
+  border-radius: 10px; padding: 16px 18px; margin-bottom: 18px;
+}
+.cartao > h2 { font-size: 15px; margin: 0 0 3px; letter-spacing: -0.005em; }
+.cartao > p.nota { margin: 0 0 14px; font-size: 13.5px; color: var(--tinta-2); }
+
+/* Painel de indicadores. Números grandes com o rótulo em cima e a
+   ressalva embaixo — o número sozinho é a metade que engana. */
+.indicadores { display: flex; flex-wrap: wrap; gap: 10px; }
+.indicador {
+  flex: 1 1 150px; min-width: 0;
+  border: 1px solid var(--borda); border-radius: 8px; padding: 11px 13px;
+}
+.indicador .rotulo { font-size: 11.5px; text-transform: uppercase;
+  letter-spacing: .05em; color: var(--tinta-3); }
+.indicador .valor { font-size: 23px; font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em; margin-top: 2px; }
+.indicador .pe { font-size: 12px; color: var(--tinta-2); margin-top: 3px; }
+
+.rolagem { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--grade); }
+th { font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--tinta-3); font-weight: 600; white-space: nowrap; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--grade); }
+a.pergunta { color: var(--tinta); text-decoration: none; }
+a.pergunta:hover { text-decoration: underline; }
+
+.legenda { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px;
+  color: var(--tinta-2); margin-bottom: 12px; }
+.legenda span { display: inline-flex; align-items: center; gap: 6px; }
+.pastilha { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.pastilha.mercado { background: var(--mercado); }
+.pastilha.historia { background: var(--historia); }
+
+.vazio { color: var(--tinta-3); font-size: 14px; padding: 10px 0; }
+
+footer { margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--borda);
+  font-size: 13px; color: var(--tinta-3); }
+footer a { color: var(--tinta-2); }
+
+@media (max-width: 620px) {
+  .folha { padding-block: 20px; }
+  th, td { padding: 8px 7px; }
+}
+{% block estilo %}{% endblock %}
+</style>
+</head>
+<body>
+<div class="folha">
+  <header>
+    <h1>Oráculo</h1>
+    <p class="sub">O que o Polymarket precifica, ao lado do que a história registrou.</p>
+  </header>
+
+  <nav>
+    <a href="/" class="{{ 'ativa' if aba == 'painel' }}">Painel</a>
+    <a href="/calibragem" class="{{ 'ativa' if aba == 'calibragem' }}">O mercado é calibrado?</a>
+  </nav>
+
+  {% block conteudo %}{% endblock %}
+
+  <footer>
+    Tudo vem de fonte pública e sem nenhuma chave de API: catálogo e preço do
+    <a href="https://polymarket.com">Polymarket</a> (Gamma e CLOB), séries
+    históricas do <a href="https://fred.stlouisfed.org">FRED</a> do Fed de St.
+    Louis. Os números desta tela saem crus em
+    <a href="/dados/painel">/dados/painel</a> e
+    <a href="/dados/calibragem">/dados/calibragem</a>.
+    <a href="https://github.com/Pipemaster29/oraculo">Código</a>.
+  </footer>
+</div>
+</body>
+</html>

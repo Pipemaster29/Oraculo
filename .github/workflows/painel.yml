@@ -1,0 +1,62 @@
+# Remonta o painel e commita o resultado.
+#
+# De hora em hora, e essa escolha é deliberada. O btc-moon precisou esticar cada
+# execução para cinco horas porque o `schedule` do GitHub atrasa e descarta sob
+# carga — das 48 execuções pedidas por dia chegavam cerca de sete. Aqui o mesmo
+# atraso não machuca: o que esta página mostra é preço de mercado de evento
+# macro, que anda em dias, contra taxa-base histórica, que anda em décadas. Uma
+# execução que atrasa duas horas custa duas horas de preço velho, e a página
+# carimba a própria idade justamente para que isso seja visível em vez de
+# invisível.
+#
+# Se um dia o projeto passar a cobrir mercado que se move em minutos, é aqui que
+# a conversa recomeça — e a resposta não será cron mais agressivo, será execução
+# mais longa.
+
+name: painel
+
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+
+# Uma execução por vez. Duas montando ao mesmo tempo produzem dois commits sobre
+# o mesmo arquivo e a segunda perde por conflito de push.
+concurrency:
+  group: dados
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  montar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: montar o painel
+        run: python -m scripts.montar --teto 2100
+
+      - name: conferir as invariantes antes de commitar
+        # Este passo é o portão. Sem ele, uma fonte que muda de formato commita
+        # `data/painel.json` vazio ou com lixo e a página publica isso.
+        run: python -m scripts.auditar
+
+      - name: commitar
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          # `git commit` sai com código 1 quando não há nada a commitar, o que
+          # aqui é o caso normal e não uma falha.
+          git diff --staged --quiet || git commit -m "painel: retrato de $(date -u +'%d/%m %H:%M UTC')"
+          git push
