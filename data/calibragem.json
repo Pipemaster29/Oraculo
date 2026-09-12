@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-12T00:06:54+00:00",
+ "gerado_em": "2026-09-12T09:35:00+00:00",
  "volume_minimo": 20000.0,
  "parada_da_colheita": "teto pedido atingido",
  "mercados_pedidos": 2100,
@@ -10,92 +10,92 @@
   "1": {
    "n": 2023,
    "taxa_base": 0.2723677706376668,
-   "brier": 0.09795038726519964,
-   "brier_da_climatologia": 0.19818356815553226,
+   "brier": 0.0979503872652002,
+   "brier_da_climatologia": 0.19818356815553415,
    "brier_das_faixas": 0.0985973140951898,
-   "ganho_da_precisao_fina": 0.0006469268299901659,
-   "ganho_sobre_climatologia": 0.5057592908594255,
-   "confiabilidade": 0.001297453164100544,
+   "ganho_da_precisao_fina": 0.0006469268299896108,
+   "ganho_sobre_climatologia": 0.5057592908594274,
+   "confiabilidade": 0.0012974531641005448,
    "resolucao": 0.10088370722444488,
    "incerteza": 0.19818356815553415,
    "vies_favorito_azarao": {
     "n_azarao": 1185,
-    "erro_azarao": 0.014085443037974689,
+    "erro_azarao": 0.014085443037974685,
     "n_favorito": 176,
-    "erro_favorito": 0.0052130681818183255
+    "erro_favorito": 0.0052130681818182145
    },
    "banda_suspeita": {
     "piso": 0.1,
     "teto": 0.4,
     "n": 305,
-    "preco_medio": 0.24658852459016395,
+    "preco_medio": 0.2465885245901639,
     "frequencia_real": 0.33114754098360655,
-    "diferenca": 0.0845590163934426,
+    "diferenca": 0.08455901639344265,
     "erro_padrao": 0.024680424587216462,
-    "z": 3.4261572808289937
+    "z": 3.426157280828996
    },
    "faixas": [
     {
      "piso": 0.0,
      "teto": 0.1,
      "n": 1081,
-     "preco_medio": 0.009033765032377433,
+     "preco_medio": 0.009033765032377428,
      "frequencia_real": 0.014801110083256245,
-     "erro": 0.005767345050878812,
+     "erro": 0.005767345050878817,
      "confiavel": true
     },
     {
      "piso": 0.1,
      "teto": 0.2,
      "n": 104,
-     "preco_medio": 0.14945432692307686,
+     "preco_medio": 0.14945432692307692,
      "frequencia_real": 0.25,
-     "erro": 0.10054567307692314,
+     "erro": 0.10054567307692308,
      "confiavel": true
     },
     {
      "piso": 0.2,
      "teto": 0.30000000000000004,
      "n": 105,
-     "preco_medio": 0.2458166666666667,
+     "preco_medio": 0.24581666666666666,
      "frequencia_real": 0.3333333333333333,
-     "erro": 0.0875166666666666,
+     "erro": 0.08751666666666666,
      "confiavel": true
     },
     {
      "piso": 0.30000000000000004,
      "teto": 0.4,
      "n": 96,
-     "preco_medio": 0.3526614583333334,
+     "preco_medio": 0.35266145833333334,
      "frequencia_real": 0.4166666666666667,
-     "erro": 0.06400520833333329,
+     "erro": 0.06400520833333334,
      "confiavel": true
     },
     {
      "piso": 0.4,
      "teto": 0.5,
      "n": 141,
-     "preco_medio": 0.45208865248226965,
+     "preco_medio": 0.45208865248226954,
      "frequencia_real": 0.48936170212765956,
-     "erro": 0.03727304964538991,
+     "erro": 0.03727304964539002,
      "confiavel": true
     },
     {
      "piso": 0.5,
      "teto": 0.6,
      "n": 150,
-     "preco_medio": 0.5492300000000001,
+     "preco_medio": 0.54923,
      "frequencia_real": 0.5266666666666666,
-     "erro": -0.02256333333333349,
+     "erro": -0.02256333333333338,
      "confiavel": true
     },
     {
      "piso": 0.6000000000000001,
      "teto": 0.7000000000000001,
      "n": 104,
-     "preco_medio": 0.6424759615384619,
+     "preco_medio": 0.6424759615384615,
      "frequencia_real": 0.6442307692307693,
-     "erro": 0.001754807692307403,
+     "erro": 0.001754807692307736,
      "confiavel": true
     },
     {
@@ -111,9 +111,9 @@
      "piso": 0.8,
      "teto": 0.9,
      "n": 43,
-     "preco_medio": 0.8466511627906975,
+     "preco_medio": 0.8466511627906976,
      "frequencia_real": 0.8372093023255814,
-     "erro": -0.009441860465116081,
+     "erro": -0.009441860465116192,
      "confiavel": true
     },
     {
@@ -130,19 +130,19 @@
   "7": {
    "n": 1678,
    "taxa_base": 0.23122765196662692,
-   "brier": 0.08412922526817614,
-   "brier_da_climatologia": 0.17776142493262415,
+   "brier": 0.0841292252681764,
+   "brier_da_climatologia": 0.1777614249326274,
    "brier_das_faixas": 0.08596260090278064,
-   "ganho_da_precisao_fina": 0.001833375634604506,
-   "ganho_sobre_climatologia": 0.526729574202822,
+   "ganho_da_precisao_fina": 0.0018333756346042424,
+   "ganho_sobre_climatologia": 0.5267295742028291,
    "confiabilidade": 0.001306556000941227,
    "resolucao": 0.09310538003078796,
    "incerteza": 0.17776142493262737,
    "vies_favorito_azarao": {
     "n_azarao": 1116,
-    "erro_azarao": 0.017182795698924717,
+    "erro_azarao": 0.01718279569892473,
     "n_favorito": 127,
-    "erro_favorito": 0.01816535433070876
+    "erro_favorito": 0.01816535433070854
    },
    "banda_suspeita": {
     "piso": 0.1,
@@ -159,63 +159,63 @@
      "piso": 0.0,
      "teto": 0.1,
      "n": 1023,
-     "preco_medio": 0.01064222873900295,
+     "preco_medio": 0.010642228739002934,
      "frequencia_real": 0.021505376344086023,
-     "erro": 0.010863147605083074,
+     "erro": 0.01086314760508309,
      "confiavel": true
     },
     {
      "piso": 0.1,
      "teto": 0.2,
      "n": 93,
-     "preco_medio": 0.1498602150537634,
+     "preco_medio": 0.14986021505376343,
      "frequencia_real": 0.23655913978494625,
-     "erro": 0.08669892473118285,
+     "erro": 0.08669892473118282,
      "confiavel": true
     },
     {
      "piso": 0.2,
      "teto": 0.30000000000000004,
      "n": 73,
-     "preco_medio": 0.2493219178082191,
+     "preco_medio": 0.24932191780821916,
      "frequencia_real": 0.3150684931506849,
-     "erro": 0.06574657534246581,
+     "erro": 0.06574657534246575,
      "confiavel": true
     },
     {
      "piso": 0.30000000000000004,
      "teto": 0.4,
      "n": 52,
-     "preco_medio": 0.3549423076923078,
+     "preco_medio": 0.3549423076923077,
      "frequencia_real": 0.4423076923076923,
-     "erro": 0.08736538461538451,
+     "erro": 0.08736538461538457,
      "confiavel": true
     },
     {
      "piso": 0.4,
      "teto": 0.5,
      "n": 94,
-     "preco_medio": 0.4546170212765959,
+     "preco_medio": 0.45461702127659576,
      "frequencia_real": 0.43617021276595747,
-     "erro": -0.018446808510638457,
+     "erro": -0.01844680851063829,
      "confiavel": true
     },
     {
      "piso": 0.5,
      "teto": 0.6,
      "n": 92,
-     "preco_medio": 0.5440923913043477,
+     "preco_medio": 0.5440923913043478,
      "frequencia_real": 0.4891304347826087,
-     "erro": -0.05496195652173902,
+     "erro": -0.05496195652173913,
      "confiavel": true
     },
     {
      "piso": 0.6000000000000001,
      "teto": 0.7000000000000001,
      "n": 76,
-     "preco_medio": 0.6533815789473684,
+     "preco_medio": 0.6533815789473685,
      "frequencia_real": 0.6842105263157895,
-     "erro": 0.030828947368421122,
+     "erro": 0.03082894736842101,
      "confiavel": true
     },
     {
@@ -240,9 +240,9 @@
      "piso": 0.9,
      "teto": 1.0,
      "n": 91,
-     "preco_medio": 0.9809120879120876,
+     "preco_medio": 0.980912087912088,
      "frequencia_real": 0.978021978021978,
-     "erro": -0.0028901098901096267,
+     "erro": -0.0028901098901099598,
      "confiavel": true
     }
    ]
@@ -250,17 +250,17 @@
   "30": {
    "n": 1330,
    "taxa_base": 0.18571428571428572,
-   "brier": 0.07884204229323287,
-   "brier_da_climatologia": 0.15122448979592004,
+   "brier": 0.07884204229323308,
+   "brier_da_climatologia": 0.15122448979591838,
    "brier_das_faixas": 0.0800721541336061,
-   "ganho_da_precisao_fina": 0.0012301118403732353,
-   "ganho_sobre_climatologia": 0.4786423654023795,
+   "ganho_da_precisao_fina": 0.0012301118403730271,
+   "ganho_sobre_climatologia": 0.47864236540237237,
    "confiabilidade": 0.001984798048868408,
    "resolucao": 0.07313713371118068,
    "incerteza": 0.15122448979591838,
    "vies_favorito_azarao": {
     "n_azarao": 973,
-    "erro_azarao": 0.0124295991778006,
+    "erro_azarao": 0.012429599177800621,
     "n_favorito": 70,
     "erro_favorito": -0.008921428571428525
    },
@@ -279,45 +279,45 @@
      "piso": 0.0,
      "teto": 0.1,
      "n": 884,
-     "preco_medio": 0.01307918552036202,
+     "preco_medio": 0.01307918552036199,
      "frequencia_real": 0.020361990950226245,
-     "erro": 0.007282805429864226,
+     "erro": 0.007282805429864255,
      "confiavel": true
     },
     {
      "piso": 0.1,
      "teto": 0.2,
      "n": 89,
-     "preco_medio": 0.14993258426966283,
+     "preco_medio": 0.1499325842696629,
      "frequencia_real": 0.21348314606741572,
-     "erro": 0.0635505617977529,
+     "erro": 0.06355056179775281,
      "confiavel": true
     },
     {
      "piso": 0.2,
      "teto": 0.30000000000000004,
      "n": 78,
-     "preco_medio": 0.2543589743589744,
+     "preco_medio": 0.25435897435897437,
      "frequencia_real": 0.3717948717948718,
-     "erro": 0.11743589743589739,
+     "erro": 0.11743589743589744,
      "confiavel": true
     },
     {
      "piso": 0.30000000000000004,
      "teto": 0.4,
      "n": 42,
-     "preco_medio": 0.35186904761904764,
+     "preco_medio": 0.3518690476190476,
      "frequencia_real": 0.42857142857142855,
-     "erro": 0.07670238095238091,
+     "erro": 0.07670238095238097,
      "confiavel": true
     },
     {
      "piso": 0.4,
      "teto": 0.5,
      "n": 48,
-     "preco_medio": 0.4561875,
+     "preco_medio": 0.45618749999999997,
      "frequencia_real": 0.4166666666666667,
-     "erro": -0.03952083333333334,
+     "erro": -0.03952083333333328,
      "confiavel": true
     },
     {
@@ -333,36 +333,36 @@
      "piso": 0.6000000000000001,
      "teto": 0.7000000000000001,
      "n": 42,
-     "preco_medio": 0.6490595238095237,
+     "preco_medio": 0.6490595238095238,
      "frequencia_real": 0.7619047619047619,
-     "erro": 0.11284523809523817,
+     "erro": 0.11284523809523805,
      "confiavel": true
     },
     {
      "piso": 0.7000000000000001,
      "teto": 0.8,
      "n": 29,
-     "preco_medio": 0.743758620689655,
+     "preco_medio": 0.7437586206896551,
      "frequencia_real": 0.6551724137931034,
-     "erro": -0.08858620689655161,
+     "erro": -0.08858620689655172,
      "confiavel": false
     },
     {
      "piso": 0.8,
      "teto": 0.9,
      "n": 25,
-     "preco_medio": 0.8394000000000003,
+     "preco_medio": 0.8393999999999999,
      "frequencia_real": 0.84,
-     "erro": 0.0005999999999997119,
+     "erro": 0.0006000000000000449,
      "confiavel": false
     },
     {
      "piso": 0.9,
      "teto": 1.0,
      "n": 45,
-     "preco_medio": 0.9697666666666664,
+     "preco_medio": 0.9697666666666667,
      "frequencia_real": 0.9555555555555556,
-     "erro": -0.014211111111110841,
+     "erro": -0.014211111111111063,
      "confiavel": true
     }
    ]
