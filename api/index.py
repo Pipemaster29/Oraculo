@@ -172,20 +172,66 @@ def dados(nome: str) -> JSONResponse:
     return JSONResponse(bloco)
 
 
-# TEMPORÁRIO — sonda de diagnóstico. Sai assim que a rota estiver resolvida.
-# Registrada por ÚLTIMO de propósito: o FastAPI casa na ordem de registro, e um
-# `{caminho:path}` declarado antes engoliria "/" e "/calibragem".
-@app.get("/{caminho:path}")
-def sonda(caminho: str, request: Request) -> JSONResponse:
+@app.get("/_sonda")
+def sonda(request: Request) -> JSONResponse:
+    """O caminho que a plataforma entregou a esta função.
+
+    Ficou permanente porque foi o que resolveu o primeiro deploy, e a resposta
+    não era adivinhável: com `rewrites` moderno, **`/` e `/calibragem` chegavam
+    os DOIS como `/api/index`**, sem nenhum cabeçalho carregando o caminho
+    original. Não é prefixo a remover — é informação destruída, e nenhum
+    middleware a recupera.
+
+    Quatro páginas 404 e um JSON `{"detail":"Not Found"}` do FastAPI não dizem
+    isso. Esta rota diz, em um deploy, e continua dizendo se a plataforma mudar
+    de comportamento. É barata: não lê arquivo, não sai para a rede e não expõe
+    nada além do que o próprio requisitante mandou.
+    """
     return JSONResponse(
         {
-            "caminho_do_parametro": caminho,
             "scope_path": request.scope.get("path"),
-            "scope_raw_path": str(request.scope.get("raw_path")),
             "root_path": request.scope.get("root_path"),
             "url": str(request.url),
-            "cabecalhos_vercel": {
-                k: v for k, v in request.headers.items() if k.lower().startswith("x-vercel")
-            },
+            # `request.app` e não `app`: o nome `app` no fim deste arquivo é
+            # reaproveitado pelo envelope, que não tem `.routes`. O Starlette
+            # guarda a instância do FastAPI no próprio scope da requisição.
+            "rotas": sorted(
+                rota.path for rota in request.app.routes if getattr(rota, "path", None)
+            ),
         }
     )
+
+
+class NormalizarCaminho:
+    """Tira o prefixo `/api/index` do caminho, quando a plataforma o acrescenta.
+
+    A configuração em `vercel.json` usa `builds` + `routes` com `dest` apontando
+    para o ARQUIVO, que preserva o caminho original — e aí este envelope não faz
+    nada. Ele existe para o caso do meio: se a plataforma entregar
+    `/api/index/calibragem` em vez de `/calibragem`, a rota continua achando a
+    página em vez de devolver 404.
+
+    O que ele NÃO conserta, e é importante não se enganar: quando o caminho
+    chega colapsado em `/api/index` para toda requisição, a informação de qual
+    página foi pedida já não existe. Nesse caso o `/` responde e o resto dá 404,
+    e a correção é no `vercel.json`, não aqui.
+    """
+
+    def __init__(self, aplicacao, prefixo: str = "/api/index") -> None:
+        self.aplicacao = aplicacao
+        self.prefixo = prefixo
+
+    async def __call__(self, scope, receive, send):
+        if scope.get("type") == "http":
+            caminho = scope.get("path", "")
+            if caminho == self.prefixo or caminho.startswith(self.prefixo + "/"):
+                limpo = caminho[len(self.prefixo) :] or "/"
+                scope = {**scope, "path": limpo, "raw_path": limpo.encode()}
+        await self.aplicacao(scope, receive, send)
+
+
+# A Vercel e o `uvicorn` procuram um ASGI chamado `app`. O nome passa a apontar
+# para o envelope DEPOIS de todas as rotas terem sido registradas — os
+# decoradores acima já rodaram contra a instância do FastAPI, que o envelope
+# guarda e chama.
+app = NormalizarCaminho(app)
