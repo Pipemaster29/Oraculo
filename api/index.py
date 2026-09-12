@@ -170,3 +170,22 @@ def dados(nome: str) -> JSONResponse:
     if bloco is None:
         return JSONResponse({"erro": f"{nome} ainda não foi gerado"}, status_code=404)
     return JSONResponse(bloco)
+
+
+# TEMPORÁRIO — sonda de diagnóstico. Sai assim que a rota estiver resolvida.
+# Registrada por ÚLTIMO de propósito: o FastAPI casa na ordem de registro, e um
+# `{caminho:path}` declarado antes engoliria "/" e "/calibragem".
+@app.get("/{caminho:path}")
+def sonda(caminho: str, request: Request) -> JSONResponse:
+    return JSONResponse(
+        {
+            "caminho_do_parametro": caminho,
+            "scope_path": request.scope.get("path"),
+            "scope_raw_path": str(request.scope.get("raw_path")),
+            "root_path": request.scope.get("root_path"),
+            "url": str(request.url),
+            "cabecalhos_vercel": {
+                k: v for k, v in request.headers.items() if k.lower().startswith("x-vercel")
+            },
+        }
+    )
