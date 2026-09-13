@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-12T09:35:00+00:00",
+ "gerado_em": "2026-09-13T10:37:21+00:00",
  "volume_minimo": 20000.0,
  "parada_da_colheita": "teto pedido atingido",
  "mercados_pedidos": 2100,
@@ -10,13 +10,13 @@
   "1": {
    "n": 2023,
    "taxa_base": 0.2723677706376668,
-   "brier": 0.0979503872652002,
+   "brier": 0.09786437639026198,
    "brier_da_climatologia": 0.19818356815553415,
-   "brier_das_faixas": 0.0985973140951898,
-   "ganho_da_precisao_fina": 0.0006469268299896108,
-   "ganho_sobre_climatologia": 0.5057592908594274,
-   "confiabilidade": 0.0012974531641005448,
-   "resolucao": 0.10088370722444488,
+   "brier_das_faixas": 0.09851241999442129,
+   "ganho_da_precisao_fina": 0.0006480436041593068,
+   "ganho_sobre_climatologia": 0.5061932868548508,
+   "confiabilidade": 0.0012804027021835647,
+   "resolucao": 0.10095155086329642,
    "incerteza": 0.19818356815553415,
    "vies_favorito_azarao": {
     "n_azarao": 1185,
@@ -74,10 +74,10 @@
     {
      "piso": 0.4,
      "teto": 0.5,
-     "n": 141,
-     "preco_medio": 0.45208865248226954,
-     "frequencia_real": 0.48936170212765956,
-     "erro": 0.03727304964539002,
+     "n": 140,
+     "preco_medio": 0.4519964285714286,
+     "frequencia_real": 0.4857142857142857,
+     "erro": 0.03371785714285713,
      "confiavel": true
     },
     {
@@ -92,10 +92,10 @@
     {
      "piso": 0.6000000000000001,
      "teto": 0.7000000000000001,
-     "n": 104,
-     "preco_medio": 0.6424759615384615,
-     "frequencia_real": 0.6442307692307693,
-     "erro": 0.001754807692307736,
+     "n": 105,
+     "preco_medio": 0.6426904761904763,
+     "frequencia_real": 0.6476190476190476,
+     "erro": 0.004928571428571393,
      "confiavel": true
     },
     {
@@ -130,13 +130,13 @@
   "7": {
    "n": 1678,
    "taxa_base": 0.23122765196662692,
-   "brier": 0.0841292252681764,
+   "brier": 0.08407809296781883,
    "brier_da_climatologia": 0.1777614249326274,
-   "brier_das_faixas": 0.08596260090278064,
-   "ganho_da_precisao_fina": 0.0018333756346042424,
-   "ganho_sobre_climatologia": 0.5267295742028291,
-   "confiabilidade": 0.001306556000941227,
-   "resolucao": 0.09310538003078796,
+   "brier_das_faixas": 0.08590906246453764,
+   "ganho_da_precisao_fina": 0.0018309694967188067,
+   "ganho_sobre_climatologia": 0.5270172198513546,
+   "confiabilidade": 0.001351603868780646,
+   "resolucao": 0.09320396633687038,
    "incerteza": 0.17776142493262737,
    "vies_favorito_azarao": {
     "n_azarao": 1116,
@@ -203,19 +203,19 @@
     {
      "piso": 0.5,
      "teto": 0.6,
-     "n": 92,
-     "preco_medio": 0.5440923913043478,
-     "frequencia_real": 0.4891304347826087,
-     "erro": -0.05496195652173913,
+     "n": 91,
+     "preco_medio": 0.5439725274725274,
+     "frequencia_real": 0.4835164835164835,
+     "erro": -0.060456043956043926,
      "confiavel": true
     },
     {
      "piso": 0.6000000000000001,
      "teto": 0.7000000000000001,
-     "n": 76,
-     "preco_medio": 0.6533815789473685,
-     "frequencia_real": 0.6842105263157895,
-     "erro": 0.03082894736842101,
+     "n": 77,
+     "preco_medio": 0.6535324675324675,
+     "frequencia_real": 0.6883116883116883,
+     "erro": 0.0347792207792208,
      "confiavel": true
     },
     {
