@@ -8,12 +8,21 @@
 # Os dois relógios diferentes são de propósito, e é o que permite ao painel ler
 # a calibragem de `data/` em vez de recalculá-la a cada montagem.
 
+# ---------------------------------------------------------------------------
+# PAUSADO EM 15/09/2026, junto com o `painel`. Ver o cabeçalho de painel.yml:
+# cada commit em `data/` dispara um build na Vercel, e a cota é de lá, não daqui.
+# ---------------------------------------------------------------------------
+# Este fluxo pesa MENOS que o outro em builds — três execuções em três dias,
+# contra 21 do painel — mas ele também remonta o painel no passo seguinte, então
+# religar só este continuaria publicando. Se for para voltar um, volte com
+# frequência diária e olhe a cota antes de voltar o outro.
+
 name: calibragem
 
 on:
-  schedule:
-    # 05:40 UTC: fora do minuto zero, onde a fila do GitHub é mais disputada.
-    - cron: "40 5 * * *"
+  # schedule:
+  #   # 05:40 UTC: fora do minuto zero, onde a fila do GitHub é mais disputada.
+  #   - cron: "40 5 * * *"
   workflow_dispatch:
 
 concurrency:

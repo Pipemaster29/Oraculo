@@ -58,18 +58,27 @@ uvicorn api.index:app --reload   # a página em http://127.0.0.1:8000
 
 Não há chave, `.env` nem banco. O estado inteiro mora em `data/`.
 
-### Os dois relógios, que são diferentes de propósito
+### Os dois relógios — HOJE PAUSADOS
 
-| o quê | com que frequência | por quê |
+| o quê | frequência desenhada | por quê |
 |---|---|---|
-| o painel: preço, taxa-base, ajuste | **de hora em hora** | ~21 requisições. O preço de um mercado macro anda em dias |
-| a calibragem sobre mercados resolvidos | **uma vez por dia** | ~2.100 requisições. Um dia a mais numa amostra de dois mil move a terceira casa do Brier |
+| o painel: preço, taxa-base, ajuste | de hora em hora | ~21 requisições. O preço de um mercado macro anda em dias |
+| a calibragem sobre mercados resolvidos | uma vez por dia | ~2.100 requisições. Um dia a mais numa amostra de dois mil move a terceira casa do Brier |
 
-O `schedule` do GitHub atrasa e descarta sob carga, e aqui isso **não** é
-problema: uma execução que atrasa duas horas custa duas horas de preço velho, e
-a página carimba a própria idade para que isso seja visível. Se um dia o projeto
-cobrir mercado que se move em minutos, a resposta não será cron mais agressivo —
-será execução mais longa.
+**Os dois estão com o `schedule` comentado desde 15/09/2026**, e o motivo não
+estava em nenhum dos dois arquivos: cada commit em `data/` é um push, e todo
+push dispara um build na Vercel. MEDIDO: 24 commits do bot entre 12/09 e 15/09 —
+24 builds em três dias, contra uma cota de plano Hobby.
+
+O minuto de runner do GitHub é gratuito em repositório público, então o arquivo
+que agendava o trabalho não tinha nenhum motivo para mencionar custo. **O custo
+morava na outra ponta.** Quando for religar, a conta a fazer é de builds na
+Vercel, não de minutos no GitHub — e `0 6 * * *` dá ~30 builds por mês em vez de
+~700, com a página envelhecendo no máximo 24 horas, que ela própria carimba.
+
+O `schedule` do GitHub também atrasa e descarta sob carga, e isso aqui nunca foi
+problema: uma execução que atrasa duas horas custa duas horas de preço velho, e a
+idade está na tela.
 
 ---
 

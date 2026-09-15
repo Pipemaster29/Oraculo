@@ -12,12 +12,32 @@
 # Se um dia o projeto passar a cobrir mercado que se move em minutos, é aqui que
 # a conversa recomeça — e a resposta não será cron mais agressivo, será execução
 # mais longa.
+#
+# ---------------------------------------------------------------------------
+# PAUSADO EM 15/09/2026. O `schedule` está comentado, não apagado.
+# ---------------------------------------------------------------------------
+# O motivo não é este fluxo: é o que ele provoca do outro lado. Cada commit em
+# `data/` é um push, e todo push dispara um build novo na Vercel. MEDIDO: 24
+# commits do bot entre 12/09 e 15/09, ou seja 24 builds em três dias, e o plano
+# Hobby tem cota de build.
+#
+# O minuto de runner do GitHub é gratuito em repositório público — o custo
+# estava inteiro na outra ponta, que este arquivo nunca menciona. É o tipo de
+# efeito que não aparece no lugar onde foi causado.
+#
+# PARA RELIGAR: descomente as duas linhas do `schedule` abaixo. Antes disso,
+# pense na frequência: com `0 6 * * *` (uma vez por dia) o painel envelhece no
+# máximo 24 horas — e a página CARIMBA a própria idade, então o leitor vê o
+# atraso em vez de tomar preço velho por preço de agora. São ~30 builds por mês
+# em vez de ~700.
+#
+# O disparo manual continua ligado: aba Actions → "painel" → "Run workflow".
 
 name: painel
 
 on:
-  schedule:
-    - cron: "7 * * * *"
+  # schedule:
+  #   - cron: "7 * * * *"
   workflow_dispatch:
 
 # Uma execução por vez. Duas montando ao mesmo tempo produzem dois commits sobre
