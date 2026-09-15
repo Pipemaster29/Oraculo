@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-14T10:59:09+00:00",
+ "gerado_em": "2026-09-15T10:26:28+00:00",
  "volume_minimo": 20000.0,
  "parada_da_colheita": "teto pedido atingido",
  "mercados_pedidos": 2100,
@@ -9,15 +9,15 @@
  "horizontes": {
   "1": {
    "n": 2023,
-   "taxa_base": 0.2723677706376668,
-   "brier": 0.09724018941547208,
-   "brier_da_climatologia": 0.19818356815553415,
-   "brier_das_faixas": 0.0979043506487355,
-   "ganho_da_precisao_fina": 0.0006641612332634189,
-   "ganho_sobre_climatologia": 0.5093428263479536,
-   "confiabilidade": 0.0012232845766785075,
-   "resolucao": 0.10150250208347715,
-   "incerteza": 0.19818356815553415,
+   "taxa_base": 0.2718734552644587,
+   "brier": 0.09720515481339595,
+   "brier_da_climatologia": 0.1979582795870231,
+   "brier_das_faixas": 0.09785834853024106,
+   "ganho_da_precisao_fina": 0.0006531937168451074,
+   "ganho_sobre_climatologia": 0.5089614083523886,
+   "confiabilidade": 0.001194936578655769,
+   "resolucao": 0.1012948676354378,
+   "incerteza": 0.19795827958702308,
    "vies_favorito_azarao": {
     "n_azarao": 1187,
     "erro_azarao": 0.014128685762426284,
@@ -75,9 +75,9 @@
      "piso": 0.4,
      "teto": 0.5,
      "n": 140,
-     "preco_medio": 0.4519964285714286,
-     "frequencia_real": 0.4857142857142857,
-     "erro": 0.03371785714285713,
+     "preco_medio": 0.45160357142857144,
+     "frequencia_real": 0.4785714285714286,
+     "erro": 0.026967857142857155,
      "confiavel": true
     },
     {
@@ -128,16 +128,16 @@
    ]
   },
   "7": {
-   "n": 1679,
-   "taxa_base": 0.23108993448481238,
-   "brier": 0.08359257757593805,
-   "brier_da_climatologia": 0.1776873766646175,
-   "brier_das_faixas": 0.08546711750134302,
-   "ganho_da_precisao_fina": 0.0018745399254049694,
-   "ganho_sobre_climatologia": 0.5295525256489216,
-   "confiabilidade": 0.0012296726987697847,
-   "resolucao": 0.09344993186204427,
-   "incerteza": 0.1776873766646175,
+   "n": 1680,
+   "taxa_base": 0.23095238095238096,
+   "brier": 0.08365545401785715,
+   "brier_da_climatologia": 0.17761337868480723,
+   "brier_das_faixas": 0.08553873041359125,
+   "ganho_da_precisao_fina": 0.0018832763957341014,
+   "ganho_sobre_climatologia": 0.5290025186317064,
+   "confiabilidade": 0.0012393782083415855,
+   "resolucao": 0.09331402647955758,
+   "incerteza": 0.17761337868480725,
    "vies_favorito_azarao": {
     "n_azarao": 1118,
     "erro_azarao": 0.017197227191413242,
@@ -194,10 +194,10 @@
     {
      "piso": 0.4,
      "teto": 0.5,
-     "n": 94,
-     "preco_medio": 0.45461702127659576,
-     "frequencia_real": 0.43617021276595747,
-     "erro": -0.01844680851063829,
+     "n": 95,
+     "preco_medio": 0.45441052631578943,
+     "frequencia_real": 0.43157894736842106,
+     "erro": -0.02283157894736837,
      "confiavel": true
     },
     {
@@ -248,16 +248,16 @@
    ]
   },
   "30": {
-   "n": 1331,
-   "taxa_base": 0.1855747558226897,
-   "brier": 0.07859554094665665,
-   "brier_da_climatologia": 0.15113676582403882,
-   "brier_das_faixas": 0.07985512692802847,
-   "ganho_da_precisao_fina": 0.0012595859813718246,
-   "ganho_sobre_climatologia": 0.479970736980295,
-   "confiabilidade": 0.001959029273872554,
-   "resolucao": 0.07324066816988287,
-   "incerteza": 0.1511367658240388,
+   "n": 1332,
+   "taxa_base": 0.18543543543543545,
+   "brier": 0.0786753490990991,
+   "brier_da_climatologia": 0.1510491347203059,
+   "brier_das_faixas": 0.07994938354157367,
+   "ganho_da_precisao_fina": 0.001274034442474578,
+   "ganho_sobre_climatologia": 0.4791406832963302,
+   "confiabilidade": 0.0019786546059726543,
+   "resolucao": 0.07307840578470488,
+   "incerteza": 0.1510491347203059,
    "vies_favorito_azarao": {
     "n_azarao": 975,
     "erro_azarao": 0.012470256410256411,
@@ -314,10 +314,10 @@
     {
      "piso": 0.4,
      "teto": 0.5,
-     "n": 47,
-     "preco_medio": 0.4553617021276596,
-     "frequencia_real": 0.425531914893617,
-     "erro": -0.02982978723404256,
+     "n": 48,
+     "preco_medio": 0.45483333333333337,
+     "frequencia_real": 0.4166666666666667,
+     "erro": -0.03816666666666668,
      "confiavel": true
     },
     {
